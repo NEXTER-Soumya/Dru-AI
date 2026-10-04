@@ -51,11 +51,11 @@ intake, primary use, and identification features come from
 ## Deploy frontend on Vercel and backend on Render
 
 The UI uses Flask templates for local development. `build-frontend.mjs` turns
-those templates into static pages and copies the existing assets into
-`frontend-dist`, which Vercel serves. The Flask API, MongoDB connection, and
-PyTorch model stay on Render. Vercel rewrites `/api/*` and `/logout` to Render,
-so browser requests and session cookies remain same-origin; no CORS setup is
-needed.
+those templates into static pages and copies the existing assets into the
+dedicated `frontend/` directory. Vercel serves that directory as a static-only
+project, while the Flask API, MongoDB connection, and PyTorch model stay on
+Render. Vercel rewrites `/api/*` and `/logout` to Render, so browser requests
+and session cookies remain same-origin; no CORS setup is needed.
 
 ### Deploy the backend to Render
 
@@ -80,16 +80,21 @@ memory for the model.
 
 ### Deploy the frontend to Vercel
 
-1. In `vercel.json`, replace both `YOUR-RENDER-SERVICE` placeholders with the
-   Render service's hostname (for example, `dru-ai-api`), keeping the
-   `.onrender.com` suffix.
-2. Commit and push that change to GitHub.
-3. Import the same repository in Vercel. Leave the project root at the
-   repository root; the committed `vercel.json` runs the static build and
-   selects `frontend-dist` as the output directory.
-4. Deploy, then open the Vercel URL and test sign-up, sign-in, image
+1. In the Vercel project settings, set **Root Directory** to `frontend`.
+   Leave the Build Command and Output Directory overrides empty. The
+   `frontend/` directory contains only static site files and its Vercel
+   rewrite configuration, so Vercel will not package the Python app or
+   PyTorch dependencies.
+2. In the root `vercel.json`, set the two rewrite destinations to your Render
+   service hostname (for example, `dru-ai-api.onrender.com`), then run
+   `node build-frontend.mjs` from the repository root to copy the updated
+   config and current templates/assets into `frontend/`.
+3. Commit and push the root `vercel.json` and generated `frontend/` changes.
+4. Import the same repository in Vercel, choosing `frontend` as the Root
+   Directory if prompted.
+5. Deploy, then open the Vercel URL and test sign-up, sign-in, image
    identification, Library, and logout.
 
-The API proxy destinations in `vercel.json` must point at your actual Render
-service before the Vercel deployment. Free Render services may spin down when
-idle, so the first API request after a quiet period can take longer.
+Render should continue using the repository root as its Root Directory. Free
+Render services may spin down when idle, so the first API request after a
+quiet period can take longer.

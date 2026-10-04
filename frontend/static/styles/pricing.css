@@ -1,0 +1,342 @@
+/* ==========================================
+   PRICING SECTION STYLING (Compact & Non-Scrolling)
+   ========================================== */
+
+#pricing.page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Locks scrolling completely */
+}
+
+.pricing-container {
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Header & Toggle */
+.pricing-header {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.pricing-subtext {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.billing-toggle {
+    display: inline-flex;
+    background-color: #eaeaea;
+    padding: 3px;
+    border-radius: 30px;
+    gap: 4px;
+}
+
+.toggle-btn {
+    background: transparent;
+    border: none;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    color: #555;
+    transition: all 0.3s ease;
+}
+
+.toggle-btn.active {
+    background-color: rgb(0, 30, 15);
+    color: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.toggle-btn span {
+    font-size: 0.7rem;
+    background-color: rgb(0, 160, 0);
+    color: #fff;
+    padding: 2px 5px;
+    border-radius: 8px;
+    margin-left: 4px;
+}
+
+/* 3-Column Grid Layout */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr 1.2fr;
+    gap: 20px;
+    width: 100%;
+    max-height: calc(100vh - 180px); /* Keeps it bound within the screen */
+    align-items: stretch;
+}
+
+/* Base Card Style (Compact) */
+.price-card {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 14px;
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
+/* Basic Card Specifics */
+.card-top {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.card-icon {
+    width: 38px;
+    height: 38px;
+    background-color: rgba(0, 160, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(0, 160, 0);
+    font-size: 1.1rem;
+}
+
+.card-title-group h3 {
+    font-size: 0.95rem;
+    color: #666;
+    font-weight: 600;
+}
+
+.card-title-group h2, .plus-top h2 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #111;
+}
+
+.plan-desc {
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+/* Feature Bullet Lists */
+.feature-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.feature-list li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.82rem;
+    color: #333;
+}
+
+.feature-list li ion-icon {
+    color: rgb(0, 160, 0);
+    font-size: 1rem;
+    min-width: 16px;
+}
+
+/* Plus Card (Highlighted Dark Theme) */
+.plus-card {
+    background-color: rgb(0, 25, 12);
+    border: none;
+    color: #fff;
+    box-shadow: 0 8px 25px rgba(0, 30, 15, 0.25);
+    position: relative;
+}
+
+.plus-badge-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.crown-icon {
+    width: 38px;
+    height: 38px;
+    background-color: rgba(255, 215, 0, 0.15);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: gold;
+    font-size: 1.2rem;
+}
+
+.recommended-badge {
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+.plus-top h3 {
+    color: #bbb;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.plus-top h2 {
+    color: #fff;
+}
+
+.plus-desc {
+    color: #ccc;
+}
+
+.plus-list li {
+    color: #eee;
+}
+
+.plus-list li ion-icon {
+    color: rgb(50, 220, 90);
+}
+
+/* Action Buttons */
+.btn-current {
+    width: 100%;
+    background-color: #e5eee8;
+    color: rgb(0, 30, 15);
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: default;
+}
+
+.btn-upgrade {
+    display: block;
+    width: 100%;
+    background-color: #ffffff;
+    color: rgb(0, 30, 15);
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.btn-upgrade:hover {
+    background-color: rgb(0, 160, 0);
+    color: #fff;
+}
+
+/* Compare Table Card */
+.compare-card h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 10px;
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow: hidden; /* Prevents inner table scrolling */
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.75rem; /* Compact font size to fit screen height */
+}
+
+.comparison-table th, 
+.comparison-table td {
+    padding: 6px 6px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    color: #444;
+}
+
+.comparison-table th {
+    font-weight: 700;
+    color: #222;
+    font-size: 0.8rem;
+}
+
+.comparison-table td ion-icon {
+    font-size: 0.9rem;
+}
+
+.comparison-table td ion-icon.check {
+    color: rgb(0, 160, 0);
+}
+
+.comparison-table td small {
+    display: block;
+    font-size: 0.62rem;
+    color: #777;
+}
+
+.highlight-text {
+    color: rgb(0, 140, 0);
+}
+
+/* ==========================================
+   DARK MODE OVERRIDES FOR PRICING
+   ========================================== */
+body.dark-mode #pricing .price-card:not(.plus-card) {
+    background-color: #1a1a1a;
+    border-color: #333;
+}
+
+body.dark-mode .pricing-subtext,
+body.dark-mode .card-title-group h3,
+body.dark-mode .plan-desc,
+body.dark-mode .comparison-table th,
+body.dark-mode .comparison-table td {
+    color: #ccc;
+}
+
+body.dark-mode .card-title-group h2,
+body.dark-mode .compare-card h3 {
+    color: #fff;
+}
+
+body.dark-mode .feature-list li {
+    color: #ddd;
+}
+
+body.dark-mode .billing-toggle {
+    background-color: #262626;
+}
+
+body.dark-mode .toggle-btn {
+    color: #aaa;
+}
+
+body.dark-mode .toggle-btn.active {
+    background-color: rgb(0, 180, 60);
+    color: #fff;
+}
+
+body.dark-mode .btn-current {
+    background-color: #25382b;
+    color: rgb(80, 240, 130);
+}
+
+body.dark-mode .comparison-table td {
+    border-bottom-color: #333;
+}

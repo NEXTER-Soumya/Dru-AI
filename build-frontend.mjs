@@ -3,7 +3,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = path.dirname(fileURLToPath(import.meta.url));
-const output = path.join(root, "frontend-dist");
+const output = path.join(root, "frontend");
 
 function makeStatic(html) {
   return html
@@ -34,6 +34,7 @@ await mkdir(output, { recursive: true });
 await cp(path.join(root, "static"), path.join(output, "static"), {
   recursive: true,
 });
+await cp(path.join(root, "vercel.json"), path.join(output, "vercel.json"));
 
 const pages = [
   ["templates/pages/index.html", "index.html"],
@@ -49,4 +50,4 @@ for (const [source, destination] of pages) {
   await writeFile(path.join(output, destination), built);
 }
 
-console.log("Built static Vercel frontend in frontend-dist.");
+console.log("Built static Vercel frontend in frontend/.");

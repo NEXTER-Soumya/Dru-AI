@@ -1,0 +1,393 @@
+/* ==========================================
+   1. GLOBAL & VIEWPORT LOCK (No Scrolling)
+   ========================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #ffffff;
+    color: #111111;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ==========================================
+   2. NAVIGATION BAR
+   ========================================== */
+nav {
+    height: 70px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+nav .logo-icon {
+    font-size: 1.5rem;
+    color: rgb(0, 160, 0);
+    display: flex;
+    align-items: center;
+}
+
+nav .logo-text h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+nav .logo-text h2 span {
+    color: rgb(0, 160, 0);
+}
+
+nav .nav-menu ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav .nav-menu ul li a {
+    text-decoration: none;
+    color: #555555;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+nav .nav-menu ul li a:hover {
+    color: rgb(0, 160, 0);
+}
+
+nav .action {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+nav .action div {
+    height: 35px;
+    padding: 0 15px;
+    border: 1.5px solid rgb(0, 160, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 7px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.3s ease-in-out;
+}
+
+nav .action div:active {
+    transform: scale(0.93);
+}
+
+nav .action .log-in:hover {
+    background-color: rgb(0, 160, 0);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 160, 0, 0.25);
+}
+
+nav .action .sign-up {
+    background-color: rgb(0, 160, 0);
+    color: #fff;
+}
+
+nav .action .sign-up:hover {
+    background-color: transparent;
+    color: rgb(0, 160, 0);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 160, 0, 0.25);
+}
+
+nav .action .theme {
+    width: 35px;
+    padding: 0;
+    border-radius: 50%;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+nav .action .theme ion-icon {
+    transition: transform 0.4s ease;
+}
+
+nav .action .theme ion-icon.rotate {
+    transform: rotate(180deg);
+}
+
+/* ==========================================
+   3. PAGE-TURN TRANSITION CONTAINER
+   ========================================== */
+.page-container {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 120px); /* Leaves space for nav (70px) and footer (50px) */
+    overflow: hidden;
+}
+
+.page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(100%); /* Starts off-screen to the right */
+    transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.4s ease;
+}
+
+.page.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0); /* Smoothly slides in from right to left */
+}
+
+/* ==========================================
+   4. HOME SECTION STYLING
+   ========================================== */
+#home .home-content {
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 40px;
+    align-items: center;
+}
+
+#home .left {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+#home .left h1 {
+    font-size: 3.2rem;
+    font-weight: 800;
+    line-height: 1.1;
+    color: #111;
+}
+
+#home .left h2 {
+    font-size: 3.2rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-top: -10px;
+}
+
+#home .left h2 span {
+    color: rgb(0, 160, 0);
+}
+
+#home .left p {
+    font-size: 1.05rem;
+    color: #555;
+    line-height: 1.5;
+    max-width: 480px;
+}
+
+/* Hero Buttons */
+#home .hero-buttons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-top: 5px;
+}
+
+#home .get-start {
+    background-color: rgb(0, 30, 15);
+    color: #fff;
+    padding: 12px 22px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#home .get-start:hover {
+    background-color: rgb(0, 160, 0);
+    transform: translateY(-2px);
+}
+
+#home .watch-demo {
+    background-color: transparent;
+    color: #333;
+    border: 1.5px solid #ddd;
+    padding: 11px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+#home .watch-demo:hover {
+    border-color: rgb(0, 160, 0);
+    color: rgb(0, 160, 0);
+    transform: translateY(-2px);
+}
+
+#home .watch-demo ion-icon {
+    font-size: 1.2rem;
+    color: rgb(0, 160, 0);
+}
+
+/* Feature Badges Row (Home) */
+#home .hero-icons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px 20px;
+    margin-top: 10px;
+    max-width: 500px;
+}
+
+#home .h-icons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+#home .h-icons ion-icon {
+    min-width: 36px;
+    height: 36px;
+    background-color: rgba(0, 160, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    color: rgb(0, 160, 0);
+    padding: 8px;
+}
+
+#home .h-icons span {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #444;
+    line-height: 1.2;
+}
+
+/* 1. Shift the layout columns to give the image much more width space */
+#home .home-content {
+    max-width: 1250px; /* Slightly widened total container */
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 0.85fr 1.35fr; /* Favors the right side heavily */
+    gap: 30px;
+    align-items: center;
+}
+
+/* 2. Increase the maximum size bounds for the image */
+#home .right img {
+    width: 100%;
+    max-width: 760px; /* Pushed up significantly so the animals render much larger */
+    height: auto;
+    max-height: calc(100vh - 110px); /* Maximizes vertical fill between nav and footer */
+    object-fit: contain;
+}
+
+/* ==========================================
+   5. FIXED FOOTER
+   ========================================== */
+.site-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #ffffff;
+    border-top: 1px solid #eaeaea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.site-footer p {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+/* ==========================================
+   6. DARK MODE OVERRIDES
+   ========================================== */
+body.dark-mode {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+body.dark-mode nav .nav-menu ul li a {
+    color: #aaa;
+}
+
+body.dark-mode nav .nav-menu ul li a:hover {
+    color: rgb(50, 200, 50);
+}
+
+body.dark-mode nav .action .theme {
+    color: #fff;
+}
+
+body.dark-mode #home .left h1,
+body.dark-mode #home .left h2 {
+    color: #fff;
+}
+
+body.dark-mode #home .left p {
+    color: #aaa;
+}
+
+body.dark-mode #home .watch-demo {
+    color: #fff;
+    border-color: #444;
+}
+
+body.dark-mode #home .watch-demo:hover {
+    border-color: rgb(50, 200, 50);
+    color: rgb(50, 200, 50);
+}
+
+body.dark-mode #home .h-icons ion-icon {
+    background-color: rgba(50, 200, 50, 0.15);
+    color: rgb(50, 200, 50);
+}
+
+body.dark-mode #home .h-icons span {
+    color: #ccc;
+}
+
+body.dark-mode .site-footer {
+    background-color: #1a1a1a;
+    border-top: 1px solid #333;
+}
+
+body.dark-mode .site-footer p {
+    color: #aaa;
+}

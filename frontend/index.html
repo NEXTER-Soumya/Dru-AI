@@ -1,0 +1,1157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dru AI</title>
+    <!-- Notice 'static' endpoint and correct filenames -->
+    <link rel="stylesheet" href="/static/styles/index.css">
+    <link rel="stylesheet" href="/static/styles/header.css">
+    <link rel="stylesheet" href="/static/styles/features.css">
+    <link rel="stylesheet" href="/static/styles/documentation.css">
+    <link rel="stylesheet" href="/static/styles/about.css">
+    <link rel="stylesheet" href="/static/styles/help.css">
+    <link rel="stylesheet" href="/static/styles/modal.css">
+    <link rel="stylesheet" href="/static/styles/pricing.css">
+    <link rel="stylesheet" href="/static/styles/responsive.css">
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <div class="logo-icon"><ion-icon name="paw"></ion-icon></div>
+        <div class="logo-text">
+          <h2>Dru <span>AI</span></h2>
+        </div>
+      </div>
+      <div class="nav-menu">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#feature">Feature</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#help">Help</a></li>
+        </ul>
+      </div>
+      <div class="action">
+        <div class="log-in">Sign In</div>
+        <div class="sign-up">Sign Up</div>
+        <div class="theme" id="theme">
+          <ion-icon name="moon-outline"></ion-icon>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Pages Container -->
+    <main class="page-container">
+      <section id="home" class="page active">
+        <div class="home-content">
+          <div class="left">
+            <h1>Identify animals</h1>
+            <h2>in <span style="font-style: italic">seconds.</span></h2>
+            <p>
+              Upload a photo to identify the breed and species. <br />
+              Get detailed information, characteristics and care insights.
+            </p>
+            <div class="hero-buttons">
+              <div class="get-start open-auth-modal">
+                <span>Get Started </span
+                ><span><ion-icon name="arrow-forward"></ion-icon></span>
+              </div>
+              <div class="watch-demo">
+                <span><ion-icon name="play-circle"></ion-icon></span>
+                <span>Watch Demo</span>
+              </div>
+            </div>
+            <div class="hero-icons">
+              <div class="h-icons">
+                <ion-icon name="paw"></ion-icon>
+                <span>Animal Breed<br />Identification</span>
+              </div>
+              <div class="h-icons">
+                <ion-icon name="leaf"></ion-icon>
+                <span>Species<br />Recognition</span>
+              </div>
+              <div class="h-icons">
+                <ion-icon name="book"></ion-icon>
+                <span>Detailed<br />Information</span>
+              </div>
+              <div class="h-icons">
+                <ion-icon name="server"></ion-icon>
+                <span>Trusted by<br />Field Workers</span>
+              </div>
+            </div>
+          </div>
+          <div class="right">
+            <img
+              src="/static/mockups/animals_1.png"
+              alt="Animals Illustration"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="feature" class="page">
+        <div class="home-container">
+          <!-- Left Column: Feature Heading & Capabilities -->
+          <div class="home-left">
+            <h1 class="home-title">
+              Powered by <span style="font-style: italic">Advanced AI.</span>
+            </h1>
+            <p class="home-subtitle">
+              Our local TFLite engine processes images instantly on-device,
+              ensuring high-speed classification while keeping your data
+              completely private.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="home-buttons">
+              <a href="#about" class="btn-primary">Learn More &rarr;</a>
+            </div>
+
+            <!-- Feature Capabilities Grid -->
+            <div class="home-features-row">
+              <div class="feature-badge">
+                <div class="badge-icon">
+                  <ion-icon name="flash-outline"></ion-icon>
+                </div>
+                <span>Lightning Fast Inference</span>
+              </div>
+              <div class="feature-badge">
+                <div class="badge-icon">
+                  <ion-icon name="shield-checkmark-outline"></ion-icon>
+                </div>
+                <span>100% Secure</span>
+              </div>
+              <div class="feature-badge">
+                <div class="badge-icon">
+                  <ion-icon name="phone-portrait-outline"></ion-icon>
+                </div>
+                <span>Optimized for Mobile & Web</span>
+              </div>
+              <div class="feature-badge">
+                <div class="badge-icon">
+                  <ion-icon name="analytics-outline"></ion-icon>
+                </div>
+                <span>High Accuracy TFLite Model</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Feature Graphic / Illustration Area -->
+          <div class="home-right">
+            <svg
+              class="home-hero-svg"
+              viewBox="0 0 500 400"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <!-- Background Glow Effect -->
+              <circle cx="250" cy="200" r="140" fill="rgba(0, 160, 0, 0.08)" />
+
+              <!-- Phone / Device Frame -->
+              <rect
+                x="175"
+                y="60"
+                width="150"
+                height="280"
+                rx="24"
+                fill="#ffffff"
+                stroke="#111111"
+                stroke-width="6"
+                class="device-frame"
+              />
+
+              <!-- Phone Screen Area -->
+              <rect
+                x="187"
+                y="80"
+                width="126"
+                height="240"
+                rx="14"
+                fill="#f4f7f5"
+                class="device-screen"
+              />
+
+              <!-- Screen Header (Camera Notch / Speaker) -->
+              <rect x="225" y="90" width="50" height="6" rx="3" fill="#ddd" />
+
+              <!-- AI Scan Window / Animal Image Placeholder -->
+              <rect
+                x="199"
+                y="112"
+                width="102"
+                height="110"
+                rx="10"
+                fill="rgba(0, 160, 0, 0.12)"
+              />
+
+              <!-- Center Paw Icon Inside Scan Window -->
+              <path
+                d="M250 145c-8 0-14 6-14 14 0 6 5 11 11 13v12h6v-12c6-2 11-7 11-13 0-8-6-14-14-14z"
+                fill="rgb(0, 160, 0)"
+              />
+              <circle cx="236" cy="172" r="4" fill="rgb(0, 160, 0)" />
+              <circle cx="264" cy="172" r="4" fill="rgb(0, 160, 0)" />
+              <circle cx="250" cy="166" r="4" fill="rgb(0, 160, 0)" />
+
+              <!-- AI Scan Target Brackets -->
+              <path
+                d="M205 120h-4v10M205 120v4"
+                stroke="rgb(0, 160, 0)"
+                stroke-width="2.5"
+                stroke-linecap="round"
+              />
+              <path
+                d="M295 120h4v10M295 120v4"
+                stroke="rgb(0, 160, 0)"
+                stroke-width="2.5"
+                stroke-linecap="round"
+              />
+              <path
+                d="M205 214h-4v-10M205 214v-4"
+                stroke="rgb(0, 160, 0)"
+                stroke-width="2.5"
+                stroke-linecap="round"
+              />
+              <path
+                d="M295 214h4v-10M295 214v-4"
+                stroke="rgb(0, 160, 0)"
+                stroke-width="2.5"
+                stroke-linecap="round"
+              />
+
+              <!-- Scanning Line Animation Effect -->
+              <line
+                x1="199"
+                y1="150"
+                x2="301"
+                y2="150"
+                stroke="rgb(0, 160, 0)"
+                stroke-width="2"
+                stroke-dasharray="4 2"
+              />
+
+              <!-- Detected Text Result Badge -->
+              <rect
+                x="199"
+                y="230"
+                width="102"
+                height="26"
+                rx="6"
+                fill="#111111"
+              />
+              <text
+                x="250"
+                y="247"
+                text-anchor="middle"
+                fill="#ffffff"
+                font-size="9"
+                font-weight="700"
+                font-family="sans-serif"
+              >
+                Breed: Amritmahal
+              </text>
+
+              <!-- Floating Security / TFLite Node Badges -->
+              <g transform="translate(70, 110)">
+                <rect
+                  x="0"
+                  y="0"
+                  width="90"
+                  height="36"
+                  rx="8"
+                  fill="#ffffff"
+                  stroke="#eaeaea"
+                  stroke-width="1.5"
+                  class="floating-badge"
+                />
+                <circle cx="15" cy="18" r="6" fill="rgba(0, 160, 0, 0.2)" />
+                <text
+                  x="28"
+                  y="15"
+                  fill="#111"
+                  font-size="8"
+                  font-weight="700"
+                  font-family="sans-serif"
+                >
+                  100% Secure
+                </text>
+                <text
+                  x="28"
+                  y="25"
+                  fill="#666"
+                  font-size="7"
+                  font-family="sans-serif"
+                >
+                  TFLite Engine
+                </text>
+              </g>
+
+              <g transform="translate(340, 210)">
+                <rect
+                  x="0"
+                  y="0"
+                  width="90"
+                  height="36"
+                  rx="8"
+                  fill="#ffffff"
+                  stroke="#eaeaea"
+                  stroke-width="1.5"
+                  class="floating-badge"
+                />
+                <circle cx="15" cy="18" r="6" fill="rgba(0, 160, 0, 0.2)" />
+                <text
+                  x="28"
+                  y="15"
+                  fill="#111"
+                  font-size="8"
+                  font-weight="700"
+                  font-family="sans-serif"
+                >
+                  Lightning Fast
+                </text>
+                <text
+                  x="28"
+                  y="25"
+                  fill="#666"
+                  font-size="7"
+                  font-family="sans-serif"
+                >
+                  &lt; 0.2s Inference
+                </text>
+              </g>
+
+              <!-- Connecting Tech Lines -->
+              <path
+                d="M160 128 L187 140"
+                stroke="#ddd"
+                stroke-width="1.5"
+                stroke-dasharray="3 3"
+              />
+              <path
+                d="M325 228 L340 228"
+                stroke="#ddd"
+                stroke-width="1.5"
+                stroke-dasharray="3 3"
+              />
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="page">
+        <div class="home-content">
+          <div class="left">
+            <h1>Empowering AI</h1>
+            <h2>for <span style="font-style: italic">Everyone.</span></h2>
+            <p>
+              Dru AI is built to bring powerful animal breed and species
+              recognition directly to your device with uncompromising speed and
+              privacy.
+            </p>
+
+            <div class="hero-buttons open-auth-modal">
+              <div class="get-start">
+                <span>Let's Get Started </span
+                ><span><ion-icon name="arrow-forward"></ion-icon></span>
+              </div>
+            </div>
+
+            <div class="hero-icons">
+              <div class="h-icons">
+                <ion-icon name="heart-outline"></ion-icon>
+                <span>Mission Driven<br />& Open</span>
+              </div>
+              <div class="h-icons">
+                <ion-icon name="people-outline"></ion-icon>
+                <span>Expert Team<br />& Researchers</span>
+              </div>
+              <div class="h-icons">
+                <ion-icon name="globe-outline"></ion-icon>
+                <span>Global Community<br />Support</span>
+              </div>
+              <div class="h-icons">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <span>Privacy First<br />Philosophy</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="right">
+            <svg
+              class="home-hero-svg"
+              viewBox="0 0 500 400"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <!-- Background Glow Effect -->
+              <circle cx="250" cy="200" r="140" fill="rgba(0, 160, 0, 0.08)" />
+
+              <!-- Central Hub Platform / Server Device -->
+              <rect
+                x="160"
+                y="140"
+                width="180"
+                height="120"
+                rx="16"
+                fill="#ffffff"
+                stroke="#111111"
+                stroke-width="5"
+                class="device-frame"
+              />
+
+              <!-- Inner Screen Area -->
+              <rect
+                x="175"
+                y="155"
+                width="150"
+                height="90"
+                rx="8"
+                fill="#f4f7f5"
+                class="device-screen"
+              />
+
+              <!-- Database Core Node in Center -->
+              <circle
+                cx="250"
+                cy="200"
+                r="24"
+                fill="rgba(0, 160, 0, 0.15)"
+                stroke="rgb(0, 160, 0)"
+                stroke-width="2"
+              />
+
+              <!-- Heart / Global Community Icon inside Hub -->
+              <path
+                d="M250 190c-3-4-8-5-11-2s-3 8 0 12l11 11 11-11c3-4 3-9 0-12s-8-2-11 2z"
+                fill="rgb(0, 160, 0)"
+              />
+
+              <!-- Data Connection Nodes (Orbiting around the hub) -->
+              <!-- Node 1: Cattle/Buffalo Database -->
+              <g transform="translate(110, 80)">
+                <circle
+                  cx="20"
+                  cy="20"
+                  r="18"
+                  fill="#ffffff"
+                  stroke="#eaeaea"
+                  stroke-width="2"
+                  class="floating-badge"
+                />
+                <path d="M15 18h10v6h-10z" fill="rgb(0, 160, 0)" />
+                <circle cx="15" cy="16" r="3" fill="rgb(0, 160, 0)" />
+                <circle cx="25" cy="16" r="3" fill="rgb(0, 160, 0)" />
+              </g>
+
+              <!-- Node 2: Security & Privacy Lock -->
+              <g transform="translate(350, 80)">
+                <circle
+                  cx="20"
+                  cy="20"
+                  r="18"
+                  fill="#ffffff"
+                  stroke="#eaeaea"
+                  stroke-width="2"
+                  class="floating-badge"
+                />
+                <rect
+                  x="13"
+                  y="18"
+                  width="14"
+                  height="10"
+                  rx="2"
+                  fill="rgb(0, 160, 0)"
+                />
+                <path
+                  d="M16 18v-4a4 4 0 0 1 8 0v4"
+                  stroke="rgb(0, 160, 0)"
+                  stroke-width="2"
+                  fill="none"
+                />
+              </g>
+
+              <!-- Node 3: Open Source Community -->
+              <g transform="translate(340, 270)">
+                <circle
+                  cx="20"
+                  cy="20"
+                  r="18"
+                  fill="#ffffff"
+                  stroke="#eaeaea"
+                  stroke-width="2"
+                  class="floating-badge"
+                />
+                <circle cx="16" cy="15" r="4" fill="rgb(0, 160, 0)" />
+                <circle cx="26" cy="18" r="3" fill="rgb(0, 160, 0)" />
+                <path
+                  d="M12 26c0-3 2-5 4-5h4c2 0 4 2 4 5"
+                  stroke="rgb(0, 160, 0)"
+                  stroke-width="2"
+                  fill="none"
+                />
+              </g>
+
+              <!-- Connecting Circuit Lines -->
+              <path
+                d="M135 105 L180 160"
+                stroke="#ddd"
+                stroke-width="2"
+                stroke-dasharray="4 4"
+              />
+              <path
+                d="M350 105 L305 160"
+                stroke="#ddd"
+                stroke-width="2"
+                stroke-dasharray="4 4"
+              />
+              <path
+                d="M340 270 L295 230"
+                stroke="#ddd"
+                stroke-width="2"
+                stroke-dasharray="4 4"
+              />
+
+              <!-- Floating Info Badges -->
+              <g transform="translate(60, 200)">
+                <rect
+                  x="0"
+                  y="0"
+                  width="85"
+                  height="34"
+                  rx="8"
+                  fill="#ffffff"
+                  stroke="#eaeaea"
+                  stroke-width="1.5"
+                  class="floating-badge"
+                />
+                <circle cx="14" cy="17" r="5" fill="rgba(0, 160, 0, 0.2)" />
+                <text
+                  x="25"
+                  y="14"
+                  fill="#111"
+                  font-size="8"
+                  font-weight="700"
+                  font-family="sans-serif"
+                >
+                  100% Privacy
+                </text>
+                <text
+                  x="25"
+                  y="24"
+                  fill="#666"
+                  font-size="7"
+                  font-family="sans-serif"
+                >
+                  Local Processing
+                </text>
+              </g>
+
+              <g transform="translate(345, 180)">
+                <rect
+                  x="0"
+                  y="0"
+                  width="95"
+                  height="34"
+                  rx="8"
+                  fill="#ffffff"
+                  stroke="#eaeaea"
+                  stroke-width="1.5"
+                  class="floating-badge"
+                />
+                <circle cx="14" cy="17" r="5" fill="rgba(0, 160, 0, 0.2)" />
+                <text
+                  x="25"
+                  y="14"
+                  fill="#111"
+                  font-size="8"
+                  font-weight="700"
+                  font-family="sans-serif"
+                >
+                  Global Database
+                </text>
+                <text
+                  x="25"
+                  y="24"
+                  fill="#666"
+                  font-size="7"
+                  font-family="sans-serif"
+                >
+                  Kaggle Curated
+                </text>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <section id="pricing" class="page">
+        <div class="pricing-container">
+          <!-- Top Subtitle & Billing Toggle -->
+          <div class="pricing-header">
+            <p class="pricing-subtext">
+              Find the right plan for your needs. More knowledge for a wider
+              tomorrow.
+            </p>
+            <div class="billing-toggle">
+              <button class="toggle-btn active" data-period="monthly">
+                Monthly
+              </button>
+              <button class="toggle-btn" data-period="yearly">
+                Yearly <span>Save 20%</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- 3-Column Layout Grid -->
+          <div class="pricing-grid">
+            <!-- Column 1: Basic Free Plan -->
+            <div class="price-card basic-card">
+              <div class="card-top">
+                <div class="card-icon"><ion-icon name="leaf"></ion-icon></div>
+                <div class="card-title-group">
+                  <h3>Basic</h3>
+                  <h2>Free</h2>
+                </div>
+              </div>
+              <p class="plan-desc">Good for quick identification.</p>
+
+              <ul class="feature-list">
+                <li>
+                  <ion-icon name="checkmark-circle"></ion-icon> Identify animal
+                  breed
+                </li>
+                <li>
+                  <ion-icon name="checkmark-circle"></ion-icon> Identify species
+                </li>
+                <li>
+                  <ion-icon name="checkmark-circle"></ion-icon> Standard
+                  accuracy (may make mistakes)
+                </li>
+                <li>
+                  <ion-icon name="checkmark-circle"></ion-icon> Limited history
+                  (10)
+                </li>
+                <li>
+                  <ion-icon name="checkmark-circle"></ion-icon> Support via
+                  community
+                </li>
+              </ul>
+
+              <div class="pricing-action">
+                <button class="btn-current">Current Plan</button>
+              </div>
+            </div>
+
+            <!-- Column 2: Plus Plan (Highlighted / Recommended) -->
+            <div class="price-card plus-card">
+              <div class="plus-badge-row">
+                <div class="crown-icon">
+                  <ion-icon name="ribbon"></ion-icon>
+                </div>
+                <span class="recommended-badge">Recommended</span>
+              </div>
+
+              <div class="card-top plus-top">
+                <h3>Plus</h3>
+                <h2
+                  class="price-val"
+                  data-monthly="₹199 / month"
+                  data-yearly="₹159 / month"
+                >
+                  ₹199 / month
+                </h2>
+              </div>
+              <p class="plan-desc plus-desc">For professionals who need us.</p>
+
+              <ul class="feature-list plus-list">
+                <li>
+                  <ion-icon name="checkmark-circle"></ion-icon> Everything in
+                  Basic
+                </li>
+                <li>
+                  <ion-icon name="checkmark-circle"></ion-icon> 100% accurate
+                  identification
+                </li>
+                <li>
+                  <ion-icon name="checkmark-circle"></ion-icon> Faster results
+                </li>
+                <li>
+                  <ion-icon name="checkmark-circle"></ion-icon> Unlimited
+                  history
+                </li>
+                <li>
+                  <ion-icon name="checkmark-circle"></ion-icon> Priority support
+                </li>
+                <li>
+                  <ion-icon name="checkmark-circle"></ion-icon> Early access to
+                  new features
+                </li>
+              </ul>
+
+              <div class="pricing-action">
+                <a href="#" class="btn-upgrade open-auth-modal"
+                  >Upgrade to Plus &rarr;</a
+                >
+              </div>
+            </div>
+
+            <!-- Column 3: Compare Plans Table -->
+            <div class="price-card compare-card">
+              <h3>Compare Plans</h3>
+              <div class="table-wrapper">
+                <table class="comparison-table">
+                  <thead>
+                    <tr>
+                      <th>Feature</th>
+                      <th>Basic</th>
+                      <th>Plus</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <ion-icon name="paw"></ion-icon> Breed identification
+                      </td>
+                      <td>
+                        <ion-icon name="checkmark" class="check"></ion-icon>
+                      </td>
+                      <td>
+                        <ion-icon name="checkmark" class="check"></ion-icon>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <ion-icon name="leaf"></ion-icon> Species identification
+                      </td>
+                      <td>
+                        <ion-icon name="checkmark" class="check"></ion-icon>
+                      </td>
+                      <td>
+                        <ion-icon name="checkmark" class="check"></ion-icon>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <ion-icon name="shield-checkmark"></ion-icon> Accuracy
+                      </td>
+                      <td>Good <br /><small>(may make mistakes)</small></td>
+                      <td>
+                        <strong class="highlight-text">100% accurate</strong>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><ion-icon name="flash"></ion-icon> Result speed</td>
+                      <td>Standard</td>
+                      <td><strong>Faster</strong></td>
+                    </tr>
+                    <tr>
+                      <td><ion-icon name="time"></ion-icon> History limit</td>
+                      <td>10 identifications</td>
+                      <td><strong>Unlimited</strong></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <ion-icon name="headset"></ion-icon> Priority support
+                      </td>
+                      <td>Community</td>
+                      <td><strong>Priority</strong></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <ion-icon name="star"></ion-icon> Early access to new
+                        features
+                      </td>
+                      <td>&mdash;</td>
+                      <td>
+                        <ion-icon name="checkmark" class="check"></ion-icon>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="help" class="page">
+        <div class="help-container">
+          <!-- Top Subtitle -->
+          <div class="help-header">
+            <h2>Help & <span style="font-style: italic">Support</span></h2>
+            <p class="help-subtext">
+              Need assistance? Check out our quick guides or get in touch with
+              our team.
+            </p>
+          </div>
+
+          <!-- 3-Column Layout Grid -->
+          <div class="help-grid">
+            <!-- Column 1: FAQs / Quick Answers -->
+            <div class="help-card">
+              <div class="card-top">
+                <div class="card-icon">
+                  <ion-icon name="help-circle"></ion-icon>
+                </div>
+                <div class="card-title-group">
+                  <h3>Quick FAQs</h3>
+                </div>
+              </div>
+              <p class="plan-desc">Common answers about model usage.</p>
+
+              <ul class="help-list">
+                <li>
+                  <strong>How does offline mode work?</strong>
+                  <p>
+                    Dru AI runs TFLite models directly on-device without server
+                    calls.
+                  </p>
+                </li>
+                <li>
+                  <strong>How accurate is recognition?</strong>
+                  <p>
+                    Free version offers standard accuracy; Plus ensures 100%
+                    precision.
+                  </p>
+                </li>
+                <li>
+                  <strong>Is my photo data secure?</strong>
+                  <p>Yes! Images never leave your local device storage.</p>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Column 2: Documentation & Guides (Highlighted Card) -->
+            <div class="help-card highlight-help-card">
+              <div class="card-top">
+                <div class="card-icon highlight-icon">
+                  <ion-icon name="book"></ion-icon>
+                </div>
+                <div class="card-title-group">
+                  <h3 style="color: #fff">Guides</h3>
+                </div>
+              </div>
+              <p class="plan-desc" style="color: #ccc">
+                Step-by-step documentation.
+              </p>
+
+              <ul class="help-list highlight-list">
+                <li>
+                  <strong>Getting Started Guide</strong>
+                  <p>Learn how to capture and upload photos effectively.</p>
+                </li>
+                <li>
+                  <strong>Field Worker Manual</strong>
+                  <p>Optimizing offline classification in remote areas.</p>
+                </li>
+                <li>
+                  <strong>API Integration</strong>
+                  <p>Developer docs for custom TFLite implementations.</p>
+                </li>
+              </ul>
+
+              <div class="help-action">
+                <a href="#docs" class="btn-help-action"
+                  >Read Documentation &rarr;</a
+                >
+              </div>
+            </div>
+
+            <!-- Column 3: Contact & Support Team -->
+            <div class="help-card">
+              <div class="card-top">
+                <div class="card-icon"><ion-icon name="mail"></ion-icon></div>
+                <div class="card-title-group">
+                  <h3>Get in Touch</h3>
+                </div>
+              </div>
+              <p class="plan-desc">We are here to help you succeed.</p>
+
+              <div class="contact-box">
+                <div class="contact-item">
+                  <ion-icon name="chatbubbles-outline"></ion-icon>
+                  <div>
+                    <strong>Community Forum</strong>
+                    <small>Connect with other field experts</small>
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <ion-icon name="headset-outline"></ion-icon>
+                  <div>
+                    <strong>Contact Support</strong>
+                    <small>+91 91633 XXXXX</small>
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <ion-icon name="globe-outline"></ion-icon>
+                  <div>
+                    <strong>Email Support</strong>
+                    <small>gmitprojectid@gmail.com</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="docs" class="page">
+        <div class="docs-container">
+          <!-- Top Header -->
+          <div class="help-header">
+            <h2>
+              Project <span style="font-style: italic">Architecture</span> &
+              Workflow
+            </h2>
+            <p class="help-subtext">
+              Technical blueprint for Dru AI's multi-model classification and
+              analysis pipeline.
+            </p>
+          </div>
+
+          <!-- 3-Column Documentation Grid -->
+          <div class="help-grid">
+            <!-- Column 1: Breed Recognition Model -->
+            <div class="help-card">
+              <div class="card-top">
+                <div class="card-icon"><ion-icon name="paw"></ion-icon></div>
+                <div class="card-title-group">
+                  <h3>1. Breed Detection</h3>
+                </div>
+              </div>
+              <p class="plan-desc">Local TFLite classification engine.</p>
+
+              <ul class="help-list">
+                <li>
+                  <strong>Dataset Sources</strong>
+                  <p>
+                    Curated Kaggle databases covering cattle, buffalo, cats, and
+                    dogs.
+                  </p>
+                </li>
+                <li>
+                  <strong>Fast Inference</strong>
+                  <p>
+                    Optimized for on-device execution to ensure high-speed
+                    performance.
+                  </p>
+                </li>
+                <li>
+                  <strong>Primary Output</strong>
+                  <p>Outputs precise breed taxonomy (e.g., "Amritmahal").</p>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Column 2: Disease & Health Model (Highlighted Card) -->
+            <div class="help-card highlight-help-card">
+              <div class="card-top">
+                <div class="card-icon highlight-icon">
+                  <ion-icon name="medkit"></ion-icon>
+                </div>
+                <div class="card-title-group">
+                  <h3 style="color: #fff">2. Health Analysis</h3>
+                </div>
+              </div>
+              <p class="plan-desc" style="color: #ccc">
+                Secondary visual pathology check.
+              </p>
+
+              <ul class="help-list highlight-list">
+                <li>
+                  <strong>Condition Screening</strong>
+                  <p>
+                    Runs concurrently to flag potential visual medical issues or
+                    anomalies.
+                  </p>
+                </li>
+                <li>
+                  <strong>Early Warning</strong>
+                  <p>
+                    Detects visible indicators of distress, skin disorders, or
+                    injury.
+                  </p>
+                </li>
+                <li>
+                  <strong>Flagging System</strong>
+                  <p>
+                    Triggers secondary diagnostic workflows only if an issue is
+                    detected.
+                  </p>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Column 3: Gemini API Integration -->
+            <div class="help-card">
+              <div class="card-top">
+                <div class="card-icon">
+                  <ion-icon name="sparkles"></ion-icon>
+                </div>
+                <div class="card-title-group">
+                  <h3>3. Gemini Enrichment</h3>
+                </div>
+              </div>
+              <p class="plan-desc">Contextual intelligence & solutions.</p>
+
+              <div class="contact-box">
+                <div class="contact-item">
+                  <ion-icon name="document-text-outline"></ion-icon>
+                  <div>
+                    <strong>Characteristics</strong>
+                    <small
+                      >Fetches food intake, life span, & milk production
+                      data.</small
+                    >
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <ion-icon name="fitness-outline"></ion-icon>
+                  <div>
+                    <strong>Medical Cures</strong>
+                    <small
+                      >Provides treatment solutions and care insights for
+                      flagged diseases.</small
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        &copy; 2026 Dru AI |
+        <a href="#docs" style="color: inherit; text-decoration: none"
+          >Documentation</a
+        >
+      </p>
+    </footer>
+
+    <!-- ==============================
+     UNIFIED AUTHENTICATION MODAL
+     ============================== -->
+    <div class="auth-modal-overlay" id="authModal">
+      <div class="auth-modal-content">
+        <!-- Close Button -->
+        <button class="modal-close-btn" id="closeAuthModal">
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+
+        <!-- LOGIN FORM (Visible by default) -->
+        <div id="loginForm" class="auth-form-panel active-panel">
+          <div class="auth-header">
+            <h2>
+              Welcome Back to <span style="font-style: italic">Dru AI</span>
+            </h2>
+            <p>Sign in to continue analyzing</p>
+          </div>
+          <form class="unified-form">
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" placeholder="soumya@dru.in" required />
+            </div>
+            <div class="form-group">
+              <label>Password</label>
+              <div class="password-wrapper">
+                <input
+                  type="password"
+                  id="loginPassword"
+                  placeholder="At least 8 characters"
+                  required
+                />
+                <button
+                  type="button"
+                  class="toggle-password"
+                  data-target="loginPassword"
+                >
+                  <ion-icon name="eye-outline"></ion-icon>
+                </button>
+              </div>
+            </div>
+            <a href="#" class="forgot-password">Forgot password?</a>
+            <button type="submit" class="auth-submit-btn">Sign In</button>
+          </form>
+          <div class="auth-switch-text">
+            Don't have an account? <a href="#" id="showSignup">Sign Up</a>
+          </div>
+        </div>
+
+        <!-- SIGNUP FORM (Hidden by default) -->
+        <div id="signupForm" class="auth-form-panel">
+          <div class="auth-header">
+            <h2>
+              Create an
+              <span style="font-style: italic; color: rgb(0, 160, 0)"
+                >Account</span
+              >
+            </h2>
+            <p>Start your 7-day free trial</p>
+          </div>
+          <form class="unified-form">
+            <div class="form-group">
+              <label>Full Name</label>
+              <input
+                type="text"
+                id="signupName"
+                placeholder="e.g. Soumyabrata Biswas"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input
+                type="email"
+                id="signupEmail"
+                placeholder="soumya@dru.in"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label>Password</label>
+              <div class="password-wrapper">
+                <input
+                  type="password"
+                  id="signupPassword"
+                  placeholder="Min 8 characters"
+                  minlength="8"
+                  required
+                />
+                <button
+                  type="button"
+                  class="toggle-password"
+                  data-target="signupPassword"
+                >
+                  <ion-icon name="eye-outline"></ion-icon>
+                </button>
+              </div>
+            </div>
+            <button type="submit" class="auth-submit-btn">
+              Create Account
+            </button>
+          </form>
+          <div class="auth-switch-text">
+            Already have an account? <a href="#" id="showLogin">Sign In</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="/static/scripts/modal.js"></script>
+    <script src="/static/scripts/script.js"></script>
+    <script src="/static/scripts/pricing.js"></script>
+  </body>
+</html>

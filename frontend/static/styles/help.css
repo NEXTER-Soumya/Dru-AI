@@ -1,0 +1,237 @@
+/* ==========================================
+   HELP SECTION STYLING (Compact & Non-Scrolling)
+   ========================================== */
+
+#help.page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Locks scrolling completely to match single-page bounds */
+}
+
+.help-container {
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Header */
+.help-header {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.help-header h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #111;
+}
+
+.help-header h2 span {
+    color: rgb(0, 160, 0);
+}
+
+.help-subtext {
+    font-size: 0.95rem;
+    color: #555;
+    margin-top: 5px;
+}
+
+/* 3-Column Grid Layout */
+.help-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+    max-height: calc(100vh - 180px);
+    align-items: stretch;
+}
+
+/* Base Card Style */
+.help-card {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 14px;
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
+.card-top {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.card-icon {
+    width: 38px;
+    height: 38px;
+    background-color: rgba(0, 160, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(0, 160, 0);
+    font-size: 1.1rem;
+}
+
+.card-title-group h3 {
+    font-size: 1.05rem;
+    color: #222;
+    font-weight: 700;
+}
+
+.plan-desc {
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+/* Lists and Content inside Help Cards */
+.help-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-grow: 1;
+}
+
+.help-list li {
+    font-size: 0.82rem;
+    color: #333;
+}
+
+.help-list li strong {
+    display: block;
+    color: #111;
+    margin-bottom: 2px;
+}
+
+.help-list li p {
+    font-size: 0.75rem;
+    color: #666;
+    margin: 0;
+}
+
+/* Highlighted Center Card (Guides) */
+.highlight-help-card {
+    background-color: rgb(0, 25, 12);
+    border: none;
+    color: #fff;
+    box-shadow: 0 8px 25px rgba(0, 30, 15, 0.25);
+}
+
+.highlight-icon {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: rgb(50, 220, 90);
+}
+
+.highlight-list li strong {
+    color: #fff;
+}
+
+.highlight-list li p {
+    color: #ccc;
+}
+
+/* Action Button */
+.btn-help-action {
+    display: block;
+    width: 100%;
+    background-color: #ffffff;
+    color: rgb(0, 30, 15);
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+}
+
+.btn-help-action:hover {
+    background-color: rgb(0, 160, 0);
+    color: #fff;
+}
+
+/* Contact Box Elements */
+.contact-box {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex-grow: 1;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #f8f9fa;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #eaeaea;
+}
+
+.contact-item ion-icon {
+    font-size: 1.2rem;
+    color: rgb(0, 160, 0);
+    min-width: 20px;
+}
+
+.contact-item strong {
+    display: block;
+    font-size: 0.82rem;
+    color: #222;
+}
+
+.contact-item small {
+    font-size: 0.7rem;
+    color: #666;
+}
+
+/* ==========================================
+   DARK MODE OVERRIDES FOR HELP SECTION
+   ========================================== */
+body.dark-mode #help .help-header h2 {
+    color: #fff;
+}
+
+body.dark-mode #help .help-subtext {
+    color: #aaa;
+}
+
+body.dark-mode #help .help-card:not(.highlight-help-card) {
+    background-color: #1a1a1a;
+    border-color: #333;
+}
+
+body.dark-mode #help .card-title-group h3,
+body.dark-mode #help .help-list li strong,
+body.dark-mode #help .contact-item strong {
+    color: #fff;
+}
+
+body.dark-mode #help .plan-desc,
+body.dark-mode #help .help-list li p {
+    color: #aaa;
+}
+
+body.dark-mode #help .contact-item {
+    background: #242424;
+    border-color: #333;
+}
+
+body.dark-mode #help .contact-item small {
+    color: #aaa;
+}

@@ -1,0 +1,233 @@
+/* ==========================================
+   AUTH MODAL OVERLAY STYLING
+   ========================================== */
+
+.auth-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75); /* Dim background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensures it sits above navbar and pages */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease-in-out;
+    backdrop-filter: blur(5px); /* Optional: modern glass effect */
+}
+
+/* When modal is active */
+.auth-modal-overlay.modal-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* The Modal Card */
+.auth-modal-content {
+    background: #fff;
+    width: 90%;
+    max-width: 420px;
+    border-radius: 20px;
+    padding: 30px;
+    position: relative;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+    transform: scale(0.9);
+    transition: transform 0.4s ease-in-out;
+}
+
+.auth-modal-overlay.modal-active .auth-modal-content {
+    transform: scale(1);
+}
+
+/* Close Button */
+.modal-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #999;
+    transition: color 0.3s ease;
+    display: flex;
+    padding: 5px;
+}
+
+.modal-close-btn:hover {
+    color: #111;
+}
+
+/* Form Panels */
+.auth-form-panel {
+    display: none; /* Hide inactive form */
+}
+
+.auth-form-panel.active-panel {
+    display: block; /* Show active form */
+}
+
+/* Form Elements Styling */
+.auth-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.auth-header h2 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #111;
+}
+
+.auth-header h2 span {
+    color: rgb(0, 160, 0);
+}
+
+.auth-header p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 5px;
+}
+
+.unified-form .form-group {
+    margin-bottom: 15px;
+}
+
+.unified-form label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.unified-form input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    box-sizing: border-box; /* Important for padding */
+}
+
+.unified-form input:focus {
+    outline: none;
+    border-color: rgb(0, 160, 0);
+}
+
+.forgot-password {
+    display: block;
+    font-size: 0.8rem;
+    color: rgb(0, 160, 0);
+    text-align: right;
+    text-decoration: none;
+    margin-bottom: 15px;
+}
+
+.auth-submit-btn {
+    width: 100%;
+    background-color: rgb(0, 30, 15);
+    color: #fff;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.auth-submit-btn:hover {
+    background-color: rgb(0, 160, 0);
+}
+
+.auth-switch-text {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 20px;
+}
+
+.auth-switch-text a {
+    color: rgb(0, 160, 0);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* ==========================================
+   DARK MODE OVERRIDES FOR MODAL
+   ========================================== */
+body.dark-mode .auth-modal-content {
+    background-color: #1a1a1a;
+}
+
+body.dark-mode .modal-close-btn {
+    color: #777;
+}
+
+body.dark-mode .modal-close-btn:hover {
+    color: #fff;
+}
+
+body.dark-mode .auth-header h2 {
+    color: #fff;
+}
+
+body.dark-mode .auth-header p,
+body.dark-mode .auth-switch-text,
+body.dark-mode .unified-form label {
+    color: #aaa;
+}
+
+body.dark-mode .unified-form input {
+    background-color: #262626;
+    border-color: #333;
+    color: #fff;
+}
+
+body.dark-mode .auth-submit-btn {
+    background-color: rgb(0, 180, 60);
+    color: #111;
+}
+/* Password Field Wrapper */
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-wrapper input {
+    width: 100%;
+    padding-right: 40px; /* Leave space for the eye icon */
+}
+
+/* Toggle Eye Button */
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #888;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: color 0.3s ease;
+}
+
+.toggle-password:hover {
+    color: rgb(0, 160, 0);
+}
+
+body.dark-mode .toggle-password {
+    color: #aaa;
+}
+
+body.dark-mode .toggle-password:hover {
+    color: rgb(0, 180, 60);
+}

@@ -1,0 +1,973 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dru AI - Dashboard</title>
+    <!-- Pointing to styles/users/ subfolder -->
+    <link
+      rel="stylesheet"
+      href="/static/styles/users/dashboard.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/static/styles/users/scrollbar.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/static/styles/users/information.css"
+    />
+  </head>
+  <body>
+    <div class="main" id="dashboardApp" inert style="visibility: hidden">
+      <div class="left">
+        <!--Side BAR-->
+        <div class="logo">
+          <div class="logo-sec">
+            <div class="logo-icon"><ion-icon name="paw"></ion-icon></div>
+            <div class="logo-text">
+              <h2>Dru <span class="theme-accent">AI</span></h2>
+            </div>
+          </div>
+          <div class="collapse-button" id="sidebarToggle" title="Hide Sidebar">
+            <ion-icon name="chevron-back-outline"></ion-icon>
+          </div>
+        </div>
+
+        <!--Content of side bar-->
+        <div class="content">
+          <ul>
+            <li data-target="identify-section" class="active">
+              <div class="content-icon">
+                <ion-icon name="scan-sharp"></ion-icon>
+              </div>
+              <a href="#">Identify</a>
+            </li>
+            <li data-target="library-section">
+              <div class="content-icon">
+                <ion-icon name="book-sharp"></ion-icon>
+              </div>
+              <a href="#">Library</a>
+            </li>
+            <li data-target="updates-section">
+              <div class="content-icon">
+                <ion-icon name="arrow-up-right-box-outline"></ion-icon>
+              </div>
+              <a href="#">Updates</a>
+            </li>
+          </ul>
+
+          <!-- THEME TOGGLE BUTTON -->
+          <div class="theme-switch-container">
+            <div class="theme-info">
+              <div class="content-icon">
+                <ion-icon name="sunny-sharp" id="themeIcon"></ion-icon>
+              </div>
+              <span id="themeLabelText">Light Mode</span>
+            </div>
+            <button
+              class="theme-toggle-btn"
+              id="themeToggleBtn"
+              title="Toggle Theme"
+            >
+              <span class="toggle-thumb"></span>
+            </button>
+          </div>
+        </div>
+
+        <!--User Auth Section-->
+        <div class="user-block">
+          <ul>
+            <li data-target="help-section">
+              <div class="content-icon">
+                <ion-icon name="leaf-sharp"></ion-icon>
+              </div>
+              <a href="#">Help & Support</a>
+            </li>
+            <li data-target="settings-section">
+              <div class="content-icon">
+                <ion-icon name="settings-sharp"></ion-icon>
+              </div>
+              <a href="#">Settings</a>
+            </li>
+          </ul>
+          <div class="user-section">
+            <div
+              class="user-right user-avatar"
+              data-avatar="initial"
+              data-initial="?"
+            >
+              ?
+            </div>
+            <div class="user-left">
+              <div class="user-profile">
+                <p></p>
+                <p>Free Plan</p>
+              </div>
+              <a
+                class="log-out"
+                href="/logout"
+                title="Logout"
+                aria-label="Logout"
+              >
+                <ion-icon name="log-out-sharp"></ion-icon>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Panel -->
+      <div class="right">
+        <!-- Fixed Right Top Bar -->
+        <div class="right-topbar">
+          <div
+            class="right-logo"
+            id="expandSidebarBtn"
+            style="display: none"
+            title="Open Sidebar"
+          >
+            <div class="logo-icon"><ion-icon name="paw"></ion-icon></div>
+            <div class="logo-text">
+              <h2>Dru <span class="theme-accent">AI</span></h2>
+            </div>
+          </div>
+          <div class="right-profile-icon" title="User Profile">
+            <div
+              class="user-right user-avatar"
+              data-avatar="initial"
+              data-initial="?"
+            >
+              ?
+            </div>
+          </div>
+        </div>
+
+        <!-- Scrollable Content Sections Area -->
+        <div class="right-content-scrollable">
+          <div id="identify-section" class="dashboard-section active-section">
+            <div class="identify-container">
+              <div class="identify-header">
+                <h1>
+                  Identify an
+                  <span class="theme-accent" style="font-style: italic"
+                    >Animal</span
+                  >
+                </h1>
+                <p>
+                  Upload a photo or drag and drop an image to find the breed and
+                  species.
+                </p>
+              </div>
+
+              <!-- Upload Box -->
+              <div class="upload-dropzone" id="dropzone">
+                <div class="upload-cloud-icon">
+                  <ion-icon name="cloud-upload-outline"></ion-icon>
+                </div>
+                <h3>Drag and drop an image here<br />or click to upload</h3>
+                <p>JPEG, PNG, WebP up to 10 MB</p>
+
+                <div class="upload-actions">
+                  <button class="btn-primary" id="uploadBtn">
+                    <ion-icon name="image-outline"></ion-icon> Upload Image
+                  </button>
+                  <button class="btn-secondary" id="cameraBtn">
+                    <ion-icon name="camera-outline"></ion-icon> Use Camera
+                  </button>
+                </div>
+                <input
+                  type="file"
+                  id="fileInput"
+                  accept="image/jpeg,image/png,image/webp"
+                  capture="environment"
+                  style="display: none"
+                />
+              </div>
+
+              <!-- Example Images Section -->
+              <div class="examples-section">
+                <span class="examples-title">or try example image</span>
+                <div class="example-grid">
+                  <div class="example-card">
+                    <img
+                      src="https://images.unsplash.com/photo-1570042225831-d98fa7577f1e?w=150&auto=format&fit=crop&q=80"
+                      alt="Cattle"
+                    />
+                  </div>
+                  <div class="example-card">
+                    <img
+                      src="https://imgs.search.brave.com/jCqmSAeMGYy0ee5jRX6NBhE_yP7eFAPRcg6GpMc06II/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTg0/NzA5MTUwL3Bob3Rv/L2luZGlhbi1ibGFj/ay1idWZmYWxvLXRp/ZWQtdXAtb3V0c2lk/ZS1iYXJuLmpwZz9z/PTYxMng2MTImdz0w/Jms9MjAmYz1VbkRt/MFJneG4wRXZqRzA2/OVpFYkdTMUxaUms2/OUNVZ3luSGZGeWd1/aWFjPQ"
+                      alt="Buffalo"
+                    />
+                  </div>
+                  <div class="example-card">
+                    <img
+                      src="https://imgs.search.brave.com/u5R673EZKeEet6zuCeiB2HJT0h7cnBTifeWWQ-TeVmk/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi9sYWJy/YWRvci1yZXRyaWV2/ZXItODAwNjQyMy5q/cGc"
+                      alt="Labrador"
+                    />
+                  </div>
+                  <div class="example-card">
+                    <img
+                      src="https://imgs.search.brave.com/vdwTgxxVnW6TvGDUcIBu3tdZdrBMEjj2lHAKrPuE2ng/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAyMy8w/Ni8wNC8yMC8yMS9j/YXQtODA0MDg2Ml82/NDAuanBn"
+                      alt="Cat"
+                    />
+                  </div>
+                  <div class="example-card">
+                    <img
+                      src="https://imgs.search.brave.com/B5Hfb3O-RQ0sGxYUBiokORN1YIHxk4EJaJMOAbRlVpY/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/eW9ya3NoaXJld2ls/ZGxpZmVwYXJrLmNv/bS9tZWRpYS9hcG1n/aGN3My8yMDI0LWxl/b3BhcmQtaGVpZ2h0/cy1kci15d3AtNDgu/anBnP3J4eT0wLjU3/MjAzMTI5MDgwNTc3/NDMsMC41NzUwODg3/ODc0MTc1NTQ1JnJt/b2RlPWNyb3Amd2lk/dGg9MzIwJmhlaWdo/dD0xODAmcXVhbGl0/eT04MA"
+                      alt="Leopard"
+                    />
+                  </div>
+                  <div class="example-card">
+                    <img
+                      src="https://imgs.search.brave.com/qlQALF_83NXUpHA3rekKmpSldVOQ_M28RUSo0hGd30Q/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTIy/NzY5NTQ2Mi9waG90/by9hLXJveWFsLWJl/bmdhbC10aWdlci1z/ZWVuLWF0LWJhbmds/YWRlc2gtbmF0aW9u/YWwtem9vLmpwZz9z/PTYxMng2MTImdz0w/Jms9MjAmYz1meWdq/XzRkM3R0N3huaUpQ/dWpxdEplLW00TjhY/eGVWMG9kY2ZjcVkw/Q0djPQ"
+                      alt="Royal Bengal Tiger"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--LOADING BUFFERING-->
+          <div
+            id="loading-section"
+            class="dashboard-section"
+            style="display: none"
+          >
+            <div class="loading-card-wrapper">
+              <div class="spinner-circle">
+                <ion-icon name="paw" class="spinner-paw"></ion-icon>
+              </div>
+              <h2>Identifying...</h2>
+              <p>Running the breed model and saving your result.</p>
+            </div>
+          </div>
+
+          <!-- RESULT PAGE SECTION -->
+          <div
+            id="result-section"
+            class="dashboard-section"
+            style="display: none"
+          >
+            <div class="result-page-container">
+              <!-- Back Button -->
+              <button id="backToIdentifyBtn" class="back-btn">
+                <ion-icon name="arrow-back-outline"></ion-icon> Back to Identify
+              </button>
+
+              <!-- Top Header Bar -->
+              <div class="result-header-bar">
+                <div class="result-title-group">
+                  <span class="badge-identified">Breed Identified</span>
+                  <h2 id="resultBreedName">Breed prediction</h2>
+                  <p class="species-sub">Cattle breed prediction</p>
+                </div>
+              </div>
+              <div
+                id="breedInfoStatus"
+                class="breed-info-status"
+                role="status"
+                aria-live="polite"
+              >
+                Breed information comes from the local dataset.
+              </div>
+
+              <div
+                class="result-tabs-row"
+                role="tablist"
+                aria-label="Breed information"
+              >
+                <button
+                  class="result-tab active"
+                  id="resultTabOverview"
+                  type="button"
+                  role="tab"
+                  aria-selected="true"
+                  data-tab="overview"
+                >
+                  Overview
+                </button>
+                <button
+                  class="result-tab"
+                  type="button"
+                  role="tab"
+                  aria-selected="false"
+                  data-tab="characteristics"
+                >
+                  Characteristics
+                </button>
+                <button
+                  class="result-tab"
+                  type="button"
+                  role="tab"
+                  aria-selected="false"
+                  data-tab="care"
+                >
+                  Care Guide
+                </button>
+                <button
+                  class="result-tab"
+                  type="button"
+                  role="tab"
+                  aria-selected="false"
+                  data-tab="similar"
+                >
+                  Similar Breeds
+                </button>
+              </div>
+
+              <div class="tab-content-container">
+                <section
+                  id="tab-overview"
+                  class="tab-pane active-pane"
+                  role="tabpanel"
+                  aria-labelledby="resultTabOverview"
+                >
+                  <div class="result-main-grid">
+                    <div class="result-img-card">
+                      <img
+                        id="resultImagePreview"
+                        src="/static/mockups/animals_1.png"
+                        alt="Image submitted for cattle breed identification"
+                      />
+                      <div class="match-badge">
+                        <ion-icon name="checkmark-circle"></ion-icon>
+                        <span id="resultConfidence">Confidence pending</span>
+                      </div>
+                    </div>
+                    <div class="about-card">
+                      <h3>About this breed</h3>
+                      <p id="breedOverview">Loading breed information…</p>
+                    </div>
+                  </div>
+                  <div id="overviewFacts" class="overview-facts-grid"></div>
+                  <p id="overviewNote" class="overview-note"></p>
+                </section>
+                <section
+                  id="tab-characteristics"
+                  class="tab-pane"
+                  role="tabpanel"
+                >
+                  <div class="about-card">
+                    <h3>Breed Characteristics</h3>
+                    <div
+                      id="breedCharacteristics"
+                      class="breed-info-grid"
+                    ></div>
+                  </div>
+                </section>
+                <section id="tab-care" class="tab-pane" role="tabpanel">
+                  <div class="about-card">
+                    <h3>Care Guide</h3>
+                    <ul id="breedCareGuide" class="breed-info-list"></ul>
+                  </div>
+                </section>
+                <section id="tab-similar" class="tab-pane" role="tabpanel">
+                  <div class="about-card">
+                    <h3>Similar Cattle Breeds</h3>
+                    <div id="breedSimilarBreeds" class="breed-info-grid"></div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+          <!--LIBRARY SECTION-->
+          <div id="library-section" class="dashboard-section">
+            <div class="library-container">
+              <div class="library-header">
+                <h1>
+                  Identification
+                  <span class="theme-accent" style="font-style: italic"
+                    >History</span
+                  >
+                </h1>
+                <p>All your previously identified animals are saved here.</p>
+              </div>
+              <!-- Dynamic History Grid -->
+              <div class="library-grid" id="libraryGrid">
+                <!-- Dynamically populated history cards appear here -->
+              </div>
+              <div
+                class="empty-library-msg"
+                id="emptyLibraryMsg"
+                style="display: none"
+              >
+                <ion-icon name="book-outline"></ion-icon>
+                <p>No identification history yet. Try identifying an animal!</p>
+              </div>
+            </div>
+          </div>
+          <div id="updates-section" class="dashboard-section">
+            <div class="updates-container">
+              <header class="updates-header">
+                <span class="updates-eyebrow"
+                  ><ion-icon name="paw-outline"></ion-icon> WHAT'S NEXT</span
+                >
+                <h1>
+                  Built for the
+                  <span class="theme-accent" style="font-style: italic"
+                    >whole herd.</span
+                  >
+                </h1>
+                <p>
+                  We’re growing Dru AI to help identify more animals and bring
+                  more useful tools to your farm.
+                </p>
+              </header>
+
+              <section
+                class="updates-feature"
+                aria-label="Product roadmap introduction"
+              >
+                <div class="updates-feature-copy">
+                  <span class="updates-feature-label"
+                    ><ion-icon name="navigate-outline"></ion-icon> ON OUR
+                    ROADMAP</span
+                  >
+                  <h2>More ways to care for your animals.</h2>
+                  <p>
+                    From breed recognition to smarter animal care, these are
+                    some of the features we’re planning for the next chapters of
+                    Dru AI.
+                  </p>
+                </div>
+                <div class="updates-feature-art" aria-hidden="true">
+                  <span
+                    class="updates-art-circle updates-art-circle-back"
+                  ></span>
+                  <span
+                    class="updates-art-circle updates-art-circle-front"
+                  ></span>
+                  <span class="updates-art-paw"
+                    ><ion-icon name="paw"></ion-icon
+                  ></span>
+                  <span class="updates-art-spark updates-art-spark-one"
+                    ><ion-icon name="scan"></ion-icon
+                  ></span>
+                  <span class="updates-art-spark updates-art-spark-two"
+                    ><ion-icon name="leaf"></ion-icon
+                  ></span>
+                </div>
+              </section>
+
+              <div class="updates-list-heading">
+                <div>
+                  <h2>Coming up</h2>
+                  <p>A glimpse at what we’re exploring.</p>
+                </div>
+                <span class="updates-count">06 IDEAS</span>
+              </div>
+
+              <div class="updates-grid">
+                <article class="update-card">
+                  <span class="update-card-icon"
+                    ><ion-icon name="paw-outline"></ion-icon
+                  ></span>
+                  <span class="update-card-status">PLANNED</span>
+                  <h3>Buffalo Breed Identification</h3>
+                  <p>Recognize buffalo breeds from an image.</p>
+                </article>
+                <article class="update-card">
+                  <span class="update-card-icon"
+                    ><ion-icon name="medkit-outline"></ion-icon
+                  ></span>
+                  <span class="update-card-status">PLANNED</span>
+                  <h3>Animal Disease Identification</h3>
+                  <p>Explore image-based animal health support.</p>
+                </article>
+                <article class="update-card">
+                  <span class="update-card-icon"
+                    ><ion-icon name="earth-outline"></ion-icon
+                  ></span>
+                  <span class="update-card-status">PLANNED</span>
+                  <h3>Animal Species Identification</h3>
+                  <p>Identify animal species with a quick image scan.</p>
+                </article>
+                <article class="update-card">
+                  <span class="update-card-icon"
+                    ><ion-icon name="paw-outline"></ion-icon
+                  ></span>
+                  <span class="update-card-status">PLANNED</span>
+                  <h3>Cat Breed Detection</h3>
+                  <p>Discover the breed behind your cat’s features.</p>
+                </article>
+                <article class="update-card">
+                  <span class="update-card-icon"
+                    ><ion-icon name="happy-outline"></ion-icon
+                  ></span>
+                  <span class="update-card-status">PLANNED</span>
+                  <h3>Dog Breed Detection</h3>
+                  <p>Find likely dog breeds from submitted photos.</p>
+                </article>
+                <article class="update-card">
+                  <span class="update-card-icon"
+                    ><ion-icon name="card-outline"></ion-icon
+                  ></span>
+                  <span class="update-card-status">PLANNED</span>
+                  <h3>Subscriptions</h3>
+                  <p>Flexible plans as Dru AI grows with your needs.</p>
+                </article>
+              </div>
+            </div>
+          </div>
+          <div id="help-section" class="dashboard-section">
+            <div class="support-container">
+              <header class="support-page-header">
+                <span class="support-eyebrow"
+                  ><ion-icon name="paw-outline"></ion-icon> DRU AI SUPPORT</span
+                >
+                <h1>
+                  How can we
+                  <span class="theme-accent" style="font-style: italic"
+                    >Help?</span
+                  >
+                </h1>
+                <p>
+                  Questions, ideas, or something not working? We’d love to hear
+                  from you.
+                </p>
+              </header>
+
+              <section
+                class="support-contact-card"
+                aria-labelledby="supportContactTitle"
+              >
+                <div class="support-illustration" aria-hidden="true">
+                  <span
+                    class="support-illustration-orbit support-illustration-orbit-one"
+                  ></span>
+                  <span
+                    class="support-illustration-orbit support-illustration-orbit-two"
+                  ></span>
+                  <span class="support-mail-icon"
+                    ><ion-icon name="mail-open"></ion-icon
+                  ></span>
+                  <span class="support-spark support-spark-one"
+                    ><ion-icon name="paw"></ion-icon
+                  ></span>
+                  <span class="support-spark support-spark-two"
+                    ><ion-icon name="leaf"></ion-icon
+                  ></span>
+                </div>
+                <div class="support-contact-copy">
+                  <span class="support-response-label"
+                    ><span></span> HERE FOR YOU</span
+                  >
+                  <h2 id="supportContactTitle">Let’s talk it through.</h2>
+                  <p>
+                    Email our team with your question or feedback. Your mail app
+                    will open with our support address and a helpful subject
+                    already filled in.
+                  </p>
+                  <a
+                    class="support-email-link"
+                    href="mailto:gmitprojectid@gmail.com?subject=Dru%20AI%20Support%20Query"
+                  >
+                    <span class="support-email-icon"
+                      ><ion-icon name="mail-outline"></ion-icon
+                    ></span>
+                    <span>gmitprojectid@gmail.com</span>
+                    <ion-icon
+                      class="support-email-arrow"
+                      name="arrow-up-right"
+                    ></ion-icon>
+                  </a>
+                  <p class="support-contact-note">
+                    <ion-icon name="information-circle-outline"></ion-icon>
+                    For a faster reply, include the email address on your Dru AI
+                    account.
+                  </p>
+                </div>
+              </section>
+
+              <div class="support-shortcuts">
+                <a
+                  class="support-shortcut-card"
+                  href="mailto:gmitprojectid@gmail.com?subject=Dru%20AI%20Help%20Request"
+                >
+                  <span class="support-shortcut-icon"
+                    ><ion-icon name="help-buoy-outline"></ion-icon
+                  ></span>
+                  <span>
+                    <strong>Need a hand?</strong>
+                    <small>Send us a support query</small>
+                  </span>
+                  <ion-icon
+                    class="support-shortcut-arrow"
+                    name="arrow-forward-outline"
+                  ></ion-icon>
+                </a>
+                <a
+                  class="support-shortcut-card"
+                  href="mailto:gmitprojectid@gmail.com?subject=Dru%20AI%20Product%20Feedback"
+                >
+                  <span class="support-shortcut-icon"
+                    ><ion-icon name="chatbubble-ellipses-outline"></ion-icon
+                  ></span>
+                  <span>
+                    <strong>Have an idea?</strong>
+                    <small>Share your product feedback</small>
+                  </span>
+                  <ion-icon
+                    class="support-shortcut-arrow"
+                    name="arrow-forward-outline"
+                  ></ion-icon>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div id="settings-section" class="dashboard-section">
+            <div class="settings-container">
+              <header class="settings-header">
+                <h1 class="theme-accent" style="font-style: italic">
+                  Settings
+                </h1>
+                <p>Personalize your dashboard and manage your account.</p>
+              </header>
+
+              <section
+                class="settings-card"
+                aria-labelledby="profileSettingsTitle"
+              >
+                <div class="settings-card-heading">
+                  <span class="settings-card-icon"
+                    ><ion-icon name="person-circle-outline"></ion-icon
+                  ></span>
+                  <div>
+                    <h2 id="profileSettingsTitle">Profile</h2>
+                    <p>Update the name shown on your dashboard.</p>
+                  </div>
+                </div>
+                <form id="profileSettingsForm" class="settings-profile-form">
+                  <label for="settingsNameInput">Name</label>
+                  <div class="settings-profile-row">
+                    <input
+                      id="settingsNameInput"
+                      name="name"
+                      type="text"
+                      maxlength="80"
+                      value=""
+                      autocomplete="name"
+                      required
+                    />
+                    <button class="settings-primary-button" type="submit">
+                      Save name
+                    </button>
+                  </div>
+                  <p
+                    class="settings-feedback"
+                    id="profileSettingsFeedback"
+                    role="status"
+                    hidden
+                  ></p>
+                </form>
+              </section>
+
+              <section class="settings-card" aria-labelledby="profileIconTitle">
+                <div class="settings-card-heading">
+                  <span class="settings-card-icon"
+                    ><ion-icon name="image-outline"></ion-icon
+                  ></span>
+                  <div>
+                    <h2 id="profileIconTitle">Profile icon</h2>
+                    <p>
+                      Choose a profile icon. Your name initial is used by
+                      default.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="profile-icon-grid"
+                  role="group"
+                  aria-label="Choose profile icon"
+                >
+                  <button
+                    class="profile-icon-choice"
+                    type="button"
+                    data-avatar-choice="initial"
+                    aria-pressed="false"
+                  >
+                    <span
+                      class="profile-icon-preview"
+                      data-avatar-preview="initial"
+                      >?</span
+                    >
+                    <span>Initial</span>
+                  </button>
+                  <button
+                    class="profile-icon-choice"
+                    type="button"
+                    data-avatar-choice="person"
+                    aria-pressed="false"
+                  >
+                    <span class="profile-icon-preview"
+                      ><ion-icon name="person"></ion-icon
+                    ></span>
+                    <span>Person</span>
+                  </button>
+                  <button
+                    class="profile-icon-choice"
+                    type="button"
+                    data-avatar-choice="paw"
+                    aria-pressed="false"
+                  >
+                    <span class="profile-icon-preview"
+                      ><ion-icon name="paw"></ion-icon
+                    ></span>
+                    <span>Paw</span>
+                  </button>
+                  <button
+                    class="profile-icon-choice"
+                    type="button"
+                    data-avatar-choice="leaf"
+                    aria-pressed="false"
+                  >
+                    <span class="profile-icon-preview"
+                      ><ion-icon name="leaf"></ion-icon
+                    ></span>
+                    <span>Leaf</span>
+                  </button>
+                  <button
+                    class="profile-icon-choice"
+                    type="button"
+                    data-avatar-choice="flower"
+                    aria-pressed="false"
+                  >
+                    <span class="profile-icon-preview"
+                      ><ion-icon name="flower"></ion-icon
+                    ></span>
+                    <span>Flower</span>
+                  </button>
+                  <button
+                    class="profile-icon-choice"
+                    type="button"
+                    data-avatar-choice="heart"
+                    aria-pressed="false"
+                  >
+                    <span class="profile-icon-preview"
+                      ><ion-icon name="heart"></ion-icon
+                    ></span>
+                    <span>Heart</span>
+                  </button>
+                  <button
+                    class="profile-icon-choice"
+                    type="button"
+                    data-avatar-choice="star"
+                    aria-pressed="false"
+                  >
+                    <span class="profile-icon-preview"
+                      ><ion-icon name="star"></ion-icon
+                    ></span>
+                    <span>Star</span>
+                  </button>
+                </div>
+                <p
+                  class="settings-feedback"
+                  id="profileIconFeedback"
+                  role="status"
+                  hidden
+                ></p>
+              </section>
+
+              <section
+                class="settings-card"
+                aria-labelledby="appearanceSettingsTitle"
+              >
+                <div class="settings-card-heading">
+                  <span class="settings-card-icon"
+                    ><ion-icon name="color-palette-outline"></ion-icon
+                  ></span>
+                  <div>
+                    <h2 id="appearanceSettingsTitle">Appearance</h2>
+                    <p>
+                      Choose a color theme. Each theme is available in light and
+                      dark mode.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="settings-mode-picker"
+                  role="group"
+                  aria-label="Color mode"
+                >
+                  <button type="button" data-color-mode="light">Light</button>
+                  <button type="button" data-color-mode="dark">Dark</button>
+                </div>
+                <div
+                  class="theme-choice-grid"
+                  role="group"
+                  aria-label="Color theme"
+                >
+                  <button
+                    class="theme-choice"
+                    type="button"
+                    data-palette="default"
+                    aria-pressed="true"
+                  >
+                    <span class="theme-swatch theme-swatch-default"></span>
+                    <span>Default</span>
+                  </button>
+                  <button
+                    class="theme-choice"
+                    type="button"
+                    data-palette="blueviolet"
+                    aria-pressed="false"
+                  >
+                    <span class="theme-swatch theme-swatch-blueviolet"></span>
+                    <span>Blue-violet &amp; white</span>
+                  </button>
+                  <button
+                    class="theme-choice"
+                    type="button"
+                    data-palette="lightblue"
+                    aria-pressed="false"
+                  >
+                    <span class="theme-swatch theme-swatch-lightblue"></span>
+                    <span>Light blue</span>
+                  </button>
+                  <button
+                    class="theme-choice"
+                    type="button"
+                    data-palette="purple"
+                    aria-pressed="false"
+                  >
+                    <span class="theme-swatch theme-swatch-purple"></span>
+                    <span>Purple</span>
+                  </button>
+                  <button
+                    class="theme-choice"
+                    type="button"
+                    data-palette="orange"
+                    aria-pressed="false"
+                  >
+                    <span class="theme-swatch theme-swatch-orange"></span>
+                    <span>Orange</span>
+                  </button>
+                </div>
+              </section>
+
+              <section
+                class="settings-card settings-danger-card"
+                aria-labelledby="deleteAccountTitle"
+              >
+                <div class="settings-card-heading">
+                  <span class="settings-card-icon"
+                    ><ion-icon name="warning-outline"></ion-icon
+                  ></span>
+                  <div>
+                    <h2 id="deleteAccountTitle">Delete account</h2>
+                    <p>
+                      Permanently delete your account, identification history,
+                      and saved images.
+                    </p>
+                  </div>
+                </div>
+                <button
+                  class="settings-delete-button"
+                  id="deleteAccountButton"
+                  type="button"
+                >
+                  Delete my account
+                </button>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="required-name-overlay"
+      id="requiredNameModal"
+      hidden
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="requiredNameTitle"
+      aria-describedby="requiredNameDescription"
+    >
+      <div class="required-name-card">
+        <div class="required-name-icon">
+          <ion-icon name="person-outline"></ion-icon>
+        </div>
+        <h2 id="requiredNameTitle">What should we call you?</h2>
+        <p id="requiredNameDescription">
+          Save your name to continue to your Dru AI dashboard.
+        </p>
+        <form id="requiredNameForm">
+          <label for="requiredNameInput">Name</label>
+          <input
+            id="requiredNameInput"
+            name="name"
+            type="text"
+            maxlength="80"
+            value=""
+            autocomplete="name"
+            required
+          />
+          <p
+            class="required-name-error"
+            id="requiredNameError"
+            role="alert"
+            hidden
+          ></p>
+          <button
+            class="required-name-submit"
+            id="requiredNameSubmit"
+            type="submit"
+          >
+            Save name
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div
+      class="account-delete-overlay"
+      id="accountDeleteModal"
+      hidden
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="accountDeleteTitle"
+      aria-describedby="accountDeleteDescription"
+    >
+      <div class="account-delete-dialog">
+        <span class="account-delete-icon" aria-hidden="true">
+          <ion-icon name="trash-outline"></ion-icon>
+        </span>
+        <span class="account-delete-eyebrow">ACCOUNT REMOVAL</span>
+        <h2 id="accountDeleteTitle">Permanently delete your account?</h2>
+        <p id="accountDeleteDescription">
+          This permanently removes your account, identification history, and saved images.
+          You’ll be signed out, and this cannot be undone.
+        </p>
+        <p
+          class="account-delete-error"
+          id="accountDeleteError"
+          role="alert"
+          hidden
+        ></p>
+        <div class="account-delete-actions">
+          <button class="account-delete-cancel" id="cancelAccountDelete" type="button">
+            Keep my account
+          </button>
+          <button class="account-delete-confirm" id="confirmAccountDelete" type="button">
+            <ion-icon name="trash-outline"></ion-icon>
+            <span>Delete permanently</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pointing to scripts/users/ subfolder -->
+    <script type="module" src="/static/scripts/users/bootstrap.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

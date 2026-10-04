@@ -1,0 +1,180 @@
+/* --- Feature Section Specific Styles --- */
+
+#feature.page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#feature .home-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 40px;
+    align-items: center;
+    height: calc(100vh - 120px); /* Perfectly fills the non-scrolling viewport */
+}
+
+/* Left Column Layout */
+#feature .home-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#feature .home-title {
+    font-size: 3.2rem;
+    font-weight: 800;
+    line-height: 1.15;
+    color: #111;
+}
+
+#feature .home-title span {
+    color: rgb(0, 160, 0);
+}
+
+#feature .home-subtitle {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.5;
+    max-width: 480px;
+}
+
+/* Call-to-Action Buttons */
+#feature .home-buttons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-top: 5px;
+}
+
+#feature .btn-primary {
+    background-color: rgb(0, 30, 15);
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: inline-flex;
+    align-items: center;
+}
+
+#feature .btn-primary:hover {
+    background-color: rgb(0, 160, 0);
+    transform: translateY(-2px);
+}
+
+/* Feature Grid Badges */
+#feature .home-features-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px 20px;
+    margin-top: 15px;
+    max-width: 520px;
+}
+
+#feature .feature-badge {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#feature .badge-icon {
+    min-width: 35px;
+    height: 35px;
+    background-color: rgba(0, 160, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    color: rgb(0, 160, 0);
+}
+
+#feature .feature-badge span {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #444;
+    line-height: 1.2;
+}
+
+/* Right Column Graphic Area */
+#feature .home-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#feature .home-hero-img {
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* --- Dark Mode Support for Feature Section --- */
+body.dark-mode #feature .home-title {
+    color: #fff;
+}
+
+body.dark-mode #feature .home-subtitle {
+    color: #aaa;
+}
+
+body.dark-mode #feature .feature-badge span {
+    color: #ccc;
+}
+
+body.dark-mode #feature .badge-icon {
+    background-color: rgba(50, 200, 50, 0.15);
+    color: rgb(50, 200, 50);
+}
+/* Ensure the illustration container handles the SVG cleanly */
+.home-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* SVG Responsiveness & Constraints */
+.home-right svg.home-hero-svg {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    max-height: calc(100vh - 160px);
+    object-fit: contain;
+}
+
+/* ==========================================
+   DARK MODE ADJUSTMENTS FOR THE SVG
+   ========================================== */
+body.dark-mode .home-right .device-frame {
+    stroke: #444 !important;
+    fill: #1a1a1a !important;
+}
+
+body.dark-mode .home-right .device-screen {
+    fill: #121212 !important;
+}
+
+body.dark-mode .home-right .floating-badge {
+    fill: #ffffff !important;
+    stroke: #989898 !important;
+}
+
+body.dark-mode .home-right .floating-badge text[fill="#111"] {
+    fill: #fff !important;
+}
+
+body.dark-mode .home-right .floating-badge text[fill="#666"] {
+    fill: #aaa !important;
+}
