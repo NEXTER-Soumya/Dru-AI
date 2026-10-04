@@ -1,0 +1,27 @@
+/* Ensure the overall header container spans full width but centers content */
+header, .header-container, nav {
+    width: 100%;
+    max-width: 1250px; /* Matches your section max-width */
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Force the nav menu itself to be perfectly centered in the middle of the header */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* Locks the menu exact dead-center */
+    list-style: none;
+}
+
+/* Fix any stray close icons or mobile toggle elements floating improperly */
+.nav-close-btn, .close-icon {
+    position: relative;
+    /* ensure it doesn't break absolute centering */
+}

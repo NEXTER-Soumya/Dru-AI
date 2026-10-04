@@ -1,0 +1,389 @@
+/* ==========================================
+   LOADING / BUFFERING SCREEN STYLES
+   ========================================== */
+.loading-card-wrapper {
+    background: var(--bg-card, #ffffff);
+    border: 1px solid var(--border-color, #eaeaea);
+    border-radius: 16px;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 480px;
+    margin: 40px auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.spinner-circle {
+    width: 90px;
+    height: 90px;
+    border: 4px solid var(--border-color, #eaeaea);
+    border-top: 4px solid var(--accent, rgb(0, 160, 0));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+.spinner-paw {
+    font-size: 2rem;
+    color: var(--accent, rgb(0, 160, 0));
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading-card-wrapper h2 {
+    font-size: 1.3rem;
+    margin-bottom: 6px;
+}
+
+.loading-card-wrapper p {
+    font-size: 0.85rem;
+    color: #777;
+}
+
+/* ==========================================
+   RESULT PAGE STYLES
+   ========================================== */
+.result-page-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+
+.back-btn {
+    background: transparent;
+    border: none;
+    color: var(--accent, rgb(0, 160, 0));
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.result-header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: var(--bg-card, #ffffff);
+    border: 1px solid var(--border-color, #eaeaea);
+    padding: 20px 24px;
+    border-radius: 16px;
+    margin-bottom: 15px;
+}
+
+.badge-identified {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #777;
+    letter-spacing: 0.5px;
+}
+
+.result-title-group h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin: 4px 0;
+}
+
+.species-sub {
+    font-style: italic;
+    color: #777;
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+}
+
+.breed-info-status {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0 0 8px;
+}
+
+.result-tabs-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 8px 0 18px;
+    border-bottom: 1px solid var(--border-color, #eaeaea);
+    padding-bottom: 10px;
+}
+
+.result-tab {
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    color: #777;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 8px 12px;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.result-tab:hover,
+.result-tab.active {
+    color: var(--accent-strong, rgb(0, 130, 0));
+    background: rgba(var(--accent-rgb, 0, 160, 0), 0.08);
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active-pane {
+    display: block;
+}
+
+.result-main-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    align-items: stretch;
+}
+
+@media (max-width: 850px) {
+    .result-main-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+.result-img-card {
+    position: relative;
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    height: 350px;
+    min-width: 0;
+    background: var(--bg-main, #f4f7f5);
+    border: 1px solid var(--border-color, #eaeaea);
+}
+
+.result-img-card img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.match-badge {
+    position: absolute;
+    z-index: 1;
+    bottom: 12px;
+    left: 12px;
+    max-width: calc(100% - 24px);
+    background: rgba(255, 255, 255, 0.92);
+    color: #111;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+}
+
+.match-badge ion-icon {
+    color: var(--accent, rgb(0, 160, 0));
+    flex: 0 0 auto;
+    font-size: 1rem;
+}
+
+.about-card {
+    background: var(--bg-card, #ffffff);
+    border: 1px solid var(--border-color, #eaeaea);
+    border-radius: 16px;
+    padding: 20px;
+}
+
+.result-main-grid > .about-card {
+    width: 100%;
+    height: 350px;
+    min-width: 0;
+    overflow-y: auto;
+    border-radius: 16px;
+}
+
+.about-card h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.about-card p,
+.breed-info-list li,
+.breed-info-item p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+.breed-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+}
+
+.overview-facts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 12px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.overview-fact-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    min-width: 0;
+    padding: 14px;
+    background: var(--bg-card, #ffffff);
+    border: 1px solid var(--border-color, #eaeaea);
+    border-radius: 12px;
+}
+
+.overview-fact-card ion-icon {
+    flex: 0 0 30px;
+    width: 30px;
+    height: 30px;
+    padding: 6px;
+    border-radius: 9px;
+    color: var(--accent, rgb(0, 150, 0));
+    background: rgba(var(--accent-rgb, 0, 160, 0), 0.1);
+    font-size: 1rem;
+}
+
+.overview-fact-content {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.overview-fact-card h4 {
+    font-size: 0.85rem;
+    line-height: 1.25;
+    margin: 0 0 5px;
+}
+
+.overview-fact-card p {
+    min-width: 0;
+    margin: 0;
+    color: #666;
+    font-size: 0.82rem;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+
+.overview-note {
+    border-top: 1px solid var(--border-color, #eaeaea);
+    font-size: 0.75rem !important;
+    margin-top: 16px;
+    padding-top: 12px;
+}
+
+.breed-info-item {
+    background: var(--bg-main, #f9fbf9);
+    border: 1px solid var(--border-color, #eaeaea);
+    border-radius: 12px;
+    padding: 14px;
+}
+
+.breed-info-item h4 {
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+}
+
+.breed-info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-left: 22px;
+}
+
+.breed-info-list li {
+    padding-left: 4px;
+}
+
+body.dark-mode .breed-info-status {
+    color: #aaa;
+}
+
+body.dark-mode .result-tab {
+    color: #aaa;
+}
+
+body.dark-mode .result-tab:hover,
+body.dark-mode .result-tab.active {
+    color: #54db75;
+    background: rgba(0, 180, 60, 0.16);
+}
+
+body.dark-mode .breed-info-item,
+body.dark-mode .overview-fact-card {
+    background: #222;
+    border-color: #333;
+}
+
+body.dark-mode .breed-info-item p,
+body.dark-mode .overview-fact-card p,
+body.dark-mode .breed-info-list li,
+body.dark-mode .about-card p {
+    color: #aaa;
+}
+
+body.dark-mode .overview-fact-card ion-icon {
+    color: #54db75;
+    background: rgba(0, 180, 60, 0.16);
+}
+
+@media (max-width: 560px) {
+    .result-header-bar {
+        padding: 16px;
+    }
+
+    .result-tab {
+        font-size: 0.85rem;
+        padding: 7px 9px;
+    }
+
+    .result-main-grid {
+        gap: 14px;
+    }
+
+    .result-img-card,
+    .result-main-grid > .about-card {
+        height: 350px;
+    }
+
+    .result-main-grid > .about-card {
+        padding: 16px;
+    }
+
+    .overview-facts-grid {
+        grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
+        gap: 10px;
+    }
+
+    .overview-fact-card {
+        gap: 8px;
+        padding: 12px;
+    }
+
+    .overview-fact-card ion-icon {
+        flex-basis: 28px;
+        width: 28px;
+        height: 28px;
+        padding: 5px;
+    }
+}

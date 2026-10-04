@@ -1,0 +1,2193 @@
+{
+  "schema_version": "1.1.0",
+  "species": "cattle",
+  "dataset_note": "API-ready qualitative breed information for the 50 classifier labels supplied by the user. The overview field provides a concise breed-level summary. Similar breeds are functional/management comparisons, not a claim of close genetic relatedness.",
+  "care_disclaimer": "This care guide is general livestock husbandry information. Vaccination, treatment, deworming, breeding, nutrition and disease-control decisions should follow a qualified local veterinarian and state livestock-health guidance.",
+  "source_basis": [
+    {
+      "title": "Department of Animal Husbandry & Dairying (DAHD) — Pashupedia Cattle Breeds",
+      "url": "https://dahd.gov.in/pashupedia-cattle-breed"
+    },
+    {
+      "title": "DAHD — Registered Breeds of Cattle / NGRA",
+      "url": "https://dahd.gov.in/sites/default/files/2026-03/NGRA-Annexure.pdf"
+    },
+    {
+      "title": "NDDB — Bovine Breeds",
+      "url": "https://sapplpp.nddb.coop/services/animalbreeding/geneticimprovement/breeds"
+    },
+    {
+      "title": "NDDB Dairy Knowledge Portal — breed profiles",
+      "url": "https://www.dairyknowledge.in/dkp/"
+    },
+    {
+      "title": "ICAR — National Bureau of Animal Genetic Resources / Indian Journal of Animal Sciences",
+      "url": "https://epubs.icar.org.in/"
+    },
+    {
+      "title": "ICAR-CCARI — Shweta Kapila",
+      "url": "https://ccari.res.in/shwetkapila0320.html"
+    },
+    {
+      "title": "FAO — Krishna Valley cattle in India",
+      "url": "https://www.fao.org/4/a0806t/a0806t.pdf"
+    },
+    {
+      "title": "DAHD/ICAR livestock health and management guidance",
+      "url": "https://dahd.gov.in/en/schemes-programmes/lhdcp"
+    }
+  ],
+  "breeds": {
+    "0": {
+      "id": 0,
+      "name": "Amritmahal",
+      "overview": "Amritmahal is a hardy draught breed from Karnataka, valued for its compact muscular build, stamina and ability to work under relatively low-input conditions. It is primarily associated with farm and transport work rather than high milk production.",
+      "origin_or_home_tract": "Karnataka",
+      "primary_type": "draught",
+      "top_5_characteristics": [
+        {
+          "title": "Build",
+          "description": "Medium-to-large, compact and muscular, suited to sustained work."
+        },
+        {
+          "title": "Coat",
+          "description": "Usually grey, ranging from white to very dark grey or almost black."
+        },
+        {
+          "title": "Horns",
+          "description": "Long horns emerge close together, sweep backward/upward, then turn inward."
+        },
+        {
+          "title": "Work ability",
+          "description": "Strong draught capacity with good stamina for farm and transport work."
+        },
+        {
+          "title": "Adaptation",
+          "description": "Well adapted to Karnataka conditions and relatively low-input management."
+        }
+      ],
+      "care_guide": {
+        "feeding": "Base the ration on good-quality roughage and local green fodder; add concentrate/mineral support when the animal is doing sustained draught work. Keep feed changes gradual.",
+        "housing": "Provide a dry, shaded, well-ventilated shelter with a non-slip floor and clean bedding. Protect from prolonged rain or extreme heat according to the home climate. Prioritize shade, airflow and access to cool drinking water during heat waves.",
+        "grazing_or_exercise": "Allow regular grazing or controlled exercise. For working animals, schedule water, rest and cooling breaks and avoid the hottest part of the day.",
+        "healthcare": "Follow the local veterinary vaccination schedule, routine deworming and parasite control. Check hooves/feet regularly because workload and terrain increase wear.",
+        "breeding_or_milking": "Select healthy animals from sound working lines. Avoid breeding animals with structural limb or hoof problems; pregnancy and postpartum care should be supervised locally.",
+        "handling_note": "Use calm, low-stress handling and provide secure fencing and clean water points."
+      },
+      "similar_breeds": [
+        "Hallikar",
+        "Kangayam",
+        "Khillari",
+        "Nagori"
+      ]
+    },
+    "1": {
+      "id": 1,
+      "name": "Ayrshire",
+      "overview": "Ayrshire is a Scottish dairy breed included in this classifier as an exotic cattle class. It is recognized for efficient milk production, strong dairy conformation and adaptability to grazing-based systems, although management in India should consider local climate and heat stress.",
+      "origin_or_home_tract": "Scotland",
+      "primary_type": "dairy",
+      "top_5_characteristics": [
+        {
+          "title": "Origin",
+          "description": "A Scottish dairy breed; it is an exotic class in relation to Indian indigenous breeds."
+        },
+        {
+          "title": "Coat",
+          "description": "Typically red or brown with white markings, often sharply patterned."
+        },
+        {
+          "title": "Dairy type",
+          "description": "Selected primarily for milk production and efficient grazing."
+        },
+        {
+          "title": "Udder",
+          "description": "Generally well-developed dairy conformation with balanced quarters."
+        },
+        {
+          "title": "Climate need",
+          "description": "Performs best with heat-stress control in hot Indian climates."
+        }
+      ],
+      "care_guide": {
+        "feeding": "Provide a balanced ration built around quality green fodder, dry roughage, clean water and an appropriate mineral mixture. Increase energy/protein supply according to milk yield and stage of lactation.",
+        "housing": "Use a clean, dry, well-ventilated shed with shade and adequate drainage. Keep milking and resting areas hygienic.",
+        "grazing_or_exercise": "Provide daily movement or grazing appropriate to body condition and climate. Reduce heat load with shade, airflow and frequent access to water in hot weather.",
+        "healthcare": "Follow the local vaccination and deworming plan; maintain tick/parasite control and monitor appetite, manure, body condition, udder health and lameness. In hot Indian conditions, heat-stress monitoring is especially important because this is a temperate dairy breed.",
+        "breeding_or_milking": "Use clean milking practices and consistent milking times. Breed only when the animal is in suitable body condition; use a veterinarian/technician for fertility problems.",
+        "handling_note": "Use calm, low-stress handling and provide secure fencing and clean water points."
+      },
+      "similar_breeds": [
+        "Sahiwal",
+        "Red_Sindhi",
+        "Gir",
+        "Rathi"
+      ],
+      "dataset_note": "Ayrshire is not an indigenous Indian breed; it originated in Scotland and is included because it is one of the labels in the supplied classifier dataset."
+    },
+    "2": {
+      "id": 2,
+      "name": "Bargur",
+      "overview": "Bargur is a hilly-region cattle breed of Tamil Nadu known for agility, endurance and adaptation to rugged terrain and forest-edge grazing. It is primarily maintained as a draught breed and is valued for active, hard-working cattle.",
+      "origin_or_home_tract": "Tamil Nadu",
+      "primary_type": "draught",
+      "top_5_characteristics": [
+        {
+          "title": "Build",
+          "description": "Compact, medium-sized hill cattle with strong limbs."
+        },
+        {
+          "title": "Coat",
+          "description": "Usually brown with white patches; other colour variants also occur."
+        },
+        {
+          "title": "Endurance",
+          "description": "Known for speed, stamina and trotting ability on rugged terrain."
+        },
+        {
+          "title": "Management",
+          "description": "Traditionally maintained with low external inputs and forest grazing."
+        },
+        {
+          "title": "Milk",
+          "description": "Cows are comparatively poor milkers and are not primarily a dairy breed."
+        }
+      ],
+      "care_guide": {
+        "feeding": "Base the ration on good-quality roughage and local green fodder; add concentrate/mineral support when the animal is doing sustained draught work. Keep feed changes gradual.",
+        "housing": "Provide a dry, shaded, well-ventilated shelter with a non-slip floor and clean bedding. Protect from prolonged rain or extreme heat according to the home climate. Prioritize shade, airflow and access to cool drinking water during heat waves.",
+        "grazing_or_exercise": "Allow regular grazing or controlled exercise. For working animals, schedule water, rest and cooling breaks and avoid the hottest part of the day. On steep terrain, monitor hoof condition and avoid overloading young or pregnant animals.",
+        "healthcare": "Follow the local veterinary vaccination schedule, routine deworming and parasite control. Check hooves/feet regularly because workload and terrain increase wear.",
+        "breeding_or_milking": "Select healthy animals from sound working lines. Avoid breeding animals with structural limb or hoof problems; pregnancy and postpartum care should be supervised locally.",
+        "handling_note": "Use calm, secure handling and adequate fencing; traditional populations may be more reactive than intensively managed dairy cattle."
+      },
+      "similar_breeds": [
+        "Kangayam",
+        "Hallikar",
+        "Khillari",
+        "Pulikulam"
+      ]
+    },
+    "3": {
+      "id": 3,
+      "name": "Dangi",
+      "overview": "Dangi is a hardy cattle breed associated with the hilly and high-rainfall areas of Maharashtra. It is well known for endurance, traction ability and adaptation to wet conditions, making it useful for draught work in difficult terrain.",
+      "origin_or_home_tract": "Maharashtra/Gujarat",
+      "primary_type": "draught",
+      "top_5_characteristics": [
+        {
+          "title": "Build",
+          "description": "Medium, sturdy cattle adapted to agricultural work."
+        },
+        {
+          "title": "Coat",
+          "description": "Commonly grey/white with characteristic speckling or darker patches."
+        },
+        {
+          "title": "Hooves",
+          "description": "Hard feet support work in challenging and wet agricultural terrain."
+        },
+        {
+          "title": "Work ability",
+          "description": "Reliable draught animal, especially for field operations."
+        },
+        {
+          "title": "Adaptation",
+          "description": "Known for hardiness in the humid and hilly parts of its home tract."
+        }
+      ],
+      "care_guide": {
+        "feeding": "Base the ration on good-quality roughage and local green fodder; add concentrate/mineral support when the animal is doing sustained draught work. Keep feed changes gradual.",
+        "housing": "Provide a dry, shaded, well-ventilated shelter with a non-slip floor and clean bedding. Protect from prolonged rain or extreme heat according to the home climate. Prioritize shade, airflow and access to cool drinking water during heat waves.",
+        "grazing_or_exercise": "Allow regular grazing or controlled exercise. For working animals, schedule water, rest and cooling breaks and avoid the hottest part of the day.",
+        "healthcare": "Follow the local veterinary vaccination schedule, routine deworming and parasite control. Check hooves/feet regularly because workload and terrain increase wear.",
+        "breeding_or_milking": "Select healthy animals from sound working lines. Avoid breeding animals with structural limb or hoof problems; pregnancy and postpartum care should be supervised locally.",
+        "handling_note": "Use calm, low-stress handling and provide secure fencing and clean water points."
+      },
+      "similar_breeds": [
+        "Gaolao",
+        "Khillari",
+        "Deoni",
+        "Konkan Kapila"
+      ]
+    },
+    "4": {
+      "id": 4,
+      "name": "Deoni",
+      "overview": "Deoni is an established dual-purpose breed from the Marathwada region and adjoining areas, combining useful draught ability with milk production. It is valued for its sturdy build, adaptability and suitability for smallholder farming systems.",
+      "origin_or_home_tract": "Maharashtra/Karnataka",
+      "primary_type": "dual_purpose",
+      "top_5_characteristics": [
+        {
+          "title": "Type",
+          "description": "Medium-sized dual-purpose cattle valued for both milk and draught work."
+        },
+        {
+          "title": "Appearance",
+          "description": "Strong resemblance to Gir in general body conformation."
+        },
+        {
+          "title": "Colour",
+          "description": "Three recognized colour patterns include Wannera, Shevera and Balankya."
+        },
+        {
+          "title": "Temperament",
+          "description": "Generally steady, useful farm cattle with robust body structure."
+        },
+        {
+          "title": "Adaptation",
+          "description": "Well suited to the dry and semi-dry conditions of its native region."
+        }
+      ],
+      "care_guide": {
+        "feeding": "Use good roughage and green fodder as the base, with concentrate and minerals increased during lactation, late pregnancy or periods of heavy work. Ensure unrestricted clean water.",
+        "housing": "Provide a shaded, dry and well-ventilated shelter with good drainage, clean bedding and enough space for resting and movement. Prioritize shade, airflow and access to cool drinking water during heat waves.",
+        "grazing_or_exercise": "Balance grazing with controlled exercise. Working or lactating animals need additional recovery time and should be protected from heat stress.",
+        "healthcare": "Maintain routine vaccination, deworming, external parasite control, hoof care and regular veterinary observation. Keep new or sick animals separated when appropriate.",
+        "breeding_or_milking": "Select for sound legs, udder/teat structure and overall health. Maintain clean milking practices and seek veterinary help for infertility, difficult calving or udder disease.",
+        "handling_note": "Use calm, low-stress handling and provide secure fencing and clean water points."
+      },
+      "similar_breeds": [
+        "Gir",
+        "Kankrej",
+        "Gaolao",
+        "Dangi"
+      ]
+    },
+    "5": {
+      "id": 5,
+      "name": "Gir",
+      "overview": "Gir is a prominent dairy breed from Gujarat and one of the important Indian zebu cattle breeds. It is valued for heat tolerance, disease resilience, distinctive domed forehead and ears, and useful milk production under tropical conditions.",
+      "origin_or_home_tract": "Gujarat",
+      "primary_type": "dairy",
+      "top_5_characteristics": [
+        {
+          "title": "Dairy ability",
+          "description": "Important indigenous dairy breed with good milk-producing potential."
+        },
+        {
+          "title": "Head",
+          "description": "Distinctive broad forehead with a convex profile."
+        },
+        {
+          "title": "Ears",
+          "description": "Large, long, pendulous ears are a prominent breed feature."
+        },
+        {
+          "title": "Coat",
+          "description": "Commonly red, speckled red, or red-and-white patterned."
+        },
+        {
+          "title": "Heat tolerance",
+          "description": "Well adapted to hot climates and low-input Indian production systems."
+        }
+      ],
+      "care_guide": {
+        "feeding": "Provide a balanced ration built around quality green fodder, dry roughage, clean water and an appropriate mineral mixture. Increase energy/protein supply according to milk yield and stage of lactation.",
+        "housing": "Use a clean, dry, well-ventilated shed with shade and adequate drainage. Keep milking and resting areas hygienic. Prioritize shade, airflow and access to cool drinking water during heat waves.",
+        "grazing_or_exercise": "Provide daily movement or grazing appropriate to body condition and climate. Reduce heat load with shade, airflow and frequent access to water in hot weather.",
+        "healthcare": "Follow the local vaccination and deworming plan; maintain tick/parasite control and monitor appetite, manure, body condition, udder health and lameness.",
+        "breeding_or_milking": "Use clean milking practices and consistent milking times. Breed only when the animal is in suitable body condition; use a veterinarian/technician for fertility problems.",
+        "handling_note": "Use calm, low-stress handling and provide secure fencing and clean water points."
+      },
+      "similar_breeds": [
+        "Sahiwal",
+        "Red_Sindhi",
+        "Kankrej",
+        "Rathi"
+      ]
+    },
+    "6": {
+      "id": 6,
+      "name": "Hallikar",
+      "overview": "Hallikar is a famous draught breed from Karnataka, historically selected for strength, endurance and efficient field work. It has a compact muscular body and is especially suited to dry farming environments and sustained agricultural labour.",
+      "origin_or_home_tract": "Karnataka",
+      "primary_type": "draught",
+      "top_5_characteristics": [
+        {
+          "title": "Build",
+          "description": "Medium-to-large, sturdy zebu with a strong working frame."
+        },
+        {
+          "title": "Coat",
+          "description": "Usually white to grey, with darker shading especially in males."
+        },
+        {
+          "title": "Horns",
+          "description": "Long horns tend to bend backward and upward."
+        },
+        {
+          "title": "Draught ability",
+          "description": "Renowned for strength, endurance and sustained field work."
+        },
+        {
+          "title": "Low-input fitness",
+          "description": "Well suited to traditional grazing and farm systems in southern India."
+        }
+      ],
+      "care_guide": {
+        "feeding": "Base the ration on good-quality roughage and local green fodder; add concentrate/mineral support when the animal is doing sustained draught work. Keep feed changes gradual.",
+        "housing": "Provide a dry, shaded, well-ventilated shelter with a non-slip floor and clean bedding. Protect from prolonged rain or extreme heat according to the home climate. Prioritize shade, airflow and access to cool drinking water during heat waves.",
+        "grazing_or_exercise": "Allow regular grazing or controlled exercise. For working animals, schedule water, rest and cooling breaks and avoid the hottest part of the day.",
+        "healthcare": "Follow the local veterinary vaccination schedule, routine deworming and parasite control. Check hooves/feet regularly because workload and terrain increase wear.",
+        "breeding_or_milking": "Select healthy animals from sound working lines. Avoid breeding animals with structural limb or hoof problems; pregnancy and postpartum care should be supervised locally.",
+        "handling_note": "Use calm, low-stress handling and provide secure fencing and clean water points."
+      },
+      "similar_breeds": [
+        "Amritmahal",
+        "Khillari",
+        "Kangayam",
+        "Krishna_Valley"
+      ]
+    },
+    "7": {
+      "id": 7,
+      "name": "Hariana",
+      "overview": "Hariana is a major dual-purpose cattle breed of northern India, especially associated with Haryana and neighbouring regions. It is valued for draught ability, useful milk production, hardiness and adaptation to hot semi-arid conditions.",
+      "origin_or_home_tract": "Haryana/Uttar Pradesh/Rajasthan",
+      "primary_type": "dual_purpose",
+      "top_5_characteristics": [
+        {
+          "title": "Type",
+          "description": "Classic dual-purpose breed used for milk and draught work."
+        },
+        {
+          "title": "Colour",
+          "description": "Usually white to light grey, with darker shading in bulls."
+        },
+        {
+          "title": "Build",
+          "description": "Medium-to-large, strong-bodied cattle with useful draught capacity."
+        },
+        {
+          "title": "Dairy ability",
+          "description": "Cows can provide useful milk while retaining field utility."
+        },
+        {
+          "title": "Adaptation",
+          "description": "Well suited to hot plains and resource-variable farming systems."
+        }
+      ],
+      "care_guide": {
+        "feeding": "Use good roughage and green fodder as the base, with concentrate and minerals increased during lactation, late pregnancy or periods of heavy work. Ensure unrestricted clean water.",
+        "housing": "Provide a shaded, dry and well-ventilated shelter with good drainage, clean bedding and enough space for resting and movement. Prioritize shade, airflow and access to cool drinking water during heat waves.",
+        "grazing_or_exercise": "Balance grazing with controlled exercise. Working or lactating animals need additional recovery time and should be protected from heat stress.",
+        "healthcare": "Maintain routine vaccination, deworming, external parasite control, hoof care and regular veterinary observation. Keep new or sick animals separated when appropriate.",
+        "breeding_or_milking": "Select for sound legs, udder/teat structure and overall health. Maintain clean milking practices and seek veterinary help for infertility, difficult calving or udder disease.",
+        "handling_note": "Use calm, low-stress handling and provide secure fencing and clean water points."
+      },
+      "similar_breeds": [
+        "Rathi",
+        "Kankrej",
+        "Mewati",
+        "Tharparkar"
+      ]
+    },
+    "8": {
+      "id": 8,
+      "name": "Himachali Pahari",
+      "overview": "Himachali Pahari cattle are adapted to the mountain environments of Himachal Pradesh, where hardiness, mobility and tolerance of cold and steep terrain are important. They are generally maintained in low-input systems for milk, manure and local agricultural needs.",
+      "origin_or_home_tract": "Himachal Pradesh",
+      "primary_type": "dual_purpose",
+      "top_5_characteristics": [
+        {
+          "title": "Coat",
+          "description": "Often black or blackish-brown."
+        },
+        {
+          "title": "Build",
+          "description": "Compact, cylindrical body with relatively short legs."
+        },
+        {
+          "title": "Horns",
+          "description": "Medium-sized horns curve laterally and upward."
+        },
+        {
+          "title": "Hilly adaptation",
+          "description": "Strongly adapted to mountainous terrain and local climatic conditions."
+        },
+        {
+          "title": "Use",
+          "description": "Traditionally useful for both milk and draught work."
+        }
+      ],
+      "care_guide": {
+        "feeding": "Use good roughage and green fodder as the base, with concentrate and minerals increased during lactation, late pregnancy or periods of heavy work. Ensure unrestricted clean water. During severe cold, protect energy intake because maintenance needs can rise.",
+        "housing": "Provide a shaded, dry and well-ventilated shelter with good drainage, clean bedding and enough space for resting and movement. In cold/high-altitude areas, block strong drafts and provide dry bedding while retaining enough ventilation.",
+        "grazing_or_exercise": "Balance grazing with controlled exercise. Working or lactating animals need additional recovery time and should be protected from heat stress. On steep terrain, monitor hoof condition and avoid overloading young or pregnant animals.",
+        "healthcare": "Maintain routine vaccination, deworming, external parasite control, hoof care and regular veterinary observation. Keep new or sick animals separated when appropriate.",
+        "breeding_or_milking": "Select for sound legs, udder/teat structure and overall health. Maintain clean milking practices and seek veterinary help for infertility, difficult calving or udder disease.",
+        "handling_note": "Use calm, low-stress handling and provide secure fencing and clean water points."
+      },
+      "similar_breeds": [
+        "Badri",
+        "Siri",
+        "Ladakhi",
+        "Malnad_gidda"
+      ]
+    },
+    "9": {
+      "id": 9,
+      "name": "Kangayam",
+      "overview": "Kangayam is a well-known draught breed from Tamil Nadu, recognized for its strength, endurance and ability to perform agricultural work in hot, relatively dry conditions. It is a classic South Indian working cattle breed with a strong, compact body.",
+      "origin_or_home_tract": "Tamil Nadu",
+      "primary_type": "draught",
+      "top_5_characteristics": [
+        {
+          "title": "Build",
+          "description": "Compact, strong-bodied cattle with stout limbs and hard hooves."
+        },
+        {
+          "title": "Colour",
+          "description": "Often grey or white in adults; calves may be born red and change colour with age."
+        },
+        {
+          "title": "Horns",
+          "description": "Horn shape varies by type but is generally curved outward/backward."
+        },
+        {
+          "title": "Work ability",
+          "description": "Highly valued for draught strength, stamina and active movement."
+        },
+        {
+          "title": "Heat adaptation",
+          "description": "Well adapted to the hot and relatively dry Tamil Nadu tract."
+        }
+      ],
+      "care_guide": {
+        "feeding": "Base the ration on good-quality roughage and local green fodder; add concentrate/mineral support when the animal is doing sustained draught work. Keep feed changes gradual.",
+        "housing": "Provide a dry, shaded, well-ventilated shelter with a non-slip floor and clean bedding. Protect from prolonged rain or extreme heat according to the home climate. Prioritize shade, airflow and access to cool drinking water during heat waves.",
+        "grazing_or_exercise": "Allow regular grazing or controlled exercise. For working animals, schedule water, rest and cooling breaks and avoid the hottest part of the day.",
+        "healthcare": "Follow the local veterinary vaccination schedule, routine deworming and parasite control. Check hooves/feet regularly because workload and terrain increase wear.",
+        "breeding_or_milking": "Select healthy animals from sound working lines. Avoid breeding animals with structural limb or hoof problems; pregnancy and postpartum care should be supervised locally.",
+        "handling_note": "Use calm, low-stress handling and provide secure fencing and clean water points."
+      },
+      "similar_breeds": [
+        "Bargur",
+        "Hallikar",
+        "Amritmahal",
+        "Umblachery"
+      ]
+    },
+    "10": {
+      "id": 10,
+      "name": "Kankrej",
+      "overview": "Kankrej is a large, powerful breed from Gujarat and adjoining Rajasthan, traditionally valued for both draught work and milk production. Its strong frame, heat tolerance and endurance make it well suited to demanding tropical farming conditions.",
+      "origin_or_home_tract": "Gujarat/Rajasthan",
+      "primary_type": "dual_purpose",
+      "top_5_characteristics": [
+        {
+          "title": "Build",
+          "description": "Large, powerful zebu with strong hindquarters."
+        },
+        {
+          "title": "Colour",
+          "description": "Silver-grey to iron-grey; males often darker on shoulders and hindquarters."
+        },
+        {
+          "title": "Horns",
+          "description": "Long, lyre-shaped horns are a striking feature."
+        },
+        {
+          "title": "Utility",
+          "description": "Used for both milk production and draught work."
+        },
+        {
+          "title": "Adaptation",
+          "description": "Well suited to hot, dry and semi-arid environments."
+        }
+      ],
+      "care_guide": {
+        "feeding": "Use good roughage and green fodder as the base, with concentrate and minerals increased during lactation, late pregnancy or periods of heavy work. Ensure unrestricted clean water.",
+        "housing": "Provide a shaded, dry and well-ventilated shelter with good drainage, clean bedding and enough space for resting and movement. Prioritize shade, airflow and access to cool drinking water during heat waves.",
+        "grazing_or_exercise": "Balance grazing with controlled exercise. Working or lactating animals need additional recovery time and should be protected from heat stress.",
+        "healthcare": "Maintain routine vaccination, deworming, external parasite control, hoof care and regular veterinary observation. Keep new or sick animals separated when appropriate.",
+        "breeding_or_milking": "Select for sound legs, udder/teat structure and overall health. Maintain clean milking practices and seek veterinary help for infertility, difficult calving or udder disease.",
+        "handling_note": "Use calm, low-stress handling and provide secure fencing and clean water points."
+      },
+      "similar_breeds": [
+        "Hariana",
+        "Gir",
+        "Rathi",
+        "Tharparkar"
+      ]
+    },
+    "11": {
+      "id": 11,
+      "name": "Kenkatha",
+      "overview": "Kenkatha is a hardy draught breed associated with the Bundelkhand region and surrounding parts of northern-central India. It is valued for strength, endurance and the ability to perform farm work under comparatively low-input conditions.",
+      "origin_or_home_tract": "Uttar Pradesh/Madhya Pradesh",
+      "primary_type": "draught",
+      "top_5_characteristics": [
+        {
+          "title": "Build",
+          "description": "Small-to-medium, sturdy cattle suited to farm work."
+        },
+        {
+          "title": "Coat",
+          "description": "Generally light grey to grey, sometimes with darker shading."
+        },
+        {
+          "title": "Draught use",
+          "description": "Primarily valued for ploughing, transport and other draught tasks."
+        },
+        {
+          "title": "Hardiness",
+          "description": "Can perform under modest feed and management conditions."
+        },
+        {
+          "title": "Local adaptation",
+          "description": "Well adapted to the plains and mixed farming systems of its tract."
+        }
+      ],
+      "care_guide": {
+        "feeding": "Base the ration on good-quality roughage and local green fodder; add concentrate/mineral support when the animal is doing sustained draught work. Keep feed changes gradual.",
+        "housing": "Provide a dry, shaded, well-ventilated shelter with a non-slip floor and clean bedding. Protect from prolonged rain or extreme heat according to the home climate. Prioritize shade, airflow and access to cool drinking water during heat waves.",
+        "grazing_or_exercise": "Allow regular grazing or controlled exercise. For working animals, schedule water, rest and cooling breaks and avoid the hottest part of the day.",
+        "healthcare": "Follow the local veterinary vaccination schedule, routine deworming and parasite control. Check hooves/feet regularly because workload and terrain increase wear.",
+        "breeding_or_milking": "Select healthy animals from sound working lines. Avoid breeding animals with structural limb or hoof problems; pregnancy and postpartum care should be supervised locally.",
+        "handling_note": "Use calm, low-stress handling and provide secure fencing and clean water points."
+      },
+      "similar_breeds": [
+        "Kherigarh",
+        "Malvi",
+        "Nimari",
+        "Bachaur"
+      ]
+    },
+    "12": {
+      "id": 12,
+      "name": "Khariar",
+      "overview": "Khariar is an indigenous breed associated with Odisha, adapted to local village and agricultural systems. It is valued mainly for hardiness and draught utility, with cattle able to cope with local feed resources and variable field conditions.",
+      "origin_or_home_tract": "Odisha",
+      "primary_type": "draught",
+      "top_5_characteristics": [
+        {
+          "title": "Build",
+          "description": "Small-to-medium and compact working cattle."
+        },
+        {
+          "title": "Utility",
+          "description": "Primarily maintained for draught work."
+        },
+        {
+          "title": "Terrain fitness",
+          "description": "Adapted to local agricultural conditions of Odisha."
+        },
+        {
+          "title": "Hardiness",
+          "description": "Suitable for relatively low-input village production systems."
+        },
+        {
+          "title": "Maintenance",
+          "description": "Benefits from grazing plus supplemental feed during heavy work."
+        }
+      ],
+      "care_guide": {
+        "feeding": "Base the ration on good-quality roughage and local green fodder; add concentrate/mineral support when the animal is doing sustained draught work. Keep feed changes gradual.",
+        "housing": "Provide a dry, shaded, well-ventilated shelter with a non-slip floor and clean bedding. Protect from prolonged rain or extreme heat according to the home climate. Prioritize shade, airflow and access to cool drinking water during heat waves. Keep floors and bedding dry and improve drainage to reduce hoof and skin problems.",
+        "grazing_or_exercise": "Allow regular grazing or controlled exercise. For working animals, schedule water, rest and cooling breaks and avoid the hottest part of the day.",
+        "healthcare": "Follow the local veterinary vaccination schedule, routine deworming and parasite control. Check hooves/feet regularly because workload and terrain increase wear.",
+        "breeding_or_milking": "Select healthy animals from sound working lines. Avoid breeding animals with structural limb or hoof problems; pregnancy and postpartum care should be supervised locally.",
+        "handling_note": "Use calm, low-stress handling and provide secure fencing and clean water points."
+      },
+      "similar_breeds": [
+        "Ghumusari",
+        "Motu",
+        "Kosali",
+        "Bachaur"
+      ]
+    },
+    "13": {
+      "id": 13,
+      "name": "Khillari",
+      "overview": "Khillari is a strong draught breed from Maharashtra and northern Karnataka, known for stamina, speed and suitability for dryland agricultural work. Its compact muscular build and hardiness make it useful where traction and endurance are more important than high milk yield.",
+      "origin_or_home_tract": "Maharashtra/Karnataka",
+      "primary_type": "draught",
+      "top_5_characteristics": [
+        {
+          "title": "Build",
+          "description": "Compact, tight-skinned body with strong, well-set limbs."
+        },
+        {
+          "title": "Colour",
+          "description": "Commonly grey-white, often with darker forequarters in bulls."
+        },
+        {
+          "title": "Horns",
+          "description": "Long, distinctive horns with forward-turning tips."
+        },
+        {
+          "title": "Draught speed",
+          "description": "Known as a medium-fast draught breed with strong working ability."
+        },
+        {
+          "title": "Hardiness",
+          "description": "Well adapted to the Deccan plateau and low-input systems."
+        }
+      ],
+      "care_guide": {
+        "feeding": "Base the ration on good-quality roughage and local green fodder; add concentrate/mineral support when the animal is doing sustained draught work. Keep feed changes gradual.",
+        "housing": "Provide a dry, shaded, well-ventilated shelter with a non-slip floor and clean bedding. Protect from prolonged rain or extreme heat according to the home climate. Prioritize shade, airflow and access to cool drinking water during heat waves.",
+        "grazing_or_exercise": "Allow regular grazing or controlled exercise. For working animals, schedule water, rest and cooling breaks and avoid the hottest part of the day.",
+        "healthcare": "Follow the local veterinary vaccination schedule, routine deworming and parasite control. Check hooves/feet regularly because workload and terrain increase wear.",
+        "breeding_or_milking": "Select healthy animals from sound working lines. Avoid breeding animals with structural limb or hoof problems; pregnancy and postpartum care should be supervised locally.",
+        "handling_note": "Use calm, low-stress handling and provide secure fencing and clean water points."
+      },
+      "similar_breeds": [
+        "Hallikar",
+        "Amritmahal",
+        "Kangayam",
+        "Dangi"
+      ]
+    },
+    "14": {
+      "id": 14,
+      "name": "Konkan Kapila",
+      "overview": "Konkan Kapila is an indigenous cattle breed from the Konkan region of Maharashtra, adapted to warm, humid and high-rainfall conditions. It is valued for hardiness, local adaptation and usefulness in smallholder mixed farming systems.",
+      "origin_or_home_tract": "Maharashtra",
+      "primary_type": "draught",
+      "top_5_characteristics": [
+        {
+          "title": "Build",
+          "description": "Small-to-medium compact cattle."
+        },
+        {
+          "title": "Colour",
+          "description": "Often reddish-brown or black; white, grey and mixed animals also occur."
+        },
+        {
+          "title": "Draught ability",
+          "description": "Useful for agricultural operations, especially in hilly terrain."
+        },
+        {
+          "title": "Low-input fitness",
+          "description": "Can survive largely on grazing and is suited to low-input farming."
+        },
+        {
+          "title": "Heat tolerance",
+          "description": "Strong adaptation to hot, humid Konkan conditions; milk output is modest."
+        }
+      ],
+      "care_guide": {
+        "feeding": "Base the ration on good-quality roughage and local green fodder; add concentrate/mineral support when the animal is doing sustained draught work. Keep feed changes gradual.",
+        "housing": "Provide a dry, shaded, well-ventilated shelter with a non-slip floor and clean bedding. Protect from prolonged rain or extreme heat according to the home climate. Prioritize shade, airflow and access to cool drinking water during heat waves. Keep floors and bedding dry and improve drainage to reduce hoof and skin problems.",
+        "grazing_or_exercise": "Allow regular grazing or controlled exercise. For working animals, schedule water, rest and cooling breaks and avoid the hottest part of the day. On steep terrain, monitor hoof condition and avoid overloading young or pregnant animals.",
+        "healthcare": "Follow the local veterinary vaccination schedule, routine deworming and parasite control. Check hooves/feet regularly because workload and terrain increase wear.",
+        "breeding_or_milking": "Select healthy animals from sound working lines. Avoid breeding animals with structural limb or hoof problems; pregnancy and postpartum care should be supervised locally.",
+        "handling_note": "Use calm, low-stress handling and provide secure fencing and clean water points."
+      },
+      "similar_breeds": [
+        "Dangi",
+        "Malnad_gidda",
+        "Pulikulam",
+        "Khariar"
+      ]
+    },
+    "15": {
+      "id": 15,
+      "name": "Kosali",
+      "overview": "Kosali is an indigenous cattle breed associated with Chhattisgarh and surrounding central Indian areas. It is primarily a hardy working breed, valued for adaptation to local conditions, economical maintenance and use in traditional agriculture.",
+      "origin_or_home_tract": "Chhattisgarh",
+      "primary_type": "draught",
+      "top_5_characteristics": [
+        {
+          "title": "Size",
+          "description": "A relatively small indigenous breed."
+        },
+        {
+          "title": "Colour",
+          "description": "Red is common, with white and black animals also found."
+        },
+        {
+          "title": "Conformation",
+          "description": "Small hump, dewlap and naval flap; small, slightly inward horns."
+        },
+        {
+          "title": "Adaptation",
+          "description": "Well adapted to the agroclimatic conditions of Chhattisgarh."
+        },
+        {
+          "title": "Use",
+          "description": "Traditionally associated mainly with draught work in smallholder systems."
+        }
+      ],
+      "care_guide": {
+        "feeding": "Base the ration on good-quality roughage and local green fodder; add concentrate/mineral support when the animal is doing sustained draught work. Keep feed changes gradual.",
+        "housing": "Provide a dry, shaded, well-ventilated shelter with a non-slip floor and clean bedding. Protect from prolonged rain or extreme heat according to the home climate. Prioritize shade, airflow and access to cool drinking water during heat waves. Keep floors and bedding dry and improve drainage to reduce hoof and skin problems.",
+        "grazing_or_exercise": "Allow regular grazing or controlled exercise. For working animals, schedule water, rest and cooling breaks and avoid the hottest part of the day.",
+        "healthcare": "Follow the local veterinary vaccination schedule, routine deworming and parasite control. Check hooves/feet regularly because workload and terrain increase wear.",
+        "breeding_or_milking": "Select healthy animals from sound working lines. Avoid breeding animals with structural limb or hoof problems; pregnancy and postpartum care should be supervised locally.",
+        "handling_note": "Use calm, low-stress handling and provide secure fencing and clean water points."
+      },
+      "similar_breeds": [
+        "Bachaur",
+        "Kenkatha",
+        "Motu",
+        "Ghumusari"
+      ]
+    },
+    "16": {
+      "id": 16,
+      "name": "Krishna_Valley",
+      "overview": "Krishna_Valley is a large dual-purpose cattle breed from the Krishna River basin of Karnataka and neighbouring regions. It is known for a strong frame, useful draught capacity and moderate dairy utility, especially in mixed farming systems.",
+      "origin_or_home_tract": "Karnataka/Maharashtra",
+      "primary_type": "draught",
+      "top_5_characteristics": [
+        {
+          "title": "Build",
+          "description": "Strong, substantial cattle suitable for heavy farm work."
+        },
+        {
+          "title": "Colour",
+          "description": "Often light grey with black shading; dark muzzle is characteristic."
+        },
+        {
+          "title": "Heavy work",
+          "description": "Capable of working in heavy black-cotton soils."
+        },
+        {
+          "title": "Climate adaptation",
+          "description": "Tolerates hot and humid conditions well."
+        },
+        {
+          "title": "Utility",
+          "description": "Primarily a draught breed valued for strength and endurance."
+        }
+      ],
+      "care_guide": {
+        "feeding": "Base the ration on good-quality roughage and local green fodder; add concentrate/mineral support when the animal is doing sustained draught work. Keep feed changes gradual.",
+        "housing": "Provide a dry, shaded, well-ventilated shelter with a non-slip floor and clean bedding. Protect from prolonged rain or extreme heat according to the home climate. Prioritize shade, airflow and access to cool drinking water during heat waves. Keep floors and bedding dry and improve drainage to reduce hoof and skin problems.",
+        "grazing_or_exercise": "Allow regular grazing or controlled exercise. For working animals, schedule water, rest and cooling breaks and avoid the hottest part of the day.",
+        "healthcare": "Follow the local veterinary vaccination schedule, routine deworming and parasite control. Check hooves/feet regularly because workload and terrain increase wear.",
+        "breeding_or_milking": "Select healthy animals from sound working lines. Avoid breeding animals with structural limb or hoof problems; pregnancy and postpartum care should be supervised locally.",
+        "handling_note": "Use calm, low-stress handling and provide secure fencing and clean water points."
+      },
+      "similar_breeds": [
+        "Hallikar",
+        "Kankrej",
+        "Gaolao",
+        "Amritmahal"
+      ]
+    },
+    "17": {
+      "id": 17,
+      "name": "Ladakhi",
+      "overview": "Ladakhi cattle are adapted to the cold, high-altitude environment of Ladakh. Their main strengths are hardiness, cold tolerance and ability to survive under limited forage in rugged terrain, with local utility for milk, manure and transport.",
+      "origin_or_home_tract": "Ladakh",
+      "primary_type": "dual_purpose",
+      "top_5_characteristics": [
+        {
+          "title": "Altitude adaptation",
+          "description": "Naturally adapted to roughly 3,000–5,000 m high-altitude environments."
+        },
+        {
+          "title": "Build",
+          "description": "Small, compact body with short legs suited to rugged terrain."
+        },
+        {
+          "title": "Coat",
+          "description": "Often dark, with a hairy coat that helps provide insulation in cold conditions."
+        },
+        {
+          "title": "Physiology",
+          "description": "Shows adaptation to low-oxygen, cold and dry environments."
+        },
+        {
+          "title": "Utility",
+          "description": "Provides milk while also supporting local livestock livelihoods."
+        }
+      ],
+      "care_guide": {
+        "feeding": "Use good roughage and green fodder as the base, with concentrate and minerals increased during lactation, late pregnancy or periods of heavy work. Ensure unrestricted clean water. During severe cold, protect energy intake because maintenance needs can rise.",
+        "housing": "Provide a shaded, dry and well-ventilated shelter with good drainage, clean bedding and enough space for resting and movement. In cold/high-altitude areas, block strong drafts and provide dry bedding while retaining enough ventilation.",
+        "grazing_or_exercise": "Balance grazing with controlled exercise. Working or lactating animals need additional recovery time and should be protected from heat stress.",
+        "healthcare": "Maintain routine vaccination, deworming, external parasite control, hoof care and regular veterinary observation. Keep new or sick animals separated when appropriate.",
+        "breeding_or_milking": "Select for sound legs, udder/teat structure and overall health. Maintain clean milking practices and seek veterinary help for infertility, difficult calving or udder disease.",
+        "handling_note": "Use calm, low-stress handling and provide secure fencing and clean water points."
+      },
+      "similar_breeds": [
+        "Himachali Pahari",
+        "Badri",
+        "Siri",
+        "Malnad_gidda"
+      ]
+    },
+    "18": {
+      "id": 18,
+      "name": "Lakhimi",
+      "overview": "Lakhimi is an indigenous cattle breed associated with Assam and the Brahmaputra valley. It is valued for adaptation to humid local conditions, economical maintenance and usefulness in smallholder farming, including draught and limited milk production.",
+      "origin_or_home_tract": "Assam",
+      "primary_type": "dual_purpose",
+      "top_5_characteristics": [
+        {
+          "title": "Size",
+          "description": "Small-bodied indigenous cattle."
+        },
+        {
+          "title": "Colour",
+          "description": "Commonly brown or grey, with variation in coat shade."
+        },
+        {
+          "title": "Build",
+          "description": "Medium hump with relatively short legs and compact form."
+        },
+        {
+          "title": "Utility",
+          "description": "Used for milk and draught work, especially in smallholder systems."
+        },
+        {
+          "title": "Adaptation",
+          "description": "Well suited to Assam’s climate and local feed resources."
+        }
+      ],
+      "care_guide": {
+        "feeding": "Use good roughage and green fodder as the base, with concentrate and minerals increased during lactation, late pregnancy or periods of heavy work. Ensure unrestricted clean water.",
+        "housing": "Provide a shaded, dry and well-ventilated shelter with good drainage, clean bedding and enough space for resting and movement. Prioritize shade, airflow and access to cool drinking water during heat waves. Keep floors and bedding dry and improve drainage to reduce hoof and skin problems.",
+        "grazing_or_exercise": "Balance grazing with controlled exercise. Working or lactating animals need additional recovery time and should be protected from heat stress.",
+        "healthcare": "Maintain routine vaccination, deworming, external parasite control, hoof care and regular veterinary observation. Keep new or sick animals separated when appropriate.",
+        "breeding_or_milking": "Select for sound legs, udder/teat structure and overall health. Maintain clean milking practices and seek veterinary help for infertility, difficult calving or udder disease.",
+        "handling_note": "Use calm, low-stress handling and provide secure fencing and clean water points."
+      },
+      "similar_breeds": [
+        "Siri",
+        "Badri",
+        "Purnea",
+        "Kosali"
+      ]
+    },
+    "19": {
+      "id": 19,
+      "name": "Malnad_gidda",
+      "overview": "Malnad_gidda is a small native cattle type from the wet, hilly Malnad region of Karnataka. It is prized for exceptional hardiness, disease and environmental resilience, efficient use of local forage and suitability to low-input smallholder systems.",
+      "origin_or_home_tract": "Karnataka",
+      "primary_type": "draught",
+      "top_5_characteristics": [
+        {
+          "title": "Size",
+          "description": "Small indigenous cattle well suited to hill and forest environments."
+        },
+        {
+          "title": "Build",
+          "description": "Compact, hardy frame requiring relatively modest resources."
+        },
+        {
+          "title": "Adaptation",
+          "description": "Well suited to high-rainfall Malnad conditions and forest grazing."
+        },
+        {
+          "title": "Utility",
+          "description": "Used for draught work and local farm livelihoods."
+        },
+        {
+          "title": "Low-input fitness",
+          "description": "Can perform under grazing-based, resource-limited management."
+        }
+      ],
+      "care_guide": {
+        "feeding": "Base the ration on good-quality roughage and local green fodder; add concentrate/mineral support when the animal is doing sustained draught work. Keep feed changes gradual.",
+        "housing": "Provide a dry, shaded, well-ventilated shelter with a non-slip floor and clean bedding. Protect from prolonged rain or extreme heat according to the home climate. Prioritize shade, airflow and access to cool drinking water during heat waves. Keep floors and bedding dry and improve drainage to reduce hoof and skin problems.",
+        "grazing_or_exercise": "Allow regular grazing or controlled exercise. For working animals, schedule water, rest and cooling breaks and avoid the hottest part of the day. On steep terrain, monitor hoof condition and avoid overloading young or pregnant animals.",
+        "healthcare": "Follow the local veterinary vaccination schedule, routine deworming and parasite control. Check hooves/feet regularly because workload and terrain increase wear.",
+        "breeding_or_milking": "Select healthy animals from sound working lines. Avoid breeding animals with structural limb or hoof problems; pregnancy and postpartum care should be supervised locally.",
+        "handling_note": "Use calm, low-stress handling and provide secure fencing and clean water points."
+      },
+      "similar_breeds": [
+        "Konkan Kapila",
+        "Vechur",
+        "Badri",
+        "Siri"
+      ]
+    },
+    "20": {
+      "id": 20,
+      "name": "Mewati",
+      "overview": "Mewati is a dual-purpose cattle breed from the Mewat region spanning parts of Rajasthan, Haryana and Uttar Pradesh. It is valued for draught strength, moderate milk production, heat tolerance and adaptation to dry farming conditions.",
+      "origin_or_home_tract": "Rajasthan/Haryana/Uttar Pradesh",
+      "primary_type": "dual_purpose",
+      "top_5_characteristics": [
+        {
+          "title": "Build",
+          "description": "Strong medium-to-large cattle suited to farm work."
+        },
+        {
+          "title": "Colour",
+          "description": "Generally grey/white with darker shading in males."
+        },
+        {
+          "title": "Utility",
+          "description": "Used for both milk production and draught work."
+        },
+        {
+          "title": "Hardiness",
+          "description": "Adapted to dry, hot north-western conditions."
+        },
+        {
+          "title": "Working ability",
+          "description": "Useful for ploughing, carting and general farm operations."
+        }
+      ],
+      "care_guide": {
+        "feeding": "Use good roughage and green fodder as the base, with concentrate and minerals increased during lactation, late pregnancy or periods of heavy work. Ensure unrestricted clean water.",
+        "housing": "Provide a shaded, dry and well-ventilated shelter with good drainage, clean bedding and enough space for resting and movement. Prioritize shade, airflow and access to cool drinking water during heat waves.",
+        "grazing_or_exercise": "Balance grazing with controlled exercise. Working or lactating animals need additional recovery time and should be protected from heat stress.",
+        "healthcare": "Maintain routine vaccination, deworming, external parasite control, hoof care and regular veterinary observation. Keep new or sick animals separated when appropriate.",
+        "breeding_or_milking": "Select for sound legs, udder/teat structure and overall health. Maintain clean milking practices and seek veterinary help for infertility, difficult calving or udder disease.",
+        "handling_note": "Use calm, low-stress handling and provide secure fencing and clean water points."
+      },
+      "similar_breeds": [
+        "Hariana",
+        "Rathi",
+        "Kankrej",
+        "Tharparkar"
+      ]
+    },
+    "21": {
+      "id": 21,
+      "name": "Nari",
+      "overview": "Nari is an indigenous cattle type associated with northern and north-western parts of India and maintained primarily in local low-input systems. It is valued for hardiness, adaptation to field conditions and practical utility for draught work and subsistence farming.",
+      "origin_or_home_tract": "Gujarat/Rajasthan",
+      "primary_type": "dual_purpose",
+      "top_5_characteristics": [
+        {
+          "title": "Build",
+          "description": "Medium-sized cattle with sturdy working conformation."
+        },
+        {
+          "title": "Colour",
+          "description": "Mostly white or greyish-white; bulls can be darker."
+        },
+        {
+          "title": "Horns",
+          "description": "Long, thick-based horns often curve outward/forward."
+        },
+        {
+          "title": "Draught ability",
+          "description": "Performs well in both plains and hilly forest areas."
+        },
+        {
+          "title": "Milk",
+          "description": "Moderate milk production with useful fat percentage for an indigenous breed."
+        }
+      ],
+      "care_guide": {
+        "feeding": "Use good roughage and green fodder as the base, with concentrate and minerals increased during lactation, late pregnancy or periods of heavy work. Ensure unrestricted clean water.",
+        "housing": "Provide a shaded, dry and well-ventilated shelter with good drainage, clean bedding and enough space for resting and movement. Prioritize shade, airflow and access to cool drinking water during heat waves.",
+        "grazing_or_exercise": "Balance grazing with controlled exercise. Working or lactating animals need additional recovery time and should be protected from heat stress. On steep terrain, monitor hoof condition and avoid overloading young or pregnant animals.",
+        "healthcare": "Maintain routine vaccination, deworming, external parasite control, hoof care and regular veterinary observation. Keep new or sick animals separated when appropriate.",
+        "breeding_or_milking": "Select for sound legs, udder/teat structure and overall health. Maintain clean milking practices and seek veterinary help for infertility, difficult calving or udder disease.",
+        "handling_note": "Use calm, low-stress handling and provide secure fencing and clean water points."
+      },
+      "similar_breeds": [
+        "Kankrej",
+        "Mewati",
+        "Tharparkar",
+        "Rathi"
+      ]
+    },
+    "22": {
+      "id": 22,
+      "name": "Nimari",
+      "overview": "Nimari is a dual-purpose cattle breed from the Narmada valley and adjoining areas of Madhya Pradesh. It is recognized for its ability to provide useful draught power while also producing milk, with good adaptation to warm central Indian conditions.",
+      "origin_or_home_tract": "Madhya Pradesh",
+      "primary_type": "dual_purpose",
+      "top_5_characteristics": [
+        {
+          "title": "Build",
+          "description": "Medium, hardy cattle suited to central Indian agriculture."
+        },
+        {
+          "title": "Colour",
+          "description": "Commonly red with white markings, with colour variation across animals."
+        },
+        {
+          "title": "Utility",
+          "description": "Used for both draught work and milk."
+        },
+        {
+          "title": "Adaptation",
+          "description": "Tolerant of hot conditions and variable feed availability."
+        },
+        {
+          "title": "Working ability",
+          "description": "Reliable for ploughing and transport in mixed farming systems."
+        }
+      ],
+      "care_guide": {
+        "feeding": "Use good roughage and green fodder as the base, with concentrate and minerals increased during lactation, late pregnancy or periods of heavy work. Ensure unrestricted clean water.",
+        "housing": "Provide a shaded, dry and well-ventilated shelter with good drainage, clean bedding and enough space for resting and movement. Prioritize shade, airflow and access to cool drinking water during heat waves.",
+        "grazing_or_exercise": "Balance grazing with controlled exercise. Working or lactating animals need additional recovery time and should be protected from heat stress.",
+        "healthcare": "Maintain routine vaccination, deworming, external parasite control, hoof care and regular veterinary observation. Keep new or sick animals separated when appropriate.",
+        "breeding_or_milking": "Select for sound legs, udder/teat structure and overall health. Maintain clean milking practices and seek veterinary help for infertility, difficult calving or udder disease.",
+        "handling_note": "Use calm, low-stress handling and provide secure fencing and clean water points."
+      },
+      "similar_breeds": [
+        "Kenkatha",
+        "Malvi",
+        "Gaolao",
+        "Mewati"
+      ]
+    },
+    "23": {
+      "id": 23,
+      "name": "Ongole",
+      "overview": "Ongole is a large, powerful Indian zebu breed from Andhra Pradesh, famous for strength, heat tolerance and disease resilience. It has been widely valued as a draught and breeding breed and is also important for genetic resources and international cattle populations.",
+      "origin_or_home_tract": "Andhra Pradesh",
+      "primary_type": "dual_purpose",
+      "top_5_characteristics": [
+        {
+          "title": "Build",
+          "description": "Large, powerful and muscular zebu cattle."
+        },
+        {
+          "title": "Coat",
+          "description": "Usually white or light grey."
+        },
+        {
+          "title": "Draught ability",
+          "description": "Strong working capacity and robust limbs."
+        },
+        {
+          "title": "Hardiness",
+          "description": "Known for resilience under hot climates and demanding conditions."
+        },
+        {
+          "title": "Utility",
+          "description": "Historically valued for draught work and also maintained in livestock-production systems."
+        }
+      ],
+      "care_guide": {
+        "feeding": "Use good roughage and green fodder as the base, with concentrate and minerals increased during lactation, late pregnancy or periods of heavy work. Ensure unrestricted clean water.",
+        "housing": "Provide a shaded, dry and well-ventilated shelter with good drainage, clean bedding and enough space for resting and movement. Prioritize shade, airflow and access to cool drinking water during heat waves.",
+        "grazing_or_exercise": "Balance grazing with controlled exercise. Working or lactating animals need additional recovery time and should be protected from heat stress.",
+        "healthcare": "Maintain routine vaccination, deworming, external parasite control, hoof care and regular veterinary observation. Keep new or sick animals separated when appropriate.",
+        "breeding_or_milking": "Select for sound legs, udder/teat structure and overall health. Maintain clean milking practices and seek veterinary help for infertility, difficult calving or udder disease.",
+        "handling_note": "Use calm, low-stress handling and provide secure fencing and clean water points."
+      },
+      "similar_breeds": [
+        "Krishna_Valley",
+        "Kankrej",
+        "Gaolao",
+        "Tharparkar"
+      ]
+    },
+    "24": {
+      "id": 24,
+      "name": "Poda Thirupu",
+      "overview": "Poda Thirupu is an indigenous cattle breed associated with Odisha and eastern India, adapted to local village farming conditions. It is valued mainly for hardiness, draught ability and economical maintenance on locally available feed resources.",
+      "origin_or_home_tract": "Telangana",
+      "primary_type": "draught",
+      "top_5_characteristics": [
+        {
+          "title": "Coat",
+          "description": "Distinctive spotted or speckled pattern, often brown-on-white or white patches on brown."
+        },
+        {
+          "title": "Build",
+          "description": "Medium-sized, compact cattle."
+        },
+        {
+          "title": "Draught power",
+          "description": "Bullocks are valued for heavy ploughing and carting."
+        },
+        {
+          "title": "Endurance",
+          "description": "Strong hooves and stamina make them useful in both dryland and wetland work."
+        },
+        {
+          "title": "Hardiness",
+          "description": "Tolerates drought, lower fodder availability and forest/hill conditions."
+        }
+      ],
+      "care_guide": {
+        "feeding": "Base the ration on good-quality roughage and local green fodder; add concentrate/mineral support when the animal is doing sustained draught work. Keep feed changes gradual.",
+        "housing": "Provide a dry, shaded, well-ventilated shelter with a non-slip floor and clean bedding. Protect from prolonged rain or extreme heat according to the home climate. Prioritize shade, airflow and access to cool drinking water during heat waves.",
+        "grazing_or_exercise": "Allow regular grazing or controlled exercise. For working animals, schedule water, rest and cooling breaks and avoid the hottest part of the day.",
+        "healthcare": "Follow the local veterinary vaccination schedule, routine deworming and parasite control. Check hooves/feet regularly because workload and terrain increase wear.",
+        "breeding_or_milking": "Select healthy animals from sound working lines. Avoid breeding animals with structural limb or hoof problems; pregnancy and postpartum care should be supervised locally.",
+        "handling_note": "Use calm, secure handling and adequate fencing; traditional populations may be more reactive than intensively managed dairy cattle."
+      },
+      "similar_breeds": [
+        "Ongole",
+        "Nimari",
+        "Pulikulam",
+        "Krishna_Valley"
+      ]
+    },
+    "25": {
+      "id": 25,
+      "name": "Pulikulam",
+      "overview": "Pulikulam is a hardy cattle breed from Tamil Nadu, closely associated with traditional pastoral and village systems. It is valued for endurance, disease and heat tolerance, and draught utility under hot, dry conditions.",
+      "origin_or_home_tract": "Tamil Nadu",
+      "primary_type": "draught",
+      "top_5_characteristics": [
+        {
+          "title": "Build",
+          "description": "Compact, hardy indigenous cattle suited to extensive management."
+        },
+        {
+          "title": "Hardiness",
+          "description": "Well adapted to low-input and grazing-based systems."
+        },
+        {
+          "title": "Draught use",
+          "description": "Traditionally maintained for field work and transport."
+        },
+        {
+          "title": "Terrain fitness",
+          "description": "Useful in dry and rugged tracts where robust feet are important."
+        },
+        {
+          "title": "Climate adaptation",
+          "description": "Tolerant of hot conditions and seasonal feed scarcity."
+        }
+      ],
+      "care_guide": {
+        "feeding": "Base the ration on good-quality roughage and local green fodder; add concentrate/mineral support when the animal is doing sustained draught work. Keep feed changes gradual.",
+        "housing": "Provide a dry, shaded, well-ventilated shelter with a non-slip floor and clean bedding. Protect from prolonged rain or extreme heat according to the home climate. Prioritize shade, airflow and access to cool drinking water during heat waves.",
+        "grazing_or_exercise": "Allow regular grazing or controlled exercise. For working animals, schedule water, rest and cooling breaks and avoid the hottest part of the day.",
+        "healthcare": "Follow the local veterinary vaccination schedule, routine deworming and parasite control. Check hooves/feet regularly because workload and terrain increase wear.",
+        "breeding_or_milking": "Select healthy animals from sound working lines. Avoid breeding animals with structural limb or hoof problems; pregnancy and postpartum care should be supervised locally.",
+        "handling_note": "Use calm, secure handling and adequate fencing; traditional populations may be more reactive than intensively managed dairy cattle."
+      },
+      "similar_breeds": [
+        "Bargur",
+        "Kangayam",
+        "Umblachery",
+        "Poda Thirupu"
+      ]
+    },
+    "26": {
+      "id": 26,
+      "name": "Punganur",
+      "overview": "Punganur is a very small indigenous cattle breed from Andhra Pradesh, notable for its compact body and ability to survive on relatively modest feed resources. It is primarily valued for hardiness, low maintenance and conservation importance, with useful milk characteristics for its size.",
+      "origin_or_home_tract": "Andhra Pradesh",
+      "primary_type": "dairy",
+      "top_5_characteristics": [
+        {
+          "title": "Size",
+          "description": "One of India’s smallest cattle breeds."
+        },
+        {
+          "title": "Build",
+          "description": "Short-statured, compact animals with relatively light body weight."
+        },
+        {
+          "title": "Coat",
+          "description": "White, grey, light brown and mixed colour patterns occur."
+        },
+        {
+          "title": "Feeding efficiency",
+          "description": "Small body size reduces maintenance feed requirements."
+        },
+        {
+          "title": "Milk",
+          "description": "A specialized small indigenous dairy type with relatively modest volume but useful milk characteristics."
+        }
+      ],
+      "care_guide": {
+        "feeding": "Provide a balanced ration built around quality green fodder, dry roughage, clean water and an appropriate mineral mixture. Increase energy/protein supply according to milk yield and stage of lactation.",
+        "housing": "Use a clean, dry, well-ventilated shed with shade and adequate drainage. Keep milking and resting areas hygienic. Prioritize shade, airflow and access to cool drinking water during heat waves.",
+        "grazing_or_exercise": "Provide daily movement or grazing appropriate to body condition and climate. Reduce heat load with shade, airflow and frequent access to water in hot weather.",
+        "healthcare": "Follow the local vaccination and deworming plan; maintain tick/parasite control and monitor appetite, manure, body condition, udder health and lameness.",
+        "breeding_or_milking": "Use clean milking practices and consistent milking times. Breed only when the animal is in suitable body condition; use a veterinarian/technician for fertility problems.",
+        "handling_note": "Use calm, low-stress handling and provide secure fencing and clean water points."
+      },
+      "similar_breeds": [
+        "Vechur",
+        "Badri",
+        "Malnad_gidda",
+        "Kosali"
+      ]
+    },
+    "27": {
+      "id": 27,
+      "name": "Purnea",
+      "overview": "Purnea is a local cattle breed associated with the Purnea region of Bihar. It is adapted to humid, flood-prone and smallholder farming environments and is mainly valued for practical draught utility, hardiness and economical maintenance.",
+      "origin_or_home_tract": "Bihar",
+      "primary_type": "dual_purpose",
+      "top_5_characteristics": [
+        {
+          "title": "Size",
+          "description": "Small-bodied cattle named after the Purnea breeding tract."
+        },
+        {
+          "title": "Colour",
+          "description": "Primarily grey, with red and black animals also occurring."
+        },
+        {
+          "title": "Utility",
+          "description": "Used for milk, draught and manure."
+        },
+        {
+          "title": "Climate resilience",
+          "description": "Good drought and heat tolerance for its region."
+        },
+        {
+          "title": "Conformation",
+          "description": "Medium hump, small-to-medium dewlap and modestly developed udder."
+        }
+      ],
+      "care_guide": {
+        "feeding": "Use good roughage and green fodder as the base, with concentrate and minerals increased during lactation, late pregnancy or periods of heavy work. Ensure unrestricted clean water.",
+        "housing": "Provide a shaded, dry and well-ventilated shelter with good drainage, clean bedding and enough space for resting and movement. Prioritize shade, airflow and access to cool drinking water during heat waves. Keep floors and bedding dry and improve drainage to reduce hoof and skin problems.",
+        "grazing_or_exercise": "Balance grazing with controlled exercise. Working or lactating animals need additional recovery time and should be protected from heat stress.",
+        "healthcare": "Maintain routine vaccination, deworming, external parasite control, hoof care and regular veterinary observation. Keep new or sick animals separated when appropriate.",
+        "breeding_or_milking": "Select for sound legs, udder/teat structure and overall health. Maintain clean milking practices and seek veterinary help for infertility, difficult calving or udder disease.",
+        "handling_note": "Use calm, low-stress handling and provide secure fencing and clean water points."
+      },
+      "similar_breeds": [
+        "Bachaur",
+        "Kosali",
+        "Lakhimi",
+        "Gangatiri"
+      ]
+    },
+    "28": {
+      "id": 28,
+      "name": "Rathi",
+      "overview": "Rathi is an important dairy and dual-purpose breed from Rajasthan, particularly suited to arid and semi-arid environments. It is valued for heat tolerance, efficient use of available feed and comparatively good milk production under challenging conditions.",
+      "origin_or_home_tract": "Rajasthan",
+      "primary_type": "dairy",
+      "top_5_characteristics": [
+        {
+          "title": "Dairy type",
+          "description": "Important indigenous dairy breed of north-western India."
+        },
+        {
+          "title": "Coat",
+          "description": "Usually brown with white patches; colour can vary."
+        },
+        {
+          "title": "Heat adaptation",
+          "description": "Well suited to hot, dry environments and seasonal feed stress."
+        },
+        {
+          "title": "Utility",
+          "description": "Useful for milk production while retaining some draught value."
+        },
+        {
+          "title": "Management",
+          "description": "Performs well when given good fodder and mineral support during lactation."
+        }
+      ],
+      "care_guide": {
+        "feeding": "Provide a balanced ration built around quality green fodder, dry roughage, clean water and an appropriate mineral mixture. Increase energy/protein supply according to milk yield and stage of lactation.",
+        "housing": "Use a clean, dry, well-ventilated shed with shade and adequate drainage. Keep milking and resting areas hygienic. Prioritize shade, airflow and access to cool drinking water during heat waves.",
+        "grazing_or_exercise": "Provide daily movement or grazing appropriate to body condition and climate. Reduce heat load with shade, airflow and frequent access to water in hot weather.",
+        "healthcare": "Follow the local vaccination and deworming plan; maintain tick/parasite control and monitor appetite, manure, body condition, udder health and lameness.",
+        "breeding_or_milking": "Use clean milking practices and consistent milking times. Breed only when the animal is in suitable body condition; use a veterinarian/technician for fertility problems.",
+        "handling_note": "Use calm, low-stress handling and provide secure fencing and clean water points."
+      },
+      "similar_breeds": [
+        "Sahiwal",
+        "Hariana",
+        "Tharparkar",
+        "Kankrej"
+      ]
+    },
+    "29": {
+      "id": 29,
+      "name": "Red kandhari",
+      "overview": "Red kandhari is a hardy red-coated cattle breed from Maharashtra, maintained mainly as a dual-purpose or working animal. It is known for adaptation to dry conditions, draught utility and economical maintenance in smallholder systems.",
+      "origin_or_home_tract": "Maharashtra",
+      "primary_type": "dual_purpose",
+      "top_5_characteristics": [
+        {
+          "title": "Colour",
+          "description": "Distinctive deep red to reddish-brown coat."
+        },
+        {
+          "title": "Build",
+          "description": "Medium-sized, sturdy indigenous cattle."
+        },
+        {
+          "title": "Utility",
+          "description": "Used for both milk and draught purposes."
+        },
+        {
+          "title": "Hardiness",
+          "description": "Suited to relatively dry and resource-variable production systems."
+        },
+        {
+          "title": "Work ability",
+          "description": "Useful farm animals with good general strength and endurance."
+        }
+      ],
+      "care_guide": {
+        "feeding": "Use good roughage and green fodder as the base, with concentrate and minerals increased during lactation, late pregnancy or periods of heavy work. Ensure unrestricted clean water.",
+        "housing": "Provide a shaded, dry and well-ventilated shelter with good drainage, clean bedding and enough space for resting and movement. Prioritize shade, airflow and access to cool drinking water during heat waves.",
+        "grazing_or_exercise": "Balance grazing with controlled exercise. Working or lactating animals need additional recovery time and should be protected from heat stress.",
+        "healthcare": "Maintain routine vaccination, deworming, external parasite control, hoof care and regular veterinary observation. Keep new or sick animals separated when appropriate.",
+        "breeding_or_milking": "Select for sound legs, udder/teat structure and overall health. Maintain clean milking practices and seek veterinary help for infertility, difficult calving or udder disease.",
+        "handling_note": "Use calm, low-stress handling and provide secure fencing and clean water points."
+      },
+      "similar_breeds": [
+        "Deoni",
+        "Rathi",
+        "Kankrej",
+        "Dangi"
+      ]
+    },
+    "30": {
+      "id": 30,
+      "name": "Red_Sindhi",
+      "overview": "Red_Sindhi is a well-known dairy breed originating from the Sindh region and now widely maintained in India and other tropical countries. It is valued for heat tolerance, disease resilience, reproductive ability and useful milk production under hot climates.",
+      "origin_or_home_tract": "Sindh-origin, widely kept in India",
+      "primary_type": "dairy",
+      "top_5_characteristics": [
+        {
+          "title": "Colour",
+          "description": "Characteristically deep red to reddish-brown."
+        },
+        {
+          "title": "Dairy ability",
+          "description": "Well-known indigenous dairy breed with useful milk production."
+        },
+        {
+          "title": "Heat tolerance",
+          "description": "Performs comparatively well in hot climates."
+        },
+        {
+          "title": "Temperament",
+          "description": "Generally manageable for dairy herd systems."
+        },
+        {
+          "title": "Adaptability",
+          "description": "Can perform under tropical conditions and modest-input systems."
+        }
+      ],
+      "care_guide": {
+        "feeding": "Provide a balanced ration built around quality green fodder, dry roughage, clean water and an appropriate mineral mixture. Increase energy/protein supply according to milk yield and stage of lactation.",
+        "housing": "Use a clean, dry, well-ventilated shed with shade and adequate drainage. Keep milking and resting areas hygienic. Prioritize shade, airflow and access to cool drinking water during heat waves.",
+        "grazing_or_exercise": "Provide daily movement or grazing appropriate to body condition and climate. Reduce heat load with shade, airflow and frequent access to water in hot weather.",
+        "healthcare": "Follow the local vaccination and deworming plan; maintain tick/parasite control and monitor appetite, manure, body condition, udder health and lameness.",
+        "breeding_or_milking": "Use clean milking practices and consistent milking times. Breed only when the animal is in suitable body condition; use a veterinarian/technician for fertility problems.",
+        "handling_note": "Use calm, low-stress handling and provide secure fencing and clean water points."
+      },
+      "similar_breeds": [
+        "Sahiwal",
+        "Gir",
+        "Rathi",
+        "Kankrej"
+      ]
+    },
+    "31": {
+      "id": 31,
+      "name": "Sahiwal",
+      "overview": "Sahiwal is one of the leading tropical dairy zebu breeds, originating from the Sahiwal region of the Indian subcontinent. It is highly valued for heat tolerance, disease resistance, calm temperament and relatively strong milk production compared with many indigenous working breeds.",
+      "origin_or_home_tract": "Punjab/Rajasthan",
+      "primary_type": "dairy",
+      "top_5_characteristics": [
+        {
+          "title": "Dairy ability",
+          "description": "One of the best-known indigenous dairy breeds from the Indian subcontinent."
+        },
+        {
+          "title": "Colour",
+          "description": "Reddish-brown, often with lighter shading on neck and underline."
+        },
+        {
+          "title": "Heat tolerance",
+          "description": "Strong adaptation to hot climates and tropical dairy production."
+        },
+        {
+          "title": "Conformation",
+          "description": "Medium-to-large dairy zebu with loose skin and developed hump."
+        },
+        {
+          "title": "Temperament",
+          "description": "Generally docile and suitable for managed dairy systems."
+        }
+      ],
+      "care_guide": {
+        "feeding": "Provide a balanced ration built around quality green fodder, dry roughage, clean water and an appropriate mineral mixture. Increase energy/protein supply according to milk yield and stage of lactation.",
+        "housing": "Use a clean, dry, well-ventilated shed with shade and adequate drainage. Keep milking and resting areas hygienic. Prioritize shade, airflow and access to cool drinking water during heat waves.",
+        "grazing_or_exercise": "Provide daily movement or grazing appropriate to body condition and climate. Reduce heat load with shade, airflow and frequent access to water in hot weather.",
+        "healthcare": "Follow the local vaccination and deworming plan; maintain tick/parasite control and monitor appetite, manure, body condition, udder health and lameness.",
+        "breeding_or_milking": "Use clean milking practices and consistent milking times. Breed only when the animal is in suitable body condition; use a veterinarian/technician for fertility problems.",
+        "handling_note": "Use calm, low-stress handling and provide secure fencing and clean water points."
+      },
+      "similar_breeds": [
+        "Red_Sindhi",
+        "Gir",
+        "Rathi",
+        "Tharparkar"
+      ]
+    },
+    "32": {
+      "id": 32,
+      "name": "Shweta Kapila",
+      "overview": "Shweta Kapila is a recognized indigenous cattle breed associated with the Himalayan and northern Indian region, developed and maintained under local environmental conditions. It is valued for hardiness, adaptability and useful local production traits rather than intensive high-input dairy output.",
+      "origin_or_home_tract": "Goa",
+      "primary_type": "dairy",
+      "top_5_characteristics": [
+        {
+          "title": "Colour",
+          "description": "Characteristically almost completely white from muzzle to tail switch, including eyelashes."
+        },
+        {
+          "title": "Size",
+          "description": "Short to medium stature."
+        },
+        {
+          "title": "Head/horns",
+          "description": "Straight face with small-to-medium horns directed upward and outward."
+        },
+        {
+          "title": "Climate adaptation",
+          "description": "Adapted to hot and humid coastal Goa conditions."
+        },
+        {
+          "title": "Use",
+          "description": "Raised particularly for milk rather than heavy field work."
+        }
+      ],
+      "care_guide": {
+        "feeding": "Provide a balanced ration built around quality green fodder, dry roughage, clean water and an appropriate mineral mixture. Increase energy/protein supply according to milk yield and stage of lactation.",
+        "housing": "Use a clean, dry, well-ventilated shed with shade and adequate drainage. Keep milking and resting areas hygienic. Prioritize shade, airflow and access to cool drinking water during heat waves. Keep floors and bedding dry and improve drainage to reduce hoof and skin problems.",
+        "grazing_or_exercise": "Provide daily movement or grazing appropriate to body condition and climate. Reduce heat load with shade, airflow and frequent access to water in hot weather.",
+        "healthcare": "Follow the local vaccination and deworming plan; maintain tick/parasite control and monitor appetite, manure, body condition, udder health and lameness.",
+        "breeding_or_milking": "Use clean milking practices and consistent milking times. Breed only when the animal is in suitable body condition; use a veterinarian/technician for fertility problems.",
+        "handling_note": "Use calm, low-stress handling and provide secure fencing and clean water points."
+      },
+      "similar_breeds": [
+        "Vechur",
+        "Punganur",
+        "Sahiwal",
+        "Gir"
+      ]
+    },
+    "33": {
+      "id": 33,
+      "name": "Tharparkar",
+      "overview": "Tharparkar is a hardy dual-purpose zebu breed from the Thar Desert region of Rajasthan and adjoining areas. It is especially valued for heat and drought tolerance, efficient use of sparse forage, draught ability and useful milk production.",
+      "origin_or_home_tract": "Rajasthan",
+      "primary_type": "dual_purpose",
+      "top_5_characteristics": [
+        {
+          "title": "Colour",
+          "description": "White to light grey; bulls often show darker shading at extremities."
+        },
+        {
+          "title": "Dairy ability",
+          "description": "A recognized indigenous dairy breed with useful milk production."
+        },
+        {
+          "title": "Draught ability",
+          "description": "Retains strong working ability and dual-purpose utility."
+        },
+        {
+          "title": "Desert adaptation",
+          "description": "Well adapted to hot, arid and drought-prone environments."
+        },
+        {
+          "title": "Hardiness",
+          "description": "Performs under variable fodder and water availability when properly managed."
+        }
+      ],
+      "care_guide": {
+        "feeding": "Use good roughage and green fodder as the base, with concentrate and minerals increased during lactation, late pregnancy or periods of heavy work. Ensure unrestricted clean water.",
+        "housing": "Provide a shaded, dry and well-ventilated shelter with good drainage, clean bedding and enough space for resting and movement. Prioritize shade, airflow and access to cool drinking water during heat waves.",
+        "grazing_or_exercise": "Balance grazing with controlled exercise. Working or lactating animals need additional recovery time and should be protected from heat stress.",
+        "healthcare": "Maintain routine vaccination, deworming, external parasite control, hoof care and regular veterinary observation. Keep new or sick animals separated when appropriate.",
+        "breeding_or_milking": "Select for sound legs, udder/teat structure and overall health. Maintain clean milking practices and seek veterinary help for infertility, difficult calving or udder disease.",
+        "handling_note": "Use calm, low-stress handling and provide secure fencing and clean water points."
+      },
+      "similar_breeds": [
+        "Rathi",
+        "Kankrej",
+        "Hariana",
+        "Mewati"
+      ]
+    },
+    "34": {
+      "id": 34,
+      "name": "Umblachery",
+      "overview": "Umblachery is a draught cattle breed from the coastal delta region of Tamil Nadu, adapted to wet agricultural fields and paddy cultivation. It is valued for compact strength, endurance and suitability for ploughing and transport in local farming systems.",
+      "origin_or_home_tract": "Tamil Nadu",
+      "primary_type": "draught",
+      "top_5_characteristics": [
+        {
+          "title": "Build",
+          "description": "Small-to-medium compact cattle."
+        },
+        {
+          "title": "Utility",
+          "description": "Primarily valued for draught work in agricultural fields."
+        },
+        {
+          "title": "Adaptation",
+          "description": "Well suited to the wet, coastal delta environment of its home tract."
+        },
+        {
+          "title": "Feet",
+          "description": "Strong working feet are important for field operations."
+        },
+        {
+          "title": "Low-input fitness",
+          "description": "Can be maintained under traditional grazing and village systems."
+        }
+      ],
+      "care_guide": {
+        "feeding": "Base the ration on good-quality roughage and local green fodder; add concentrate/mineral support when the animal is doing sustained draught work. Keep feed changes gradual.",
+        "housing": "Provide a dry, shaded, well-ventilated shelter with a non-slip floor and clean bedding. Protect from prolonged rain or extreme heat according to the home climate. Prioritize shade, airflow and access to cool drinking water during heat waves. Keep floors and bedding dry and improve drainage to reduce hoof and skin problems.",
+        "grazing_or_exercise": "Allow regular grazing or controlled exercise. For working animals, schedule water, rest and cooling breaks and avoid the hottest part of the day.",
+        "healthcare": "Follow the local veterinary vaccination schedule, routine deworming and parasite control. Check hooves/feet regularly because workload and terrain increase wear.",
+        "breeding_or_milking": "Select healthy animals from sound working lines. Avoid breeding animals with structural limb or hoof problems; pregnancy and postpartum care should be supervised locally.",
+        "handling_note": "Use calm, low-stress handling and provide secure fencing and clean water points."
+      },
+      "similar_breeds": [
+        "Kangayam",
+        "Pulikulam",
+        "Bargur",
+        "Konkan Kapila"
+      ]
+    },
+    "35": {
+      "id": 35,
+      "name": "Vechur",
+      "overview": "Vechur is a small indigenous cattle breed from Kerala, famous for its very small body size, low maintenance needs and adaptation to humid tropical conditions. It has strong conservation importance and is valued for efficient use of feed and distinctive milk characteristics.",
+      "origin_or_home_tract": "Kerala",
+      "primary_type": "dairy",
+      "top_5_characteristics": [
+        {
+          "title": "Size",
+          "description": "Very small indigenous cattle with low body size."
+        },
+        {
+          "title": "Build",
+          "description": "Compact body and modest feed requirement."
+        },
+        {
+          "title": "Climate adaptation",
+          "description": "Well suited to Kerala’s warm, humid conditions."
+        },
+        {
+          "title": "Milk",
+          "description": "Known for producing milk despite its very small stature."
+        },
+        {
+          "title": "Low-input fitness",
+          "description": "Suitable for smallholders because maintenance requirements are relatively low."
+        }
+      ],
+      "care_guide": {
+        "feeding": "Provide a balanced ration built around quality green fodder, dry roughage, clean water and an appropriate mineral mixture. Increase energy/protein supply according to milk yield and stage of lactation.",
+        "housing": "Use a clean, dry, well-ventilated shed with shade and adequate drainage. Keep milking and resting areas hygienic. Prioritize shade, airflow and access to cool drinking water during heat waves. Keep floors and bedding dry and improve drainage to reduce hoof and skin problems.",
+        "grazing_or_exercise": "Provide daily movement or grazing appropriate to body condition and climate. Reduce heat load with shade, airflow and frequent access to water in hot weather.",
+        "healthcare": "Follow the local vaccination and deworming plan; maintain tick/parasite control and monitor appetite, manure, body condition, udder health and lameness.",
+        "breeding_or_milking": "Use clean milking practices and consistent milking times. Breed only when the animal is in suitable body condition; use a veterinarian/technician for fertility problems.",
+        "handling_note": "Use calm, low-stress handling and provide secure fencing and clean water points."
+      },
+      "similar_breeds": [
+        "Punganur",
+        "Malnad_gidda",
+        "Badri",
+        "Shweta Kapila"
+      ]
+    },
+    "36": {
+      "id": 36,
+      "name": "bachaur",
+      "overview": "Bachaur is an indigenous draught breed associated with Bihar and the eastern Gangetic plains. It is valued for hardiness, field-work ability and suitability to low-input village farming, with cattle able to utilize locally available roughage.",
+      "origin_or_home_tract": "Bihar",
+      "primary_type": "draught",
+      "top_5_characteristics": [
+        {
+          "title": "Build",
+          "description": "Small-to-medium, sturdy cattle of the Bihar plains."
+        },
+        {
+          "title": "Utility",
+          "description": "Primarily used as a draught breed."
+        },
+        {
+          "title": "Adaptation",
+          "description": "Well suited to local Gangetic plain farming conditions."
+        },
+        {
+          "title": "Hardiness",
+          "description": "Useful under village-level, relatively low-input management."
+        },
+        {
+          "title": "Maintenance",
+          "description": "Benefits from grazing plus added energy during heavy work."
+        }
+      ],
+      "care_guide": {
+        "feeding": "Base the ration on good-quality roughage and local green fodder; add concentrate/mineral support when the animal is doing sustained draught work. Keep feed changes gradual.",
+        "housing": "Provide a dry, shaded, well-ventilated shelter with a non-slip floor and clean bedding. Protect from prolonged rain or extreme heat according to the home climate. Prioritize shade, airflow and access to cool drinking water during heat waves. Keep floors and bedding dry and improve drainage to reduce hoof and skin problems.",
+        "grazing_or_exercise": "Allow regular grazing or controlled exercise. For working animals, schedule water, rest and cooling breaks and avoid the hottest part of the day.",
+        "healthcare": "Follow the local veterinary vaccination schedule, routine deworming and parasite control. Check hooves/feet regularly because workload and terrain increase wear.",
+        "breeding_or_milking": "Select healthy animals from sound working lines. Avoid breeding animals with structural limb or hoof problems; pregnancy and postpartum care should be supervised locally.",
+        "handling_note": "Use calm, low-stress handling and provide secure fencing and clean water points."
+      },
+      "similar_breeds": [
+        "Kenkatha",
+        "Kosali",
+        "Purnea",
+        "Gangatiri"
+      ]
+    },
+    "37": {
+      "id": 37,
+      "name": "badri",
+      "overview": "Badri is a hill-adapted cattle breed from Uttarakhand, suited to Himalayan terrain and smallholder systems. It is valued for hardiness, mobility on slopes, ability to utilize local forage and resilience under low-input management.",
+      "origin_or_home_tract": "Uttarakhand",
+      "primary_type": "dual_purpose",
+      "top_5_characteristics": [
+        {
+          "title": "Size",
+          "description": "Small, sturdy cattle generally around 200–250 kg adult weight."
+        },
+        {
+          "title": "Coat",
+          "description": "Colour varies among black, brown, red, white and grey animals."
+        },
+        {
+          "title": "Terrain adaptation",
+          "description": "Long, straight legs and hard feet help on rugged mountain terrain."
+        },
+        {
+          "title": "Hardiness",
+          "description": "Well adapted to hill conditions and considered relatively disease resistant."
+        },
+        {
+          "title": "Use",
+          "description": "Maintained mainly for milk, with additional draught utility."
+        }
+      ],
+      "care_guide": {
+        "feeding": "Use good roughage and green fodder as the base, with concentrate and minerals increased during lactation, late pregnancy or periods of heavy work. Ensure unrestricted clean water. During severe cold, protect energy intake because maintenance needs can rise.",
+        "housing": "Provide a shaded, dry and well-ventilated shelter with good drainage, clean bedding and enough space for resting and movement. In cold/high-altitude areas, block strong drafts and provide dry bedding while retaining enough ventilation.",
+        "grazing_or_exercise": "Balance grazing with controlled exercise. Working or lactating animals need additional recovery time and should be protected from heat stress. On steep terrain, monitor hoof condition and avoid overloading young or pregnant animals.",
+        "healthcare": "Maintain routine vaccination, deworming, external parasite control, hoof care and regular veterinary observation. Keep new or sick animals separated when appropriate.",
+        "breeding_or_milking": "Select for sound legs, udder/teat structure and overall health. Maintain clean milking practices and seek veterinary help for infertility, difficult calving or udder disease.",
+        "handling_note": "Use calm, low-stress handling and provide secure fencing and clean water points."
+      },
+      "similar_breeds": [
+        "Himachali Pahari",
+        "Ladakhi",
+        "Siri",
+        "Vechur"
+      ]
+    },
+    "38": {
+      "id": 38,
+      "name": "bhelai",
+      "overview": "Bhelai is an indigenous cattle breed associated with central and eastern India and maintained in traditional farming systems. It is primarily valued for hardiness, local adaptation and draught utility, particularly where low-cost management is important.",
+      "origin_or_home_tract": "Haryana/Chandigarh",
+      "primary_type": "dual_purpose",
+      "top_5_characteristics": [
+        {
+          "title": "Type",
+          "description": "Medium-sized dual-purpose cattle used for milk and draught."
+        },
+        {
+          "title": "Management",
+          "description": "Traditionally associated with migratory/pastoral management systems."
+        },
+        {
+          "title": "Hardiness",
+          "description": "Adapted to variable forage availability and field conditions."
+        },
+        {
+          "title": "Utility",
+          "description": "Provides milk while retaining useful working ability."
+        },
+        {
+          "title": "Local adaptation",
+          "description": "Well suited to the northern Indian plains and seasonal movement."
+        }
+      ],
+      "care_guide": {
+        "feeding": "Use good roughage and green fodder as the base, with concentrate and minerals increased during lactation, late pregnancy or periods of heavy work. Ensure unrestricted clean water.",
+        "housing": "Provide a shaded, dry and well-ventilated shelter with good drainage, clean bedding and enough space for resting and movement. Prioritize shade, airflow and access to cool drinking water during heat waves.",
+        "grazing_or_exercise": "Balance grazing with controlled exercise. Working or lactating animals need additional recovery time and should be protected from heat stress.",
+        "healthcare": "Maintain routine vaccination, deworming, external parasite control, hoof care and regular veterinary observation. Keep new or sick animals separated when appropriate.",
+        "breeding_or_milking": "Select for sound legs, udder/teat structure and overall health. Maintain clean milking practices and seek veterinary help for infertility, difficult calving or udder disease.",
+        "handling_note": "Use calm, low-stress handling and provide secure fencing and clean water points."
+      },
+      "similar_breeds": [
+        "Hariana",
+        "Mewati",
+        "Rathi",
+        "Kankrej"
+      ]
+    },
+    "39": {
+      "id": 39,
+      "name": "dagri",
+      "overview": "Dagri is a local Indian cattle breed maintained mainly for practical agricultural use in its home region. It is characterized by hardiness, adaptation to local feed resources and useful draught capacity in smallholder farming systems.",
+      "origin_or_home_tract": "Gujarat",
+      "primary_type": "draught",
+      "top_5_characteristics": [
+        {
+          "title": "Colour",
+          "description": "Predominantly white, often with a black muzzle, dark eyelids, horns and tail switch."
+        },
+        {
+          "title": "Size",
+          "description": "Small compared with many Gujarat cattle breeds."
+        },
+        {
+          "title": "Build",
+          "description": "Slender, compact and sturdy for hill agriculture."
+        },
+        {
+          "title": "Adaptation",
+          "description": "Excellent heat and drought tolerance for the hilly semi-arid tract."
+        },
+        {
+          "title": "Milk/work",
+          "description": "Low-to-moderate milk production with useful draught capacity."
+        }
+      ],
+      "care_guide": {
+        "feeding": "Base the ration on good-quality roughage and local green fodder; add concentrate/mineral support when the animal is doing sustained draught work. Keep feed changes gradual.",
+        "housing": "Provide a dry, shaded, well-ventilated shelter with a non-slip floor and clean bedding. Protect from prolonged rain or extreme heat according to the home climate. Prioritize shade, airflow and access to cool drinking water during heat waves.",
+        "grazing_or_exercise": "Allow regular grazing or controlled exercise. For working animals, schedule water, rest and cooling breaks and avoid the hottest part of the day. On steep terrain, monitor hoof condition and avoid overloading young or pregnant animals.",
+        "healthcare": "Follow the local veterinary vaccination schedule, routine deworming and parasite control. Check hooves/feet regularly because workload and terrain increase wear.",
+        "breeding_or_milking": "Select healthy animals from sound working lines. Avoid breeding animals with structural limb or hoof problems; pregnancy and postpartum care should be supervised locally.",
+        "handling_note": "Use calm, low-stress handling and provide secure fencing and clean water points."
+      },
+      "similar_breeds": [
+        "Dangi",
+        "Kenkatha",
+        "Khillari",
+        "Konkan Kapila"
+      ]
+    },
+    "40": {
+      "id": 40,
+      "name": "gangatari",
+      "overview": "Gangatari is a cattle breed associated with the Gangetic plains of eastern Uttar Pradesh and Bihar. It is valued for adaptation to the local agro-climate, economical maintenance and utility in mixed farming systems, including draught and limited dairy use.",
+      "origin_or_home_tract": "Bihar/Uttar Pradesh",
+      "primary_type": "dual_purpose",
+      "top_5_characteristics": [
+        {
+          "title": "Type",
+          "description": "Dual-purpose cattle associated with the Gangetic plain."
+        },
+        {
+          "title": "Build",
+          "description": "Medium-sized, sturdy indigenous conformation."
+        },
+        {
+          "title": "Utility",
+          "description": "Used for both milk and draught work."
+        },
+        {
+          "title": "Adaptation",
+          "description": "Well suited to the climatic and farming conditions of the Gangetic belt."
+        },
+        {
+          "title": "Hardiness",
+          "description": "Appropriate for low-to-moderate input smallholder systems."
+        }
+      ],
+      "care_guide": {
+        "feeding": "Use good roughage and green fodder as the base, with concentrate and minerals increased during lactation, late pregnancy or periods of heavy work. Ensure unrestricted clean water.",
+        "housing": "Provide a shaded, dry and well-ventilated shelter with good drainage, clean bedding and enough space for resting and movement. Prioritize shade, airflow and access to cool drinking water during heat waves. Keep floors and bedding dry and improve drainage to reduce hoof and skin problems.",
+        "grazing_or_exercise": "Balance grazing with controlled exercise. Working or lactating animals need additional recovery time and should be protected from heat stress.",
+        "healthcare": "Maintain routine vaccination, deworming, external parasite control, hoof care and regular veterinary observation. Keep new or sick animals separated when appropriate.",
+        "breeding_or_milking": "Select for sound legs, udder/teat structure and overall health. Maintain clean milking practices and seek veterinary help for infertility, difficult calving or udder disease.",
+        "handling_note": "Use calm, low-stress handling and provide secure fencing and clean water points."
+      },
+      "similar_breeds": [
+        "Hariana",
+        "Bachaur",
+        "Purnea",
+        "Kenkatha"
+      ]
+    },
+    "41": {
+      "id": 41,
+      "name": "gaolao",
+      "overview": "Gaolao is an indigenous cattle breed from the Vidarbha and adjoining central Indian regions. It is a hardy draught and dual-purpose breed known for its ability to work under hot conditions and make use of relatively sparse local feed resources.",
+      "origin_or_home_tract": "Maharashtra/Madhya Pradesh",
+      "primary_type": "dual_purpose",
+      "top_5_characteristics": [
+        {
+          "title": "Build",
+          "description": "Tall, strong cattle with a working-oriented body."
+        },
+        {
+          "title": "Colour",
+          "description": "Usually white or light grey, often darker in males around the neck and shoulders."
+        },
+        {
+          "title": "Draught ability",
+          "description": "Known for useful speed and strength in field work."
+        },
+        {
+          "title": "Utility",
+          "description": "Used for both milk and draught functions."
+        },
+        {
+          "title": "Adaptation",
+          "description": "Well suited to central Indian conditions and mixed farming systems."
+        }
+      ],
+      "care_guide": {
+        "feeding": "Use good roughage and green fodder as the base, with concentrate and minerals increased during lactation, late pregnancy or periods of heavy work. Ensure unrestricted clean water.",
+        "housing": "Provide a shaded, dry and well-ventilated shelter with good drainage, clean bedding and enough space for resting and movement. Prioritize shade, airflow and access to cool drinking water during heat waves.",
+        "grazing_or_exercise": "Balance grazing with controlled exercise. Working or lactating animals need additional recovery time and should be protected from heat stress.",
+        "healthcare": "Maintain routine vaccination, deworming, external parasite control, hoof care and regular veterinary observation. Keep new or sick animals separated when appropriate.",
+        "breeding_or_milking": "Select for sound legs, udder/teat structure and overall health. Maintain clean milking practices and seek veterinary help for infertility, difficult calving or udder disease.",
+        "handling_note": "Use calm, low-stress handling and provide secure fencing and clean water points."
+      },
+      "similar_breeds": [
+        "Kankrej",
+        "Krishna_Valley",
+        "Amritmahal",
+        "Dangi"
+      ]
+    },
+    "42": {
+      "id": 42,
+      "name": "ghumsari",
+      "overview": "Ghumsari is an indigenous cattle breed from Odisha, adapted to warm and humid local conditions. It is valued for hardiness, economical maintenance and practical draught utility in traditional mixed farming systems.",
+      "origin_or_home_tract": "Odisha",
+      "primary_type": "draught",
+      "top_5_characteristics": [
+        {
+          "title": "Type",
+          "description": "Indigenous draught breed from Odisha."
+        },
+        {
+          "title": "Build",
+          "description": "Compact, sturdy body suited to agricultural work."
+        },
+        {
+          "title": "Low-input fitness",
+          "description": "Can be maintained with grazing and locally available fodder."
+        },
+        {
+          "title": "Adaptation",
+          "description": "Well suited to Odisha’s warm, humid environment."
+        },
+        {
+          "title": "Farm utility",
+          "description": "Used for ploughing, carting and related work."
+        }
+      ],
+      "care_guide": {
+        "feeding": "Base the ration on good-quality roughage and local green fodder; add concentrate/mineral support when the animal is doing sustained draught work. Keep feed changes gradual.",
+        "housing": "Provide a dry, shaded, well-ventilated shelter with a non-slip floor and clean bedding. Protect from prolonged rain or extreme heat according to the home climate. Prioritize shade, airflow and access to cool drinking water during heat waves. Keep floors and bedding dry and improve drainage to reduce hoof and skin problems.",
+        "grazing_or_exercise": "Allow regular grazing or controlled exercise. For working animals, schedule water, rest and cooling breaks and avoid the hottest part of the day.",
+        "healthcare": "Follow the local veterinary vaccination schedule, routine deworming and parasite control. Check hooves/feet regularly because workload and terrain increase wear.",
+        "breeding_or_milking": "Select healthy animals from sound working lines. Avoid breeding animals with structural limb or hoof problems; pregnancy and postpartum care should be supervised locally.",
+        "handling_note": "Use calm, low-stress handling and provide secure fencing and clean water points."
+      },
+      "similar_breeds": [
+        "Khariar",
+        "Motu",
+        "Kosali",
+        "Bachaur"
+      ]
+    },
+    "43": {
+      "id": 43,
+      "name": "kherigarh",
+      "overview": "Kherigarh is a hardy cattle breed from the northern Uttar Pradesh region, mainly associated with draught use. It is valued for endurance, adaptation to local feed resources and ability to perform agricultural work under low-input conditions.",
+      "origin_or_home_tract": "Uttar Pradesh",
+      "primary_type": "draught",
+      "top_5_characteristics": [
+        {
+          "title": "Build",
+          "description": "Small-to-medium, sturdy cattle."
+        },
+        {
+          "title": "Utility",
+          "description": "Primarily maintained for draught work."
+        },
+        {
+          "title": "Colour",
+          "description": "Generally light grey to white, with variation among animals."
+        },
+        {
+          "title": "Hardiness",
+          "description": "Can perform under modest feeding and village management."
+        },
+        {
+          "title": "Adaptation",
+          "description": "Suited to the plains of its Uttar Pradesh breeding tract."
+        }
+      ],
+      "care_guide": {
+        "feeding": "Base the ration on good-quality roughage and local green fodder; add concentrate/mineral support when the animal is doing sustained draught work. Keep feed changes gradual.",
+        "housing": "Provide a dry, shaded, well-ventilated shelter with a non-slip floor and clean bedding. Protect from prolonged rain or extreme heat according to the home climate. Prioritize shade, airflow and access to cool drinking water during heat waves.",
+        "grazing_or_exercise": "Allow regular grazing or controlled exercise. For working animals, schedule water, rest and cooling breaks and avoid the hottest part of the day.",
+        "healthcare": "Follow the local veterinary vaccination schedule, routine deworming and parasite control. Check hooves/feet regularly because workload and terrain increase wear.",
+        "breeding_or_milking": "Select healthy animals from sound working lines. Avoid breeding animals with structural limb or hoof problems; pregnancy and postpartum care should be supervised locally.",
+        "handling_note": "Use calm, low-stress handling and provide secure fencing and clean water points."
+      },
+      "similar_breeds": [
+        "Kenkatha",
+        "Bachaur",
+        "Nagori",
+        "Malvi"
+      ]
+    },
+    "44": {
+      "id": 44,
+      "name": "malvi",
+      "overview": "Malvi is a traditional draught and dual-purpose cattle breed from Madhya Pradesh and adjoining central India. It is valued for strength, endurance, adaptability to hot conditions and useful farm-work capacity.",
+      "origin_or_home_tract": "Madhya Pradesh",
+      "primary_type": "draught",
+      "top_5_characteristics": [
+        {
+          "title": "Build",
+          "description": "Medium-to-large, strong-bodied central Indian cattle."
+        },
+        {
+          "title": "Colour",
+          "description": "Usually grey to white with darker shading in males."
+        },
+        {
+          "title": "Draught ability",
+          "description": "Valued for ploughing, carting and sustained work."
+        },
+        {
+          "title": "Hardiness",
+          "description": "Tolerates hot conditions and variable feed resources."
+        },
+        {
+          "title": "Low-input fit",
+          "description": "Well suited to traditional mixed farming systems."
+        }
+      ],
+      "care_guide": {
+        "feeding": "Base the ration on good-quality roughage and local green fodder; add concentrate/mineral support when the animal is doing sustained draught work. Keep feed changes gradual.",
+        "housing": "Provide a dry, shaded, well-ventilated shelter with a non-slip floor and clean bedding. Protect from prolonged rain or extreme heat according to the home climate. Prioritize shade, airflow and access to cool drinking water during heat waves.",
+        "grazing_or_exercise": "Allow regular grazing or controlled exercise. For working animals, schedule water, rest and cooling breaks and avoid the hottest part of the day.",
+        "healthcare": "Follow the local veterinary vaccination schedule, routine deworming and parasite control. Check hooves/feet regularly because workload and terrain increase wear.",
+        "breeding_or_milking": "Select healthy animals from sound working lines. Avoid breeding animals with structural limb or hoof problems; pregnancy and postpartum care should be supervised locally.",
+        "handling_note": "Use calm, low-stress handling and provide secure fencing and clean water points."
+      },
+      "similar_breeds": [
+        "Nimari",
+        "Kherigarh",
+        "Nagori",
+        "Gaolao"
+      ]
+    },
+    "45": {
+      "id": 45,
+      "name": "motu",
+      "overview": "Motu is an indigenous cattle breed associated with Odisha and the eastern Indian tribal belt. It is a hardy local breed valued mainly for draught work, resilience and the ability to perform in low-input village farming environments.",
+      "origin_or_home_tract": "Odisha/Chhattisgarh/Andhra Pradesh",
+      "primary_type": "draught",
+      "top_5_characteristics": [
+        {
+          "title": "Size",
+          "description": "Generally small-to-medium indigenous working cattle."
+        },
+        {
+          "title": "Build",
+          "description": "Compact and hardy for field operations."
+        },
+        {
+          "title": "Terrain adaptation",
+          "description": "Useful in forested, hilly and mixed-farming environments."
+        },
+        {
+          "title": "Utility",
+          "description": "Primarily used for draught work."
+        },
+        {
+          "title": "Low-input fitness",
+          "description": "Can be maintained under extensive village grazing systems."
+        }
+      ],
+      "care_guide": {
+        "feeding": "Base the ration on good-quality roughage and local green fodder; add concentrate/mineral support when the animal is doing sustained draught work. Keep feed changes gradual.",
+        "housing": "Provide a dry, shaded, well-ventilated shelter with a non-slip floor and clean bedding. Protect from prolonged rain or extreme heat according to the home climate. Prioritize shade, airflow and access to cool drinking water during heat waves. Keep floors and bedding dry and improve drainage to reduce hoof and skin problems.",
+        "grazing_or_exercise": "Allow regular grazing or controlled exercise. For working animals, schedule water, rest and cooling breaks and avoid the hottest part of the day.",
+        "healthcare": "Follow the local veterinary vaccination schedule, routine deworming and parasite control. Check hooves/feet regularly because workload and terrain increase wear.",
+        "breeding_or_milking": "Select healthy animals from sound working lines. Avoid breeding animals with structural limb or hoof problems; pregnancy and postpartum care should be supervised locally.",
+        "handling_note": "Use calm, low-stress handling and provide secure fencing and clean water points."
+      },
+      "similar_breeds": [
+        "Ghumusari",
+        "Khariar",
+        "Kosali",
+        "Poda Thirupu"
+      ]
+    },
+    "46": {
+      "id": 46,
+      "name": "nagori",
+      "overview": "Nagori is a fast, active draught breed from Rajasthan, particularly known for efficient movement and field work. It is well adapted to hot, dry conditions and is valued more for work capacity than for high milk production.",
+      "origin_or_home_tract": "Rajasthan",
+      "primary_type": "draught",
+      "top_5_characteristics": [
+        {
+          "title": "Build",
+          "description": "Tall, lean and athletic working cattle."
+        },
+        {
+          "title": "Speed",
+          "description": "Well known for fast and efficient draught performance."
+        },
+        {
+          "title": "Colour",
+          "description": "Typically white or light grey."
+        },
+        {
+          "title": "Adaptation",
+          "description": "Suited to Rajasthan’s dry climate and open terrain."
+        },
+        {
+          "title": "Utility",
+          "description": "Widely valued for transport, carting and field work."
+        }
+      ],
+      "care_guide": {
+        "feeding": "Base the ration on good-quality roughage and local green fodder; add concentrate/mineral support when the animal is doing sustained draught work. Keep feed changes gradual.",
+        "housing": "Provide a dry, shaded, well-ventilated shelter with a non-slip floor and clean bedding. Protect from prolonged rain or extreme heat according to the home climate. Prioritize shade, airflow and access to cool drinking water during heat waves.",
+        "grazing_or_exercise": "Allow regular grazing or controlled exercise. For working animals, schedule water, rest and cooling breaks and avoid the hottest part of the day.",
+        "healthcare": "Follow the local veterinary vaccination schedule, routine deworming and parasite control. Check hooves/feet regularly because workload and terrain increase wear.",
+        "breeding_or_milking": "Select healthy animals from sound working lines. Avoid breeding animals with structural limb or hoof problems; pregnancy and postpartum care should be supervised locally.",
+        "handling_note": "Use calm, low-stress handling and provide secure fencing and clean water points."
+      },
+      "similar_breeds": [
+        "Kenkatha",
+        "Malvi",
+        "Amritmahal",
+        "Khillari"
+      ]
+    },
+    "47": {
+      "id": 47,
+      "name": "ponwar",
+      "overview": "Ponwar is a hardy cattle breed from the northern Indian Himalayan foothill region, maintained mainly for local agricultural needs. It is valued for endurance, adaptation to hilly and variable conditions and useful draught ability.",
+      "origin_or_home_tract": "Uttar Pradesh",
+      "primary_type": "draught",
+      "top_5_characteristics": [
+        {
+          "title": "Build",
+          "description": "Small, compact and relatively light-bodied cattle."
+        },
+        {
+          "title": "Coat",
+          "description": "Brown or black with white patches in varying proportions."
+        },
+        {
+          "title": "Temperament",
+          "description": "Can be assertive/aggressive, so calm handling is important."
+        },
+        {
+          "title": "Draught use",
+          "description": "Bullocks are capable of useful ploughing and transport work."
+        },
+        {
+          "title": "Milk",
+          "description": "Cows are low milk producers compared with specialized dairy breeds."
+        }
+      ],
+      "care_guide": {
+        "feeding": "Base the ration on good-quality roughage and local green fodder; add concentrate/mineral support when the animal is doing sustained draught work. Keep feed changes gradual.",
+        "housing": "Provide a dry, shaded, well-ventilated shelter with a non-slip floor and clean bedding. Protect from prolonged rain or extreme heat according to the home climate. Prioritize shade, airflow and access to cool drinking water during heat waves. Keep floors and bedding dry and improve drainage to reduce hoof and skin problems.",
+        "grazing_or_exercise": "Allow regular grazing or controlled exercise. For working animals, schedule water, rest and cooling breaks and avoid the hottest part of the day.",
+        "healthcare": "Follow the local veterinary vaccination schedule, routine deworming and parasite control. Check hooves/feet regularly because workload and terrain increase wear.",
+        "breeding_or_milking": "Select healthy animals from sound working lines. Avoid breeding animals with structural limb or hoof problems; pregnancy and postpartum care should be supervised locally.",
+        "handling_note": "Use calm, low-stress handling and provide secure fencing and clean water points."
+      },
+      "similar_breeds": [
+        "Kherigarh",
+        "Kenkatha",
+        "Bachaur",
+        "Hariana"
+      ]
+    },
+    "48": {
+      "id": 48,
+      "name": "siri",
+      "overview": "Siri is a hill cattle breed from the eastern Himalayan region, especially associated with Sikkim and neighbouring areas. It is adapted to cool, wet and mountainous terrain and is valued for hardiness, mobility and utility in low-input farming systems.",
+      "origin_or_home_tract": "Sikkim/West Bengal",
+      "primary_type": "dual_purpose",
+      "top_5_characteristics": [
+        {
+          "title": "Size",
+          "description": "Small zebu cattle of the north-eastern Himalayan region."
+        },
+        {
+          "title": "Coat",
+          "description": "Black or brown with white patches; solid colours also occur."
+        },
+        {
+          "title": "Hump",
+          "description": "Distinctive cervico-thoracic hump is a notable breed feature."
+        },
+        {
+          "title": "Terrain adaptation",
+          "description": "Comfortable grazing on steep slopes and forested terrain."
+        },
+        {
+          "title": "Utility",
+          "description": "Provides milk and has local draught value under hill conditions."
+        }
+      ],
+      "care_guide": {
+        "feeding": "Use good roughage and green fodder as the base, with concentrate and minerals increased during lactation, late pregnancy or periods of heavy work. Ensure unrestricted clean water. During severe cold, protect energy intake because maintenance needs can rise.",
+        "housing": "Provide a shaded, dry and well-ventilated shelter with good drainage, clean bedding and enough space for resting and movement. In cold/high-altitude areas, block strong drafts and provide dry bedding while retaining enough ventilation. Keep floors and bedding dry and improve drainage to reduce hoof and skin problems.",
+        "grazing_or_exercise": "Balance grazing with controlled exercise. Working or lactating animals need additional recovery time and should be protected from heat stress. On steep terrain, monitor hoof condition and avoid overloading young or pregnant animals.",
+        "healthcare": "Maintain routine vaccination, deworming, external parasite control, hoof care and regular veterinary observation. Keep new or sick animals separated when appropriate.",
+        "breeding_or_milking": "Select for sound legs, udder/teat structure and overall health. Maintain clean milking practices and seek veterinary help for infertility, difficult calving or udder disease.",
+        "handling_note": "Use calm, low-stress handling and provide secure fencing and clean water points."
+      },
+      "similar_breeds": [
+        "Himachali Pahari",
+        "Ladakhi",
+        "Badri",
+        "Malnad_gidda"
+      ]
+    },
+    "49": {
+      "id": 49,
+      "name": "thutho",
+      "overview": "Thutho is an indigenous cattle breed from Nagaland and the north-eastern hills, adapted to rugged terrain and high-rainfall conditions. It is mainly maintained for draught, manure and local livestock utility and is noted for its hardiness and ability to graze on steep slopes.",
+      "origin_or_home_tract": "Nagaland",
+      "primary_type": "draught",
+      "top_5_characteristics": [
+        {
+          "title": "Other names",
+          "description": "Also known locally as Ameshi, Sheapi, Chokru and Tseso."
+        },
+        {
+          "title": "Build",
+          "description": "Medium-sized, hardy and well-built."
+        },
+        {
+          "title": "Coat",
+          "description": "Usually black or brown, sometimes with white facial/body patches."
+        },
+        {
+          "title": "Terrain adaptation",
+          "description": "Well suited to hilly areas and grazing on steep slopes, including rainy conditions."
+        },
+        {
+          "title": "Utility",
+          "description": "Used mainly for draught, manure and local meat production; cows are generally not milked."
+        }
+      ],
+      "care_guide": {
+        "feeding": "Base the ration on good-quality roughage and local green fodder; add concentrate/mineral support when the animal is doing sustained draught work. Keep feed changes gradual. During severe cold, protect energy intake because maintenance needs can rise.",
+        "housing": "Provide a dry, shaded, well-ventilated shelter with a non-slip floor and clean bedding. Protect from prolonged rain or extreme heat according to the home climate. In cold/high-altitude areas, block strong drafts and provide dry bedding while retaining enough ventilation. Keep floors and bedding dry and improve drainage to reduce hoof and skin problems.",
+        "grazing_or_exercise": "Allow regular grazing or controlled exercise. For working animals, schedule water, rest and cooling breaks and avoid the hottest part of the day. On steep terrain, monitor hoof condition and avoid overloading young or pregnant animals.",
+        "healthcare": "Follow the local veterinary vaccination schedule, routine deworming and parasite control. Check hooves/feet regularly because workload and terrain increase wear.",
+        "breeding_or_milking": "Select healthy animals from sound working lines. Avoid breeding animals with structural limb or hoof problems; pregnancy and postpartum care should be supervised locally.",
+        "handling_note": "Use calm, low-stress handling and provide secure fencing and clean water points."
+      },
+      "similar_breeds": [
+        "Siri",
+        "Himachali Pahari",
+        "Lakhimi",
+        "Badri"
+      ]
+    }
+  }
+}

@@ -1,0 +1,1938 @@
+{
+  "schema_version": "1.0.0",
+  "title": "Indian Cattle Breed Practical Data Dataset",
+  "description": "Practical breed-level reference data for an animal breed identification application.",
+  "important_note": "Body weight, lifespan, feed intake and milk yield vary by sex, age, genetics, pregnancy/lactation stage, nutrition, climate and management. Values below are indicative ranges for adult animals and should not be treated as veterinary, ration-formulation or breeding advice.",
+  "units": {
+    "weight": "kg",
+    "lifespan": "years",
+    "daily_feed": "kg dry matter/day",
+    "milk": "litres/day"
+  },
+  "feed_method": "Approximate daily dry-matter intake (DMI) is derived from adult female body-weight ranges using a broad cattle guideline of about 2.0% BW/day for maintenance and about 2.5-3.0% BW/day for lactating animals. Actual rations must be formulated from forage quality, milk yield, physiological stage and veterinary/nutrition advice.",
+  "breed_count": 50,
+  "breeds": [
+    {
+      "id": 0,
+      "model_label": "Amritmahal",
+      "standard_name": "Amritmahal",
+      "scientific_name": "Bos indicus",
+      "average_adult_weight_kg": {
+        "male": {
+          "min": 500,
+          "max": 650
+        },
+        "female": {
+          "min": 350,
+          "max": 450
+        }
+      },
+      "typical_lifespan_years": {
+        "min": 15,
+        "max": 20
+      },
+      "daily_food_intake": {
+        "maintenance_dry_matter_kg_per_day": 8.0,
+        "lactating_dry_matter_kg_per_day": {
+          "min": 10.0,
+          "max": 12.0
+        },
+        "unit": "kg dry matter/day",
+        "note": "Dry matter is not the same as fresh-feed weight; fresh ration weight can be several times higher depending on moisture."
+      },
+      "milk_production_l_per_day": {
+        "typical_min": 2.0,
+        "typical_max": 3.0,
+        "note": "Indicative daily production during lactation; actual yield varies considerably with management."
+      },
+      "primary_use": "draft",
+      "primary_use_description": "Primarily valued for draught/field work; milk output is generally modest.",
+      "identification_features": "White to light grey; muscular body; prominent upward/backward horns; compact and powerful build.",
+      "data_confidence": "higher"
+    },
+    {
+      "id": 1,
+      "model_label": "Ayrshire",
+      "standard_name": "Ayrshire",
+      "scientific_name": "Bos taurus",
+      "average_adult_weight_kg": {
+        "male": {
+          "min": 600,
+          "max": 800
+        },
+        "female": {
+          "min": 450,
+          "max": 650
+        }
+      },
+      "typical_lifespan_years": {
+        "min": 12,
+        "max": 18
+      },
+      "daily_food_intake": {
+        "maintenance_dry_matter_kg_per_day": 11.0,
+        "lactating_dry_matter_kg_per_day": {
+          "min": 13.8,
+          "max": 16.5
+        },
+        "unit": "kg dry matter/day",
+        "note": "Dry matter is not the same as fresh-feed weight; fresh ration weight can be several times higher depending on moisture."
+      },
+      "milk_production_l_per_day": {
+        "typical_min": 15,
+        "typical_max": 22,
+        "note": "Indicative daily production during lactation; actual yield varies considerably with management."
+      },
+      "primary_use": "dairy",
+      "primary_use_description": "Primarily maintained for milk production.",
+      "identification_features": "Red-and-white or brown-and-white coat; medium horns in traditional cattle; refined dairy frame.",
+      "data_confidence": "moderate"
+    },
+    {
+      "id": 2,
+      "model_label": "Bargur",
+      "standard_name": "Bargur",
+      "scientific_name": "Bos indicus",
+      "average_adult_weight_kg": {
+        "male": {
+          "min": 400,
+          "max": 500
+        },
+        "female": {
+          "min": 300,
+          "max": 400
+        }
+      },
+      "typical_lifespan_years": {
+        "min": 15,
+        "max": 20
+      },
+      "daily_food_intake": {
+        "maintenance_dry_matter_kg_per_day": 7.0,
+        "lactating_dry_matter_kg_per_day": {
+          "min": 8.8,
+          "max": 10.5
+        },
+        "unit": "kg dry matter/day",
+        "note": "Dry matter is not the same as fresh-feed weight; fresh ration weight can be several times higher depending on moisture."
+      },
+      "milk_production_l_per_day": {
+        "typical_min": 2.0,
+        "typical_max": 3.0,
+        "note": "Indicative daily production during lactation; actual yield varies considerably with management."
+      },
+      "primary_use": "draft",
+      "primary_use_description": "Primarily valued for draught/field work; milk output is generally modest.",
+      "identification_features": "Usually white/grey with reddish-brown or dark markings; compact body; strong legs and horns.",
+      "data_confidence": "moderate"
+    },
+    {
+      "id": 3,
+      "model_label": "Dangi",
+      "standard_name": "Dangi",
+      "scientific_name": "Bos indicus",
+      "average_adult_weight_kg": {
+        "male": {
+          "min": 400,
+          "max": 500
+        },
+        "female": {
+          "min": 300,
+          "max": 400
+        }
+      },
+      "typical_lifespan_years": {
+        "min": 15,
+        "max": 20
+      },
+      "daily_food_intake": {
+        "maintenance_dry_matter_kg_per_day": 7.0,
+        "lactating_dry_matter_kg_per_day": {
+          "min": 8.8,
+          "max": 10.5
+        },
+        "unit": "kg dry matter/day",
+        "note": "Dry matter is not the same as fresh-feed weight; fresh ration weight can be several times higher depending on moisture."
+      },
+      "milk_production_l_per_day": {
+        "typical_min": 2.0,
+        "typical_max": 3.0,
+        "note": "Indicative daily production during lactation; actual yield varies considerably with management."
+      },
+      "primary_use": "draft",
+      "primary_use_description": "Primarily valued for draught/field work; milk output is generally modest.",
+      "identification_features": "Grey/white coat with irregular black or red shading; thick skin and strong feet suited to wet terrain.",
+      "data_confidence": "moderate"
+    },
+    {
+      "id": 4,
+      "model_label": "Deoni",
+      "standard_name": "Deoni",
+      "scientific_name": "Bos indicus",
+      "average_adult_weight_kg": {
+        "male": {
+          "min": 500,
+          "max": 650
+        },
+        "female": {
+          "min": 400,
+          "max": 500
+        }
+      },
+      "typical_lifespan_years": {
+        "min": 15,
+        "max": 20
+      },
+      "daily_food_intake": {
+        "maintenance_dry_matter_kg_per_day": 9.0,
+        "lactating_dry_matter_kg_per_day": {
+          "min": 11.2,
+          "max": 13.5
+        },
+        "unit": "kg dry matter/day",
+        "note": "Dry matter is not the same as fresh-feed weight; fresh ration weight can be several times higher depending on moisture."
+      },
+      "milk_production_l_per_day": {
+        "typical_min": 3.0,
+        "typical_max": 5.0,
+        "note": "Indicative daily production during lactation; actual yield varies considerably with management."
+      },
+      "primary_use": "dual_purpose",
+      "primary_use_description": "Used for both milk and draught/utility purposes.",
+      "identification_features": "White/grey or black-and-white patterns; broad forehead; medium horns and well-developed udder.",
+      "data_confidence": "higher"
+    },
+    {
+      "id": 5,
+      "model_label": "Gir",
+      "standard_name": "Gir",
+      "scientific_name": "Bos indicus",
+      "average_adult_weight_kg": {
+        "male": {
+          "min": 550,
+          "max": 700
+        },
+        "female": {
+          "min": 400,
+          "max": 500
+        }
+      },
+      "typical_lifespan_years": {
+        "min": 15,
+        "max": 20
+      },
+      "daily_food_intake": {
+        "maintenance_dry_matter_kg_per_day": 9.0,
+        "lactating_dry_matter_kg_per_day": {
+          "min": 11.2,
+          "max": 13.5
+        },
+        "unit": "kg dry matter/day",
+        "note": "Dry matter is not the same as fresh-feed weight; fresh ration weight can be several times higher depending on moisture."
+      },
+      "milk_production_l_per_day": {
+        "typical_min": 5.0,
+        "typical_max": 8.0,
+        "note": "Indicative daily production during lactation; actual yield varies considerably with management."
+      },
+      "primary_use": "dairy",
+      "primary_use_description": "Primarily maintained for milk production.",
+      "identification_features": "Distinctive convex forehead, long pendulous ears, reddish/red-and-white coat and curved horns.",
+      "data_confidence": "higher"
+    },
+    {
+      "id": 6,
+      "model_label": "Hallikar",
+      "standard_name": "Hallikar",
+      "scientific_name": "Bos indicus",
+      "average_adult_weight_kg": {
+        "male": {
+          "min": 450,
+          "max": 550
+        },
+        "female": {
+          "min": 300,
+          "max": 400
+        }
+      },
+      "typical_lifespan_years": {
+        "min": 15,
+        "max": 20
+      },
+      "daily_food_intake": {
+        "maintenance_dry_matter_kg_per_day": 7.0,
+        "lactating_dry_matter_kg_per_day": {
+          "min": 8.8,
+          "max": 10.5
+        },
+        "unit": "kg dry matter/day",
+        "note": "Dry matter is not the same as fresh-feed weight; fresh ration weight can be several times higher depending on moisture."
+      },
+      "milk_production_l_per_day": {
+        "typical_min": 1.5,
+        "typical_max": 2.5,
+        "note": "Indicative daily production during lactation; actual yield varies considerably with management."
+      },
+      "primary_use": "draft",
+      "primary_use_description": "Primarily valued for draught/field work; milk output is generally modest.",
+      "identification_features": "White to light grey; strong compact frame; horns rise upward/backward before curving inward.",
+      "data_confidence": "higher"
+    },
+    {
+      "id": 7,
+      "model_label": "Hariana",
+      "standard_name": "Hariana",
+      "scientific_name": "Bos indicus",
+      "average_adult_weight_kg": {
+        "male": {
+          "min": 450,
+          "max": 550
+        },
+        "female": {
+          "min": 300,
+          "max": 400
+        }
+      },
+      "typical_lifespan_years": {
+        "min": 15,
+        "max": 20
+      },
+      "daily_food_intake": {
+        "maintenance_dry_matter_kg_per_day": 7.0,
+        "lactating_dry_matter_kg_per_day": {
+          "min": 8.8,
+          "max": 10.5
+        },
+        "unit": "kg dry matter/day",
+        "note": "Dry matter is not the same as fresh-feed weight; fresh ration weight can be several times higher depending on moisture."
+      },
+      "milk_production_l_per_day": {
+        "typical_min": 4.0,
+        "typical_max": 6.0,
+        "note": "Indicative daily production during lactation; actual yield varies considerably with management."
+      },
+      "primary_use": "dual_purpose",
+      "primary_use_description": "Used for both milk and draught/utility purposes.",
+      "identification_features": "White or light grey body; bulls often darker at neck/shoulders; straight profile and moderate horns.",
+      "data_confidence": "higher"
+    },
+    {
+      "id": 8,
+      "model_label": "Himachali Pahari",
+      "standard_name": "Himachali Pahari",
+      "scientific_name": "Bos indicus",
+      "average_adult_weight_kg": {
+        "male": {
+          "min": 300,
+          "max": 400
+        },
+        "female": {
+          "min": 220,
+          "max": 300
+        }
+      },
+      "typical_lifespan_years": {
+        "min": 15,
+        "max": 20
+      },
+      "daily_food_intake": {
+        "maintenance_dry_matter_kg_per_day": 5.2,
+        "lactating_dry_matter_kg_per_day": {
+          "min": 6.5,
+          "max": 7.8
+        },
+        "unit": "kg dry matter/day",
+        "note": "Dry matter is not the same as fresh-feed weight; fresh ration weight can be several times higher depending on moisture."
+      },
+      "milk_production_l_per_day": {
+        "typical_min": 2.0,
+        "typical_max": 4.0,
+        "note": "Indicative daily production during lactation; actual yield varies considerably with management."
+      },
+      "primary_use": "dual_purpose",
+      "primary_use_description": "Used for both milk and draught/utility purposes.",
+      "identification_features": "Small mountain cattle; variable grey/brown/black shades; compact body adapted to hilly Himalayan conditions.",
+      "data_confidence": "moderate"
+    },
+    {
+      "id": 9,
+      "model_label": "Kangayam",
+      "standard_name": "Kangayam",
+      "scientific_name": "Bos indicus",
+      "average_adult_weight_kg": {
+        "male": {
+          "min": 450,
+          "max": 550
+        },
+        "female": {
+          "min": 350,
+          "max": 450
+        }
+      },
+      "typical_lifespan_years": {
+        "min": 15,
+        "max": 20
+      },
+      "daily_food_intake": {
+        "maintenance_dry_matter_kg_per_day": 8.0,
+        "lactating_dry_matter_kg_per_day": {
+          "min": 10.0,
+          "max": 12.0
+        },
+        "unit": "kg dry matter/day",
+        "note": "Dry matter is not the same as fresh-feed weight; fresh ration weight can be several times higher depending on moisture."
+      },
+      "milk_production_l_per_day": {
+        "typical_min": 2.0,
+        "typical_max": 3.0,
+        "note": "Indicative daily production during lactation; actual yield varies considerably with management."
+      },
+      "primary_use": "draft",
+      "primary_use_description": "Primarily valued for draught/field work; milk output is generally modest.",
+      "identification_features": "Grey or white, often darker forequarters in bulls; compact muscular frame and strong crescent-like horns.",
+      "data_confidence": "higher"
+    },
+    {
+      "id": 10,
+      "model_label": "Kankrej",
+      "standard_name": "Kankrej",
+      "scientific_name": "Bos indicus",
+      "average_adult_weight_kg": {
+        "male": {
+          "min": 550,
+          "max": 650
+        },
+        "female": {
+          "min": 400,
+          "max": 500
+        }
+      },
+      "typical_lifespan_years": {
+        "min": 15,
+        "max": 20
+      },
+      "daily_food_intake": {
+        "maintenance_dry_matter_kg_per_day": 9.0,
+        "lactating_dry_matter_kg_per_day": {
+          "min": 11.2,
+          "max": 13.5
+        },
+        "unit": "kg dry matter/day",
+        "note": "Dry matter is not the same as fresh-feed weight; fresh ration weight can be several times higher depending on moisture."
+      },
+      "milk_production_l_per_day": {
+        "typical_min": 4.0,
+        "typical_max": 6.0,
+        "note": "Indicative daily production during lactation; actual yield varies considerably with management."
+      },
+      "primary_use": "dual_purpose",
+      "primary_use_description": "Used for both milk and draught/utility purposes.",
+      "identification_features": "Silver-grey to steel-grey coat; lyre-shaped horns; prominent forehead and powerful hindquarters.",
+      "data_confidence": "higher"
+    },
+    {
+      "id": 11,
+      "model_label": "Kenkatha",
+      "standard_name": "Kenkatha",
+      "scientific_name": "Bos indicus",
+      "average_adult_weight_kg": {
+        "male": {
+          "min": 350,
+          "max": 450
+        },
+        "female": {
+          "min": 250,
+          "max": 350
+        }
+      },
+      "typical_lifespan_years": {
+        "min": 15,
+        "max": 20
+      },
+      "daily_food_intake": {
+        "maintenance_dry_matter_kg_per_day": 6.0,
+        "lactating_dry_matter_kg_per_day": {
+          "min": 7.5,
+          "max": 9.0
+        },
+        "unit": "kg dry matter/day",
+        "note": "Dry matter is not the same as fresh-feed weight; fresh ration weight can be several times higher depending on moisture."
+      },
+      "milk_production_l_per_day": {
+        "typical_min": 1.5,
+        "typical_max": 2.5,
+        "note": "Indicative daily production during lactation; actual yield varies considerably with management."
+      },
+      "primary_use": "draft",
+      "primary_use_description": "Primarily valued for draught/field work; milk output is generally modest.",
+      "identification_features": "Small-to-medium grey/white cattle; strong limbs; compact draft build and short-to-medium horns.",
+      "data_confidence": "moderate"
+    },
+    {
+      "id": 12,
+      "model_label": "Khariar",
+      "standard_name": "Khariar",
+      "scientific_name": "Bos indicus",
+      "average_adult_weight_kg": {
+        "male": {
+          "min": 300,
+          "max": 400
+        },
+        "female": {
+          "min": 220,
+          "max": 300
+        }
+      },
+      "typical_lifespan_years": {
+        "min": 15,
+        "max": 20
+      },
+      "daily_food_intake": {
+        "maintenance_dry_matter_kg_per_day": 5.2,
+        "lactating_dry_matter_kg_per_day": {
+          "min": 6.5,
+          "max": 7.8
+        },
+        "unit": "kg dry matter/day",
+        "note": "Dry matter is not the same as fresh-feed weight; fresh ration weight can be several times higher depending on moisture."
+      },
+      "milk_production_l_per_day": {
+        "typical_min": 1.5,
+        "typical_max": 2.5,
+        "note": "Indicative daily production during lactation; actual yield varies considerably with management."
+      },
+      "primary_use": "draft",
+      "primary_use_description": "Primarily valued for draught/field work; milk output is generally modest.",
+      "identification_features": "Generally grey/white with compact body; strong legs and useful draught ability under low-input conditions.",
+      "data_confidence": "moderate"
+    },
+    {
+      "id": 13,
+      "model_label": "Khillari",
+      "standard_name": "Khillari",
+      "scientific_name": "Bos indicus",
+      "average_adult_weight_kg": {
+        "male": {
+          "min": 400,
+          "max": 500
+        },
+        "female": {
+          "min": 300,
+          "max": 400
+        }
+      },
+      "typical_lifespan_years": {
+        "min": 15,
+        "max": 20
+      },
+      "daily_food_intake": {
+        "maintenance_dry_matter_kg_per_day": 7.0,
+        "lactating_dry_matter_kg_per_day": {
+          "min": 8.8,
+          "max": 10.5
+        },
+        "unit": "kg dry matter/day",
+        "note": "Dry matter is not the same as fresh-feed weight; fresh ration weight can be several times higher depending on moisture."
+      },
+      "milk_production_l_per_day": {
+        "typical_min": 1.0,
+        "typical_max": 2.0,
+        "note": "Indicative daily production during lactation; actual yield varies considerably with management."
+      },
+      "primary_use": "draft",
+      "primary_use_description": "Primarily valued for draught/field work; milk output is generally modest.",
+      "identification_features": "White/grey, often darker neck and shoulders; long pointed horns and hard, well-built limbs.",
+      "data_confidence": "higher"
+    },
+    {
+      "id": 14,
+      "model_label": "Konkan Kapila",
+      "standard_name": "Konkan Kapila",
+      "scientific_name": "Bos indicus",
+      "average_adult_weight_kg": {
+        "male": {
+          "min": 300,
+          "max": 400
+        },
+        "female": {
+          "min": 220,
+          "max": 300
+        }
+      },
+      "typical_lifespan_years": {
+        "min": 15,
+        "max": 20
+      },
+      "daily_food_intake": {
+        "maintenance_dry_matter_kg_per_day": 5.2,
+        "lactating_dry_matter_kg_per_day": {
+          "min": 6.5,
+          "max": 7.8
+        },
+        "unit": "kg dry matter/day",
+        "note": "Dry matter is not the same as fresh-feed weight; fresh ration weight can be several times higher depending on moisture."
+      },
+      "milk_production_l_per_day": {
+        "typical_min": 1.5,
+        "typical_max": 3.0,
+        "note": "Indicative daily production during lactation; actual yield varies considerably with management."
+      },
+      "primary_use": "draft",
+      "primary_use_description": "Primarily valued for draught/field work; milk output is generally modest.",
+      "identification_features": "Small indigenous cattle from the Konkan region; typically compact, hardy and suited to humid conditions.",
+      "data_confidence": "moderate"
+    },
+    {
+      "id": 15,
+      "model_label": "Kosali",
+      "standard_name": "Kosali",
+      "scientific_name": "Bos indicus",
+      "average_adult_weight_kg": {
+        "male": {
+          "min": 300,
+          "max": 450
+        },
+        "female": {
+          "min": 250,
+          "max": 350
+        }
+      },
+      "typical_lifespan_years": {
+        "min": 15,
+        "max": 20
+      },
+      "daily_food_intake": {
+        "maintenance_dry_matter_kg_per_day": 6.0,
+        "lactating_dry_matter_kg_per_day": {
+          "min": 7.5,
+          "max": 9.0
+        },
+        "unit": "kg dry matter/day",
+        "note": "Dry matter is not the same as fresh-feed weight; fresh ration weight can be several times higher depending on moisture."
+      },
+      "milk_production_l_per_day": {
+        "typical_min": 2.0,
+        "typical_max": 3.0,
+        "note": "Indicative daily production during lactation; actual yield varies considerably with management."
+      },
+      "primary_use": "dual_purpose",
+      "primary_use_description": "Used for both milk and draught/utility purposes.",
+      "identification_features": "Small-to-medium cattle; generally grey/white to reddish shades; hardy body adapted to central Indian conditions.",
+      "data_confidence": "moderate"
+    },
+    {
+      "id": 16,
+      "model_label": "Krishna_Valley",
+      "standard_name": "Krishna Valley",
+      "scientific_name": "Bos indicus",
+      "average_adult_weight_kg": {
+        "male": {
+          "min": 550,
+          "max": 650
+        },
+        "female": {
+          "min": 400,
+          "max": 500
+        }
+      },
+      "typical_lifespan_years": {
+        "min": 15,
+        "max": 20
+      },
+      "daily_food_intake": {
+        "maintenance_dry_matter_kg_per_day": 9.0,
+        "lactating_dry_matter_kg_per_day": {
+          "min": 11.2,
+          "max": 13.5
+        },
+        "unit": "kg dry matter/day",
+        "note": "Dry matter is not the same as fresh-feed weight; fresh ration weight can be several times higher depending on moisture."
+      },
+      "milk_production_l_per_day": {
+        "typical_min": 3.0,
+        "typical_max": 5.0,
+        "note": "Indicative daily production during lactation; actual yield varies considerably with management."
+      },
+      "primary_use": "dual_purpose",
+      "primary_use_description": "Used for both milk and draught/utility purposes.",
+      "identification_features": "Large frame; grey-white common, with darker male shoulders/quarters; broad forehead and short curved horns.",
+      "data_confidence": "moderate"
+    },
+    {
+      "id": 17,
+      "model_label": "Ladakhi",
+      "standard_name": "Ladakhi",
+      "scientific_name": "Bos indicus",
+      "average_adult_weight_kg": {
+        "male": {
+          "min": 300,
+          "max": 450
+        },
+        "female": {
+          "min": 220,
+          "max": 320
+        }
+      },
+      "typical_lifespan_years": {
+        "min": 15,
+        "max": 20
+      },
+      "daily_food_intake": {
+        "maintenance_dry_matter_kg_per_day": 5.4,
+        "lactating_dry_matter_kg_per_day": {
+          "min": 6.8,
+          "max": 8.1
+        },
+        "unit": "kg dry matter/day",
+        "note": "Dry matter is not the same as fresh-feed weight; fresh ration weight can be several times higher depending on moisture."
+      },
+      "milk_production_l_per_day": {
+        "typical_min": 1.5,
+        "typical_max": 3.0,
+        "note": "Indicative daily production during lactation; actual yield varies considerably with management."
+      },
+      "primary_use": "dual_purpose",
+      "primary_use_description": "Used for both milk and draught/utility purposes.",
+      "identification_features": "Small hardy mountain cattle; compact frame and dense coat/robust build suited to cold high-altitude conditions.",
+      "data_confidence": "moderate"
+    },
+    {
+      "id": 18,
+      "model_label": "Lakhimi",
+      "standard_name": "Lakhimi",
+      "scientific_name": "Bos indicus",
+      "average_adult_weight_kg": {
+        "male": {
+          "min": 350,
+          "max": 450
+        },
+        "female": {
+          "min": 250,
+          "max": 350
+        }
+      },
+      "typical_lifespan_years": {
+        "min": 15,
+        "max": 20
+      },
+      "daily_food_intake": {
+        "maintenance_dry_matter_kg_per_day": 6.0,
+        "lactating_dry_matter_kg_per_day": {
+          "min": 7.5,
+          "max": 9.0
+        },
+        "unit": "kg dry matter/day",
+        "note": "Dry matter is not the same as fresh-feed weight; fresh ration weight can be several times higher depending on moisture."
+      },
+      "milk_production_l_per_day": {
+        "typical_min": 2.0,
+        "typical_max": 4.0,
+        "note": "Indicative daily production during lactation; actual yield varies considerably with management."
+      },
+      "primary_use": "dual_purpose",
+      "primary_use_description": "Used for both milk and draught/utility purposes.",
+      "identification_features": "Assamese indigenous cattle; generally small-to-medium, hardy and adapted to humid subtropical conditions.",
+      "data_confidence": "moderate"
+    },
+    {
+      "id": 19,
+      "model_label": "Malnad_gidda",
+      "standard_name": "Malnad Gidda",
+      "scientific_name": "Bos indicus",
+      "average_adult_weight_kg": {
+        "male": {
+          "min": 250,
+          "max": 350
+        },
+        "female": {
+          "min": 150,
+          "max": 250
+        }
+      },
+      "typical_lifespan_years": {
+        "min": 15,
+        "max": 20
+      },
+      "daily_food_intake": {
+        "maintenance_dry_matter_kg_per_day": 4.0,
+        "lactating_dry_matter_kg_per_day": {
+          "min": 5.0,
+          "max": 6.0
+        },
+        "unit": "kg dry matter/day",
+        "note": "Dry matter is not the same as fresh-feed weight; fresh ration weight can be several times higher depending on moisture."
+      },
+      "milk_production_l_per_day": {
+        "typical_min": 2.0,
+        "typical_max": 3.0,
+        "note": "Indicative daily production during lactation; actual yield varies considerably with management."
+      },
+      "primary_use": "draft",
+      "primary_use_description": "Primarily valued for draught/field work; milk output is generally modest.",
+      "identification_features": "Very small Karnataka cattle; usually black/brown or dark grey; compact body, hardy and easy to maintain.",
+      "data_confidence": "moderate"
+    },
+    {
+      "id": 20,
+      "model_label": "Mewati",
+      "standard_name": "Mewati",
+      "scientific_name": "Bos indicus",
+      "average_adult_weight_kg": {
+        "male": {
+          "min": 400,
+          "max": 500
+        },
+        "female": {
+          "min": 300,
+          "max": 400
+        }
+      },
+      "typical_lifespan_years": {
+        "min": 15,
+        "max": 20
+      },
+      "daily_food_intake": {
+        "maintenance_dry_matter_kg_per_day": 7.0,
+        "lactating_dry_matter_kg_per_day": {
+          "min": 8.8,
+          "max": 10.5
+        },
+        "unit": "kg dry matter/day",
+        "note": "Dry matter is not the same as fresh-feed weight; fresh ration weight can be several times higher depending on moisture."
+      },
+      "milk_production_l_per_day": {
+        "typical_min": 3.0,
+        "typical_max": 5.0,
+        "note": "Indicative daily production during lactation; actual yield varies considerably with management."
+      },
+      "primary_use": "dual_purpose",
+      "primary_use_description": "Used for both milk and draught/utility purposes.",
+      "identification_features": "Usually white/grey with dark or brown shading; sturdy body, strong limbs and useful draught capacity.",
+      "data_confidence": "moderate"
+    },
+    {
+      "id": 21,
+      "model_label": "Nari",
+      "standard_name": "Nari",
+      "scientific_name": "Bos indicus",
+      "average_adult_weight_kg": {
+        "male": {
+          "min": 400,
+          "max": 500
+        },
+        "female": {
+          "min": 300,
+          "max": 400
+        }
+      },
+      "typical_lifespan_years": {
+        "min": 15,
+        "max": 20
+      },
+      "daily_food_intake": {
+        "maintenance_dry_matter_kg_per_day": 7.0,
+        "lactating_dry_matter_kg_per_day": {
+          "min": 8.8,
+          "max": 10.5
+        },
+        "unit": "kg dry matter/day",
+        "note": "Dry matter is not the same as fresh-feed weight; fresh ration weight can be several times higher depending on moisture."
+      },
+      "milk_production_l_per_day": {
+        "typical_min": 2.5,
+        "typical_max": 4.0,
+        "note": "Indicative daily production during lactation; actual yield varies considerably with management."
+      },
+      "primary_use": "dual_purpose",
+      "primary_use_description": "Used for both milk and draught/utility purposes.",
+      "identification_features": "Rajasthan-Gujarat cattle; commonly grey/white with darker extremities; hardy frame and moderate horns.",
+      "data_confidence": "moderate"
+    },
+    {
+      "id": 22,
+      "model_label": "Nimari",
+      "standard_name": "Nimari",
+      "scientific_name": "Bos indicus",
+      "average_adult_weight_kg": {
+        "male": {
+          "min": 350,
+          "max": 450
+        },
+        "female": {
+          "min": 250,
+          "max": 350
+        }
+      },
+      "typical_lifespan_years": {
+        "min": 15,
+        "max": 20
+      },
+      "daily_food_intake": {
+        "maintenance_dry_matter_kg_per_day": 6.0,
+        "lactating_dry_matter_kg_per_day": {
+          "min": 7.5,
+          "max": 9.0
+        },
+        "unit": "kg dry matter/day",
+        "note": "Dry matter is not the same as fresh-feed weight; fresh ration weight can be several times higher depending on moisture."
+      },
+      "milk_production_l_per_day": {
+        "typical_min": 2.0,
+        "typical_max": 3.0,
+        "note": "Indicative daily production during lactation; actual yield varies considerably with management."
+      },
+      "primary_use": "draft",
+      "primary_use_description": "Primarily valued for draught/field work; milk output is generally modest.",
+      "identification_features": "Red/brown or reddish body often with lighter markings; compact build and strong draught conformation.",
+      "data_confidence": "moderate"
+    },
+    {
+      "id": 23,
+      "model_label": "Ongole",
+      "standard_name": "Ongole",
+      "scientific_name": "Bos indicus",
+      "average_adult_weight_kg": {
+        "male": {
+          "min": 550,
+          "max": 700
+        },
+        "female": {
+          "min": 400,
+          "max": 500
+        }
+      },
+      "typical_lifespan_years": {
+        "min": 15,
+        "max": 20
+      },
+      "daily_food_intake": {
+        "maintenance_dry_matter_kg_per_day": 9.0,
+        "lactating_dry_matter_kg_per_day": {
+          "min": 11.2,
+          "max": 13.5
+        },
+        "unit": "kg dry matter/day",
+        "note": "Dry matter is not the same as fresh-feed weight; fresh ration weight can be several times higher depending on moisture."
+      },
+      "milk_production_l_per_day": {
+        "typical_min": 2.0,
+        "typical_max": 4.0,
+        "note": "Indicative daily production during lactation; actual yield varies considerably with management."
+      },
+      "primary_use": "dual_purpose",
+      "primary_use_description": "Used for both milk and draught/utility purposes.",
+      "identification_features": "Large white/grey cattle; broad forehead, short horns and strong muscular body; well known for heat tolerance.",
+      "data_confidence": "higher"
+    },
+    {
+      "id": 24,
+      "model_label": "Poda Thirupu",
+      "standard_name": "Poda Thurpu",
+      "scientific_name": "Bos indicus",
+      "average_adult_weight_kg": {
+        "male": {
+          "min": 400,
+          "max": 500
+        },
+        "female": {
+          "min": 300,
+          "max": 400
+        }
+      },
+      "typical_lifespan_years": {
+        "min": 15,
+        "max": 20
+      },
+      "daily_food_intake": {
+        "maintenance_dry_matter_kg_per_day": 7.0,
+        "lactating_dry_matter_kg_per_day": {
+          "min": 8.8,
+          "max": 10.5
+        },
+        "unit": "kg dry matter/day",
+        "note": "Dry matter is not the same as fresh-feed weight; fresh ration weight can be several times higher depending on moisture."
+      },
+      "milk_production_l_per_day": {
+        "typical_min": 2.0,
+        "typical_max": 3.0,
+        "note": "Indicative daily production during lactation; actual yield varies considerably with management."
+      },
+      "primary_use": "dual_purpose",
+      "primary_use_description": "Used for both milk and draught/utility purposes.",
+      "identification_features": "Telangana cattle; generally grey/white with strong frame, sturdy legs and functional draught conformation.",
+      "data_confidence": "moderate"
+    },
+    {
+      "id": 25,
+      "model_label": "Pulikulam",
+      "standard_name": "Pulikulam",
+      "scientific_name": "Bos indicus",
+      "average_adult_weight_kg": {
+        "male": {
+          "min": 350,
+          "max": 450
+        },
+        "female": {
+          "min": 250,
+          "max": 350
+        }
+      },
+      "typical_lifespan_years": {
+        "min": 15,
+        "max": 20
+      },
+      "daily_food_intake": {
+        "maintenance_dry_matter_kg_per_day": 6.0,
+        "lactating_dry_matter_kg_per_day": {
+          "min": 7.5,
+          "max": 9.0
+        },
+        "unit": "kg dry matter/day",
+        "note": "Dry matter is not the same as fresh-feed weight; fresh ration weight can be several times higher depending on moisture."
+      },
+      "milk_production_l_per_day": {
+        "typical_min": 1.0,
+        "typical_max": 2.0,
+        "note": "Indicative daily production during lactation; actual yield varies considerably with management."
+      },
+      "primary_use": "draft",
+      "primary_use_description": "Primarily valued for draught/field work; milk output is generally modest.",
+      "identification_features": "Compact Tamil Nadu cattle; grey/dark grey shades common; agile, hardy and traditionally associated with draught and native cattle sports.",
+      "data_confidence": "moderate"
+    },
+    {
+      "id": 26,
+      "model_label": "Punganur",
+      "standard_name": "Punganur",
+      "scientific_name": "Bos indicus",
+      "average_adult_weight_kg": {
+        "male": {
+          "min": 250,
+          "max": 350
+        },
+        "female": {
+          "min": 150,
+          "max": 250
+        }
+      },
+      "typical_lifespan_years": {
+        "min": 15,
+        "max": 20
+      },
+      "daily_food_intake": {
+        "maintenance_dry_matter_kg_per_day": 4.0,
+        "lactating_dry_matter_kg_per_day": {
+          "min": 5.0,
+          "max": 6.0
+        },
+        "unit": "kg dry matter/day",
+        "note": "Dry matter is not the same as fresh-feed weight; fresh ration weight can be several times higher depending on moisture."
+      },
+      "milk_production_l_per_day": {
+        "typical_min": 2.0,
+        "typical_max": 4.0,
+        "note": "Indicative daily production during lactation; actual yield varies considerably with management."
+      },
+      "primary_use": "dual_purpose",
+      "primary_use_description": "Used for both milk and draught/utility purposes.",
+      "identification_features": "Very small-bodied Andhra Pradesh cattle; short stature, compact frame and typically white/grey with coloured patches.",
+      "data_confidence": "moderate"
+    },
+    {
+      "id": 27,
+      "model_label": "Purnea",
+      "standard_name": "Purnea",
+      "scientific_name": "Bos indicus",
+      "average_adult_weight_kg": {
+        "male": {
+          "min": 350,
+          "max": 450
+        },
+        "female": {
+          "min": 250,
+          "max": 350
+        }
+      },
+      "typical_lifespan_years": {
+        "min": 15,
+        "max": 20
+      },
+      "daily_food_intake": {
+        "maintenance_dry_matter_kg_per_day": 6.0,
+        "lactating_dry_matter_kg_per_day": {
+          "min": 7.5,
+          "max": 9.0
+        },
+        "unit": "kg dry matter/day",
+        "note": "Dry matter is not the same as fresh-feed weight; fresh ration weight can be several times higher depending on moisture."
+      },
+      "milk_production_l_per_day": {
+        "typical_min": 2.0,
+        "typical_max": 3.0,
+        "note": "Indicative daily production during lactation; actual yield varies considerably with management."
+      },
+      "primary_use": "dual_purpose",
+      "primary_use_description": "Used for both milk and draught/utility purposes.",
+      "identification_features": "Small-to-medium Bihar cattle; hardy local type with compact frame suited to low-input farming.",
+      "data_confidence": "moderate"
+    },
+    {
+      "id": 28,
+      "model_label": "Rathi",
+      "standard_name": "Rathi",
+      "scientific_name": "Bos indicus",
+      "average_adult_weight_kg": {
+        "male": {
+          "min": 500,
+          "max": 600
+        },
+        "female": {
+          "min": 350,
+          "max": 450
+        }
+      },
+      "typical_lifespan_years": {
+        "min": 15,
+        "max": 20
+      },
+      "daily_food_intake": {
+        "maintenance_dry_matter_kg_per_day": 8.0,
+        "lactating_dry_matter_kg_per_day": {
+          "min": 10.0,
+          "max": 12.0
+        },
+        "unit": "kg dry matter/day",
+        "note": "Dry matter is not the same as fresh-feed weight; fresh ration weight can be several times higher depending on moisture."
+      },
+      "milk_production_l_per_day": {
+        "typical_min": 5.0,
+        "typical_max": 7.0,
+        "note": "Indicative daily production during lactation; actual yield varies considerably with management."
+      },
+      "primary_use": "dairy",
+      "primary_use_description": "Primarily maintained for milk production.",
+      "identification_features": "White/grey coat with brown or red patches; broad body and well-developed udder; strong adaptation to arid Rajasthan.",
+      "data_confidence": "higher"
+    },
+    {
+      "id": 29,
+      "model_label": "Red kandhari",
+      "standard_name": "Red Kandhari",
+      "scientific_name": "Bos indicus",
+      "average_adult_weight_kg": {
+        "male": {
+          "min": 450,
+          "max": 550
+        },
+        "female": {
+          "min": 350,
+          "max": 450
+        }
+      },
+      "typical_lifespan_years": {
+        "min": 15,
+        "max": 20
+      },
+      "daily_food_intake": {
+        "maintenance_dry_matter_kg_per_day": 8.0,
+        "lactating_dry_matter_kg_per_day": {
+          "min": 10.0,
+          "max": 12.0
+        },
+        "unit": "kg dry matter/day",
+        "note": "Dry matter is not the same as fresh-feed weight; fresh ration weight can be several times higher depending on moisture."
+      },
+      "milk_production_l_per_day": {
+        "typical_min": 2.0,
+        "typical_max": 4.0,
+        "note": "Indicative daily production during lactation; actual yield varies considerably with management."
+      },
+      "primary_use": "dual_purpose",
+      "primary_use_description": "Used for both milk and draught/utility purposes.",
+      "identification_features": "Uniform deep red to reddish-brown coat; medium evenly curved horns; compact, sturdy body.",
+      "data_confidence": "moderate"
+    },
+    {
+      "id": 30,
+      "model_label": "Red_Sindhi",
+      "standard_name": "Red Sindhi",
+      "scientific_name": "Bos indicus",
+      "average_adult_weight_kg": {
+        "male": {
+          "min": 450,
+          "max": 550
+        },
+        "female": {
+          "min": 300,
+          "max": 400
+        }
+      },
+      "typical_lifespan_years": {
+        "min": 15,
+        "max": 20
+      },
+      "daily_food_intake": {
+        "maintenance_dry_matter_kg_per_day": 7.0,
+        "lactating_dry_matter_kg_per_day": {
+          "min": 8.8,
+          "max": 10.5
+        },
+        "unit": "kg dry matter/day",
+        "note": "Dry matter is not the same as fresh-feed weight; fresh ration weight can be several times higher depending on moisture."
+      },
+      "milk_production_l_per_day": {
+        "typical_min": 5.0,
+        "typical_max": 7.0,
+        "note": "Indicative daily production during lactation; actual yield varies considerably with management."
+      },
+      "primary_use": "dairy",
+      "primary_use_description": "Primarily maintained for milk production.",
+      "identification_features": "Deep red to reddish-brown coat; compact balanced body; comparatively short horns and well-developed udder.",
+      "data_confidence": "higher"
+    },
+    {
+      "id": 31,
+      "model_label": "Sahiwal",
+      "standard_name": "Sahiwal",
+      "scientific_name": "Bos indicus",
+      "average_adult_weight_kg": {
+        "male": {
+          "min": 550,
+          "max": 650
+        },
+        "female": {
+          "min": 400,
+          "max": 500
+        }
+      },
+      "typical_lifespan_years": {
+        "min": 15,
+        "max": 20
+      },
+      "daily_food_intake": {
+        "maintenance_dry_matter_kg_per_day": 9.0,
+        "lactating_dry_matter_kg_per_day": {
+          "min": 11.2,
+          "max": 13.5
+        },
+        "unit": "kg dry matter/day",
+        "note": "Dry matter is not the same as fresh-feed weight; fresh ration weight can be several times higher depending on moisture."
+      },
+      "milk_production_l_per_day": {
+        "typical_min": 6.0,
+        "typical_max": 8.0,
+        "note": "Indicative daily production during lactation; actual yield varies considerably with management."
+      },
+      "primary_use": "dairy",
+      "primary_use_description": "Primarily maintained for milk production.",
+      "identification_features": "Brownish-red/mahogany coat; loose skin, medium dewlap, short horns and prominent well-developed udder.",
+      "data_confidence": "higher"
+    },
+    {
+      "id": 32,
+      "model_label": "Shweta Kapila",
+      "standard_name": "Shweta Kapila",
+      "scientific_name": "Bos indicus",
+      "average_adult_weight_kg": {
+        "male": {
+          "min": 300,
+          "max": 400
+        },
+        "female": {
+          "min": 220,
+          "max": 300
+        }
+      },
+      "typical_lifespan_years": {
+        "min": 15,
+        "max": 20
+      },
+      "daily_food_intake": {
+        "maintenance_dry_matter_kg_per_day": 5.2,
+        "lactating_dry_matter_kg_per_day": {
+          "min": 6.5,
+          "max": 7.8
+        },
+        "unit": "kg dry matter/day",
+        "note": "Dry matter is not the same as fresh-feed weight; fresh ration weight can be several times higher depending on moisture."
+      },
+      "milk_production_l_per_day": {
+        "typical_min": 2.0,
+        "typical_max": 4.0,
+        "note": "Indicative daily production during lactation; actual yield varies considerably with management."
+      },
+      "primary_use": "dual_purpose",
+      "primary_use_description": "Used for both milk and draught/utility purposes.",
+      "identification_features": "Goa indigenous cattle; generally light/white coat; compact local type adapted to tropical conditions.",
+      "data_confidence": "moderate"
+    },
+    {
+      "id": 33,
+      "model_label": "Tharparkar",
+      "standard_name": "Tharparkar",
+      "scientific_name": "Bos indicus",
+      "average_adult_weight_kg": {
+        "male": {
+          "min": 500,
+          "max": 600
+        },
+        "female": {
+          "min": 350,
+          "max": 450
+        }
+      },
+      "typical_lifespan_years": {
+        "min": 15,
+        "max": 20
+      },
+      "daily_food_intake": {
+        "maintenance_dry_matter_kg_per_day": 8.0,
+        "lactating_dry_matter_kg_per_day": {
+          "min": 10.0,
+          "max": 12.0
+        },
+        "unit": "kg dry matter/day",
+        "note": "Dry matter is not the same as fresh-feed weight; fresh ration weight can be several times higher depending on moisture."
+      },
+      "milk_production_l_per_day": {
+        "typical_min": 5.0,
+        "typical_max": 6.0,
+        "note": "Indicative daily production during lactation; actual yield varies considerably with management."
+      },
+      "primary_use": "dairy",
+      "primary_use_description": "Primarily maintained for milk production.",
+      "identification_features": "White to light grey; medium-large body; strong limbs and moderate horns; notably adapted to hot, dry environments.",
+      "data_confidence": "higher"
+    },
+    {
+      "id": 34,
+      "model_label": "Umblachery",
+      "standard_name": "Umblachery",
+      "scientific_name": "Bos indicus",
+      "average_adult_weight_kg": {
+        "male": {
+          "min": 400,
+          "max": 500
+        },
+        "female": {
+          "min": 300,
+          "max": 400
+        }
+      },
+      "typical_lifespan_years": {
+        "min": 15,
+        "max": 20
+      },
+      "daily_food_intake": {
+        "maintenance_dry_matter_kg_per_day": 7.0,
+        "lactating_dry_matter_kg_per_day": {
+          "min": 8.8,
+          "max": 10.5
+        },
+        "unit": "kg dry matter/day",
+        "note": "Dry matter is not the same as fresh-feed weight; fresh ration weight can be several times higher depending on moisture."
+      },
+      "milk_production_l_per_day": {
+        "typical_min": 1.5,
+        "typical_max": 3.0,
+        "note": "Indicative daily production during lactation; actual yield varies considerably with management."
+      },
+      "primary_use": "draft",
+      "primary_use_description": "Primarily valued for draught/field work; milk output is generally modest.",
+      "identification_features": "Grey cattle often with white markings; smaller than Kangayam; sturdy legs and strong draught conformation.",
+      "data_confidence": "higher"
+    },
+    {
+      "id": 35,
+      "model_label": "Vechur",
+      "standard_name": "Vechur",
+      "scientific_name": "Bos indicus",
+      "average_adult_weight_kg": {
+        "male": {
+          "min": 200,
+          "max": 300
+        },
+        "female": {
+          "min": 150,
+          "max": 200
+        }
+      },
+      "typical_lifespan_years": {
+        "min": 15,
+        "max": 20
+      },
+      "daily_food_intake": {
+        "maintenance_dry_matter_kg_per_day": 3.5,
+        "lactating_dry_matter_kg_per_day": {
+          "min": 4.4,
+          "max": 5.2
+        },
+        "unit": "kg dry matter/day",
+        "note": "Dry matter is not the same as fresh-feed weight; fresh ration weight can be several times higher depending on moisture."
+      },
+      "milk_production_l_per_day": {
+        "typical_min": 1.0,
+        "typical_max": 3.0,
+        "note": "Indicative daily production during lactation; actual yield varies considerably with management."
+      },
+      "primary_use": "draft",
+      "primary_use_description": "Primarily valued for draught/field work; milk output is generally modest.",
+      "identification_features": "Very small Kerala cattle; short stature, compact body, often brown/black/grey; prominent hardiness and easy maintenance.",
+      "data_confidence": "moderate"
+    },
+    {
+      "id": 36,
+      "model_label": "bachaur",
+      "standard_name": "Bachaur",
+      "scientific_name": "Bos indicus",
+      "average_adult_weight_kg": {
+        "male": {
+          "min": 350,
+          "max": 450
+        },
+        "female": {
+          "min": 250,
+          "max": 350
+        }
+      },
+      "typical_lifespan_years": {
+        "min": 15,
+        "max": 20
+      },
+      "daily_food_intake": {
+        "maintenance_dry_matter_kg_per_day": 6.0,
+        "lactating_dry_matter_kg_per_day": {
+          "min": 7.5,
+          "max": 9.0
+        },
+        "unit": "kg dry matter/day",
+        "note": "Dry matter is not the same as fresh-feed weight; fresh ration weight can be several times higher depending on moisture."
+      },
+      "milk_production_l_per_day": {
+        "typical_min": 1.5,
+        "typical_max": 2.5,
+        "note": "Indicative daily production during lactation; actual yield varies considerably with management."
+      },
+      "primary_use": "draft",
+      "primary_use_description": "Primarily valued for draught/field work; milk output is generally modest.",
+      "identification_features": "Bihar cattle; generally grey/white and compact; strong bullocks and low-input grazing ability.",
+      "data_confidence": "moderate"
+    },
+    {
+      "id": 37,
+      "model_label": "badri",
+      "standard_name": "Badri",
+      "scientific_name": "Bos indicus",
+      "average_adult_weight_kg": {
+        "male": {
+          "min": 300,
+          "max": 400
+        },
+        "female": {
+          "min": 220,
+          "max": 300
+        }
+      },
+      "typical_lifespan_years": {
+        "min": 15,
+        "max": 20
+      },
+      "daily_food_intake": {
+        "maintenance_dry_matter_kg_per_day": 5.2,
+        "lactating_dry_matter_kg_per_day": {
+          "min": 6.5,
+          "max": 7.8
+        },
+        "unit": "kg dry matter/day",
+        "note": "Dry matter is not the same as fresh-feed weight; fresh ration weight can be several times higher depending on moisture."
+      },
+      "milk_production_l_per_day": {
+        "typical_min": 2.0,
+        "typical_max": 3.0,
+        "note": "Indicative daily production during lactation; actual yield varies considerably with management."
+      },
+      "primary_use": "dual_purpose",
+      "primary_use_description": "Used for both milk and draught/utility purposes.",
+      "identification_features": "Small Himalayan cattle of Uttarakhand; compact mountain build, strong legs and variable coat colours.",
+      "data_confidence": "moderate"
+    },
+    {
+      "id": 38,
+      "model_label": "bhelai",
+      "standard_name": "Belahi",
+      "scientific_name": "Bos indicus",
+      "average_adult_weight_kg": {
+        "male": {
+          "min": 400,
+          "max": 500
+        },
+        "female": {
+          "min": 300,
+          "max": 400
+        }
+      },
+      "typical_lifespan_years": {
+        "min": 15,
+        "max": 20
+      },
+      "daily_food_intake": {
+        "maintenance_dry_matter_kg_per_day": 7.0,
+        "lactating_dry_matter_kg_per_day": {
+          "min": 8.8,
+          "max": 10.5
+        },
+        "unit": "kg dry matter/day",
+        "note": "Dry matter is not the same as fresh-feed weight; fresh ration weight can be several times higher depending on moisture."
+      },
+      "milk_production_l_per_day": {
+        "typical_min": 3.0,
+        "typical_max": 5.0,
+        "note": "Indicative daily production during lactation; actual yield varies considerably with management."
+      },
+      "primary_use": "dual_purpose",
+      "primary_use_description": "Used for both milk and draught/utility purposes.",
+      "identification_features": "North Indian cattle; generally light grey/white with darker shading; sturdy frame and useful milk plus draught performance.",
+      "data_confidence": "moderate"
+    },
+    {
+      "id": 39,
+      "model_label": "dagri",
+      "standard_name": "Dagri",
+      "scientific_name": "Bos indicus",
+      "average_adult_weight_kg": {
+        "male": {
+          "min": 350,
+          "max": 450
+        },
+        "female": {
+          "min": 250,
+          "max": 350
+        }
+      },
+      "typical_lifespan_years": {
+        "min": 15,
+        "max": 20
+      },
+      "daily_food_intake": {
+        "maintenance_dry_matter_kg_per_day": 6.0,
+        "lactating_dry_matter_kg_per_day": {
+          "min": 7.5,
+          "max": 9.0
+        },
+        "unit": "kg dry matter/day",
+        "note": "Dry matter is not the same as fresh-feed weight; fresh ration weight can be several times higher depending on moisture."
+      },
+      "milk_production_l_per_day": {
+        "typical_min": 1.5,
+        "typical_max": 2.5,
+        "note": "Indicative daily production during lactation; actual yield varies considerably with management."
+      },
+      "primary_use": "draft",
+      "primary_use_description": "Primarily valued for draught/field work; milk output is generally modest.",
+      "identification_features": "Gujarat draft type; usually grey/white; compact strong body, firm legs and functional horns.",
+      "data_confidence": "moderate"
+    },
+    {
+      "id": 40,
+      "model_label": "gangatari",
+      "standard_name": "Gangatiri",
+      "scientific_name": "Bos indicus",
+      "average_adult_weight_kg": {
+        "male": {
+          "min": 400,
+          "max": 500
+        },
+        "female": {
+          "min": 300,
+          "max": 400
+        }
+      },
+      "typical_lifespan_years": {
+        "min": 15,
+        "max": 20
+      },
+      "daily_food_intake": {
+        "maintenance_dry_matter_kg_per_day": 7.0,
+        "lactating_dry_matter_kg_per_day": {
+          "min": 8.8,
+          "max": 10.5
+        },
+        "unit": "kg dry matter/day",
+        "note": "Dry matter is not the same as fresh-feed weight; fresh ration weight can be several times higher depending on moisture."
+      },
+      "milk_production_l_per_day": {
+        "typical_min": 3.0,
+        "typical_max": 4.0,
+        "note": "Indicative daily production during lactation; actual yield varies considerably with management."
+      },
+      "primary_use": "dual_purpose",
+      "primary_use_description": "Used for both milk and draught/utility purposes.",
+      "identification_features": "White/light-grey eastern Gangetic cattle; medium frame and moderate horns; adapted to river-basin farming.",
+      "data_confidence": "moderate"
+    },
+    {
+      "id": 41,
+      "model_label": "gaolao",
+      "standard_name": "Gaolao",
+      "scientific_name": "Bos indicus",
+      "average_adult_weight_kg": {
+        "male": {
+          "min": 500,
+          "max": 600
+        },
+        "female": {
+          "min": 350,
+          "max": 450
+        }
+      },
+      "typical_lifespan_years": {
+        "min": 15,
+        "max": 20
+      },
+      "daily_food_intake": {
+        "maintenance_dry_matter_kg_per_day": 8.0,
+        "lactating_dry_matter_kg_per_day": {
+          "min": 10.0,
+          "max": 12.0
+        },
+        "unit": "kg dry matter/day",
+        "note": "Dry matter is not the same as fresh-feed weight; fresh ration weight can be several times higher depending on moisture."
+      },
+      "milk_production_l_per_day": {
+        "typical_min": 2.0,
+        "typical_max": 3.0,
+        "note": "Indicative daily production during lactation; actual yield varies considerably with management."
+      },
+      "primary_use": "dual_purpose",
+      "primary_use_description": "Used for both milk and draught/utility purposes.",
+      "identification_features": "White to light-grey, relatively tall and lean; long face and strong frame suited to draught work.",
+      "data_confidence": "moderate"
+    },
+    {
+      "id": 42,
+      "model_label": "ghumsari",
+      "standard_name": "Ghumusari",
+      "scientific_name": "Bos indicus",
+      "average_adult_weight_kg": {
+        "male": {
+          "min": 350,
+          "max": 450
+        },
+        "female": {
+          "min": 250,
+          "max": 350
+        }
+      },
+      "typical_lifespan_years": {
+        "min": 15,
+        "max": 20
+      },
+      "daily_food_intake": {
+        "maintenance_dry_matter_kg_per_day": 6.0,
+        "lactating_dry_matter_kg_per_day": {
+          "min": 7.5,
+          "max": 9.0
+        },
+        "unit": "kg dry matter/day",
+        "note": "Dry matter is not the same as fresh-feed weight; fresh ration weight can be several times higher depending on moisture."
+      },
+      "milk_production_l_per_day": {
+        "typical_min": 1.5,
+        "typical_max": 2.5,
+        "note": "Indicative daily production during lactation; actual yield varies considerably with management."
+      },
+      "primary_use": "draft",
+      "primary_use_description": "Primarily valued for draught/field work; milk output is generally modest.",
+      "identification_features": "Odisha indigenous cattle; compact, hardy local type with strong legs and low-input adaptability.",
+      "data_confidence": "moderate"
+    },
+    {
+      "id": 43,
+      "model_label": "kherigarh",
+      "standard_name": "Kherigarh",
+      "scientific_name": "Bos indicus",
+      "average_adult_weight_kg": {
+        "male": {
+          "min": 350,
+          "max": 450
+        },
+        "female": {
+          "min": 250,
+          "max": 350
+        }
+      },
+      "typical_lifespan_years": {
+        "min": 15,
+        "max": 20
+      },
+      "daily_food_intake": {
+        "maintenance_dry_matter_kg_per_day": 6.0,
+        "lactating_dry_matter_kg_per_day": {
+          "min": 7.5,
+          "max": 9.0
+        },
+        "unit": "kg dry matter/day",
+        "note": "Dry matter is not the same as fresh-feed weight; fresh ration weight can be several times higher depending on moisture."
+      },
+      "milk_production_l_per_day": {
+        "typical_min": 1.0,
+        "typical_max": 2.0,
+        "note": "Indicative daily production during lactation; actual yield varies considerably with management."
+      },
+      "primary_use": "draft",
+      "primary_use_description": "Primarily valued for draught/field work; milk output is generally modest.",
+      "identification_features": "Uttar Pradesh cattle; usually white/grey; active grazing animals with compact frame and light draught ability.",
+      "data_confidence": "moderate"
+    },
+    {
+      "id": 44,
+      "model_label": "malvi",
+      "standard_name": "Malvi",
+      "scientific_name": "Bos indicus",
+      "average_adult_weight_kg": {
+        "male": {
+          "min": 450,
+          "max": 550
+        },
+        "female": {
+          "min": 300,
+          "max": 400
+        }
+      },
+      "typical_lifespan_years": {
+        "min": 15,
+        "max": 20
+      },
+      "daily_food_intake": {
+        "maintenance_dry_matter_kg_per_day": 7.0,
+        "lactating_dry_matter_kg_per_day": {
+          "min": 8.8,
+          "max": 10.5
+        },
+        "unit": "kg dry matter/day",
+        "note": "Dry matter is not the same as fresh-feed weight; fresh ration weight can be several times higher depending on moisture."
+      },
+      "milk_production_l_per_day": {
+        "typical_min": 2.0,
+        "typical_max": 3.0,
+        "note": "Indicative daily production during lactation; actual yield varies considerably with management."
+      },
+      "primary_use": "draft",
+      "primary_use_description": "Primarily valued for draught/field work; milk output is generally modest.",
+      "identification_features": "Madhya Pradesh cattle; generally white/grey with dark shading in bulls; strong legs and useful draught conformation.",
+      "data_confidence": "moderate"
+    },
+    {
+      "id": 45,
+      "model_label": "motu",
+      "standard_name": "Motu",
+      "scientific_name": "Bos indicus",
+      "average_adult_weight_kg": {
+        "male": {
+          "min": 350,
+          "max": 450
+        },
+        "female": {
+          "min": 250,
+          "max": 350
+        }
+      },
+      "typical_lifespan_years": {
+        "min": 15,
+        "max": 20
+      },
+      "daily_food_intake": {
+        "maintenance_dry_matter_kg_per_day": 6.0,
+        "lactating_dry_matter_kg_per_day": {
+          "min": 7.5,
+          "max": 9.0
+        },
+        "unit": "kg dry matter/day",
+        "note": "Dry matter is not the same as fresh-feed weight; fresh ration weight can be several times higher depending on moisture."
+      },
+      "milk_production_l_per_day": {
+        "typical_min": 1.5,
+        "typical_max": 2.5,
+        "note": "Indicative daily production during lactation; actual yield varies considerably with management."
+      },
+      "primary_use": "draft",
+      "primary_use_description": "Primarily valued for draught/field work; milk output is generally modest.",
+      "identification_features": "Odisha-region cattle; hardy and compact, commonly grey/white, with strong legs adapted to difficult terrain.",
+      "data_confidence": "moderate"
+    },
+    {
+      "id": 46,
+      "model_label": "nagori",
+      "standard_name": "Nagori",
+      "scientific_name": "Bos indicus",
+      "average_adult_weight_kg": {
+        "male": {
+          "min": 450,
+          "max": 550
+        },
+        "female": {
+          "min": 300,
+          "max": 400
+        }
+      },
+      "typical_lifespan_years": {
+        "min": 15,
+        "max": 20
+      },
+      "daily_food_intake": {
+        "maintenance_dry_matter_kg_per_day": 7.0,
+        "lactating_dry_matter_kg_per_day": {
+          "min": 8.8,
+          "max": 10.5
+        },
+        "unit": "kg dry matter/day",
+        "note": "Dry matter is not the same as fresh-feed weight; fresh ration weight can be several times higher depending on moisture."
+      },
+      "milk_production_l_per_day": {
+        "typical_min": 1.0,
+        "typical_max": 2.0,
+        "note": "Indicative daily production during lactation; actual yield varies considerably with management."
+      },
+      "primary_use": "draft",
+      "primary_use_description": "Primarily valued for draught/field work; milk output is generally modest.",
+      "identification_features": "Rajasthan cattle; white/light grey, tall and fast-moving; long limbs and strong draught ability are key identifiers.",
+      "data_confidence": "moderate"
+    },
+    {
+      "id": 47,
+      "model_label": "ponwar",
+      "standard_name": "Ponwar",
+      "scientific_name": "Bos indicus",
+      "average_adult_weight_kg": {
+        "male": {
+          "min": 300,
+          "max": 400
+        },
+        "female": {
+          "min": 220,
+          "max": 300
+        }
+      },
+      "typical_lifespan_years": {
+        "min": 15,
+        "max": 20
+      },
+      "daily_food_intake": {
+        "maintenance_dry_matter_kg_per_day": 5.2,
+        "lactating_dry_matter_kg_per_day": {
+          "min": 6.5,
+          "max": 7.8
+        },
+        "unit": "kg dry matter/day",
+        "note": "Dry matter is not the same as fresh-feed weight; fresh ration weight can be several times higher depending on moisture."
+      },
+      "milk_production_l_per_day": {
+        "typical_min": 1.0,
+        "typical_max": 2.0,
+        "note": "Indicative daily production during lactation; actual yield varies considerably with management."
+      },
+      "primary_use": "draft",
+      "primary_use_description": "Primarily valued for draught/field work; milk output is generally modest.",
+      "identification_features": "Small Uttar Pradesh cattle; compact build, active and hardy; mainly maintained for draught and local utility.",
+      "data_confidence": "moderate"
+    },
+    {
+      "id": 48,
+      "model_label": "siri",
+      "standard_name": "Siri",
+      "scientific_name": "Bos indicus",
+      "average_adult_weight_kg": {
+        "male": {
+          "min": 350,
+          "max": 450
+        },
+        "female": {
+          "min": 250,
+          "max": 350
+        }
+      },
+      "typical_lifespan_years": {
+        "min": 15,
+        "max": 20
+      },
+      "daily_food_intake": {
+        "maintenance_dry_matter_kg_per_day": 6.0,
+        "lactating_dry_matter_kg_per_day": {
+          "min": 7.5,
+          "max": 9.0
+        },
+        "unit": "kg dry matter/day",
+        "note": "Dry matter is not the same as fresh-feed weight; fresh ration weight can be several times higher depending on moisture."
+      },
+      "milk_production_l_per_day": {
+        "typical_min": 2.0,
+        "typical_max": 3.0,
+        "note": "Indicative daily production during lactation; actual yield varies considerably with management."
+      },
+      "primary_use": "draft",
+      "primary_use_description": "Primarily valued for draught/field work; milk output is generally modest.",
+      "identification_features": "Small Himalayan foothill cattle of Sikkim/Darjeeling; often black/white or dark patterned, hardy and sure-footed.",
+      "data_confidence": "moderate"
+    },
+    {
+      "id": 49,
+      "model_label": "thutho",
+      "standard_name": "Thutho",
+      "scientific_name": "Bos indicus",
+      "average_adult_weight_kg": {
+        "male": {
+          "min": 300,
+          "max": 400
+        },
+        "female": {
+          "min": 220,
+          "max": 300
+        }
+      },
+      "typical_lifespan_years": {
+        "min": 15,
+        "max": 20
+      },
+      "daily_food_intake": {
+        "maintenance_dry_matter_kg_per_day": 5.2,
+        "lactating_dry_matter_kg_per_day": {
+          "min": 6.5,
+          "max": 7.8
+        },
+        "unit": "kg dry matter/day",
+        "note": "Dry matter is not the same as fresh-feed weight; fresh ration weight can be several times higher depending on moisture."
+      },
+      "milk_production_l_per_day": {
+        "typical_min": 2.0,
+        "typical_max": 3.0,
+        "note": "Indicative daily production during lactation; actual yield varies considerably with management."
+      },
+      "primary_use": "draft",
+      "primary_use_description": "Primarily valued for draught/field work; milk output is generally modest.",
+      "identification_features": "Nagaland indigenous cattle; small hardy frame, suited to local hill conditions and low-input management.",
+      "data_confidence": "moderate"
+    }
+  ],
+  "sources": [
+    {
+      "name": "ICAR-NBAGR – Cattle Breeds of India",
+      "purpose": "Registered breed names, accession records and home-tract information"
+    },
+    {
+      "name": "DAHD – Registered Breeds of Cattle / NGRA",
+      "purpose": "Official registered breed list and home tracts"
+    },
+    {
+      "name": "NDDB / Dairy Knowledge Portal",
+      "purpose": "Breed descriptions and reported production characteristics for major breeds"
+    },
+    {
+      "name": "TNAU Agritech – Dairy Unit",
+      "purpose": "Indicative production figures for several Indian cattle breeds"
+    },
+    {
+      "name": "MANAGE – Dairy Extension e-book",
+      "purpose": "Breed categorisation, adult weight and lactation reference figures for important breeds"
+    }
+  ]
+}
