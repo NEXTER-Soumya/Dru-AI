@@ -173,6 +173,14 @@ class FlaskApplicationTests(unittest.TestCase):
         self.assertEqual(authenticated_response.status_code, 200)
         self.assertTrue(authenticated_response.json["authenticated"])
         self.assertEqual(authenticated_response.json["redirect"], "/dashboard")
+        self.assertEqual(authenticated_response.json["name"], "Test User")
+        self.assertEqual(authenticated_response.json["avatar"], "initial")
+        self.assertFalse(authenticated_response.json["requires_name"])
+
+        with self.client.session_transaction() as user_session:
+            user_session["require_name_prompt"] = True
+        name_prompt_response = self.client.get("/api/session-status")
+        self.assertTrue(name_prompt_response.json["requires_name"])
 
     def test_logout_clears_persistent_session_and_allows_home_page(self):
         self.sign_in()

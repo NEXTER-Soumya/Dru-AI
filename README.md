@@ -47,3 +47,49 @@ matched case-insensitively, with underscores treated as spaces. Additional
 overview facts such as adult weight, lifespan, milk production, daily food
 intake, primary use, and identification features come from
 `models/indian_cattle_info_api.json`, matched by `model_label`.
+
+## Deploy frontend on Vercel and backend on Render
+
+The UI uses Flask templates for local development. `build-frontend.mjs` turns
+those templates into static pages and copies the existing assets into
+`frontend-dist`, which Vercel serves. The Flask API, MongoDB connection, and
+PyTorch model stay on Render. Vercel rewrites `/api/*` and `/logout` to Render,
+so browser requests and session cookies remain same-origin; no CORS setup is
+needed.
+
+### Deploy the backend to Render
+
+1. Create a **Web Service** from this GitHub repository. Use the repository
+   root as the service's root directory and select Python.
+2. Set the build command to `pip install -r requirements.txt` and the start
+   command to `gunicorn app:app`.
+3. Add these environment variables in Render:
+   - `MONGO_URI`: the MongoDB Atlas connection URI.
+   - `FLASK_SECRET_KEY`: a long, random, private secret that remains stable
+     between deploys.
+   - `FLASK_ENV`: `production` (enables secure session cookies).
+4. Configure the MongoDB Atlas network access list so Render can connect.
+   Prefer a restricted egress-IP allowlist where your Render plan supports it.
+5. Wait for the service to deploy, then note its URL, such as
+   `https://dru-ai-api.onrender.com`.
+
+The service must include `models/cattle_breed_model.pth` and both JSON
+datasets from this repository. The PyTorch model can require substantial
+memory during startup and inference; choose a Render instance with enough
+memory for the model.
+
+### Deploy the frontend to Vercel
+
+1. In `vercel.json`, replace both `YOUR-RENDER-SERVICE` placeholders with the
+   Render service's hostname (for example, `dru-ai-api`), keeping the
+   `.onrender.com` suffix.
+2. Commit and push that change to GitHub.
+3. Import the same repository in Vercel. Leave the project root at the
+   repository root; the committed `vercel.json` runs the static build and
+   selects `frontend-dist` as the output directory.
+4. Deploy, then open the Vercel URL and test sign-up, sign-in, image
+   identification, Library, and logout.
+
+The API proxy destinations in `vercel.json` must point at your actual Render
+service before the Vercel deployment. Free Render services may spin down when
+idle, so the first API request after a quiet period can take longer.

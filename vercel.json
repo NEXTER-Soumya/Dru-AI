@@ -1,0 +1,18 @@
+{
+  "buildCommand": "node build-frontend.mjs",
+  "outputDirectory": "frontend-dist",
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://YOUR-RENDER-SERVICE.onrender.com/api/:path*"
+    },
+    {
+      "source": "/logout",
+      "destination": "https://YOUR-RENDER-SERVICE.onrender.com/logout"
+    },
+    {
+      "source": "/dashboard",
+      "destination": "/dashboard.html"
+    }
+  ]
+}

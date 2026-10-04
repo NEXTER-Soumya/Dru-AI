@@ -156,7 +156,22 @@ def session_status():
         session.clear()
         return jsonify({"authenticated": False}), 200
 
-    return jsonify({"authenticated": True, "redirect": url_for("dashboard")}), 200
+    user_name = session.get("user_name")
+    user_name = user_name if isinstance(user_name, str) else ""
+    user_avatar = session.get("user_avatar", "initial")
+    if not isinstance(user_avatar, str) or user_avatar not in PROFILE_AVATARS:
+        user_avatar = "initial"
+
+    return jsonify(
+        {
+            "authenticated": True,
+            "redirect": "/dashboard",
+            "name": user_name,
+            "avatar": user_avatar,
+            "requires_name": bool(session.get("require_name_prompt"))
+            or not bool(user_name.strip()),
+        }
+    ), 200
 
 
 @app.route('/dashboard')
