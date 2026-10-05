@@ -427,10 +427,6 @@ body.dark-mode .toggle-thumb {
     padding: 30px;
 }
 
-.right-content-scrollable.help-section-view {
-    overflow: hidden;
-}
-
 .dashboard-section {
     display: none;
 }

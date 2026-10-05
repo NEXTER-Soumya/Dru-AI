@@ -29,9 +29,22 @@ async function processImageSubmission(file) {
             method: 'POST',
             body: formData,
         });
-        const data = await response.json();
+        const responseText = await response.text();
+        let data;
+        try {
+            data = JSON.parse(responseText);
+        } catch {
+            data = null;
+        }
+
         if (!response.ok) {
-            throw new Error(data.error || 'Image identification failed.');
+            throw new Error(
+                data?.error ||
+                `Image identification failed (HTTP ${response.status}). The server returned an unexpected response.`
+            );
+        }
+        if (!data || typeof data !== 'object') {
+            throw new Error('The server returned an invalid response. Please try again.');
         }
         openResultView(data);
     } catch (error) {
