@@ -140,6 +140,43 @@
     transition: background-color 0.3s ease;
 }
 
+.auth-submit-btn:disabled {
+    cursor: wait;
+    opacity: 0.8;
+}
+
+.auth-submit-btn:disabled:hover {
+    transform: none;
+}
+
+.auth-button-spinner {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    margin-left: 0.55rem;
+    vertical-align: -0.15rem;
+    border: 2px solid currentColor;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: auth-button-spin 0.7s linear infinite;
+}
+
+.auth-button-spinner[hidden] {
+    display: none;
+}
+
+@keyframes auth-button-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .auth-button-spinner {
+        animation-duration: 1.5s;
+    }
+}
+
 .auth-submit-btn:hover {
     background-color: rgb(0, 160, 0);
 }

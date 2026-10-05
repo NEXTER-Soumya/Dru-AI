@@ -1074,7 +1074,10 @@
               </div>
             </div>
             <a href="#" class="forgot-password">Forgot password?</a>
-            <button type="submit" class="auth-submit-btn">Sign In</button>
+            <button type="submit" class="auth-submit-btn" aria-live="polite">
+              <span class="auth-button-label">Sign In</span>
+              <span class="auth-button-spinner" aria-hidden="true" hidden></span>
+            </button>
           </form>
           <div class="auth-switch-text">
             Don't have an account? <a href="#" id="showSignup">Sign Up</a>
@@ -1130,8 +1133,9 @@
                 </button>
               </div>
             </div>
-            <button type="submit" class="auth-submit-btn">
-              Create Account
+            <button type="submit" class="auth-submit-btn" aria-live="polite">
+              <span class="auth-button-label">Create Account</span>
+              <span class="auth-button-spinner" aria-hidden="true" hidden></span>
             </button>
           </form>
           <div class="auth-switch-text">

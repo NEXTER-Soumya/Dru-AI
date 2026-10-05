@@ -92,6 +92,20 @@ togglePasswordBtns.forEach(btn => {
 
 // 1. Sign In Form Submission
 const loginFormElement = document.querySelector("#loginForm form");
+function setAuthFormLoading(form, loading, message) {
+    const submitButton = form.querySelector(".auth-submit-btn");
+    const label = submitButton.querySelector(".auth-button-label");
+    const spinner = submitButton.querySelector(".auth-button-spinner");
+
+    if (!submitButton.dataset.defaultLabel) {
+        submitButton.dataset.defaultLabel = label.textContent.trim();
+    }
+    submitButton.disabled = loading;
+    submitButton.setAttribute("aria-busy", String(loading));
+    label.textContent = loading ? message : submitButton.dataset.defaultLabel;
+    spinner.hidden = !loading;
+}
+
 if (loginFormElement) {
     loginFormElement.addEventListener('submit', async (e) => {
         e.preventDefault();
@@ -102,6 +116,7 @@ if (loginFormElement) {
         const email = emailInput ? emailInput.value : '';
         const password = passwordInput ? passwordInput.value : '';
 
+        setAuthFormLoading(loginFormElement, true, "Signing in…");
         try {
             const response = await fetch('/api/signin', {
                 method: 'POST',
@@ -118,6 +133,8 @@ if (loginFormElement) {
         } catch (err) {
             console.error("Login error:", err);
             alert("An error occurred during login. Please try again.");
+        } finally {
+            setAuthFormLoading(loginFormElement, false);
         }
     });
 }
@@ -136,6 +153,7 @@ if (signupFormElement) {
         const email = emailInput ? emailInput.value : '';
         const password = passwordInput ? passwordInput.value : '';
 
+        setAuthFormLoading(signupFormElement, true, "Creating account…");
         try {
             const response = await fetch('/api/signup', {
                 method: 'POST',
@@ -152,6 +170,8 @@ if (signupFormElement) {
         } catch (err) {
             console.error("Signup error:", err);
             alert("An error occurred during signup. Please try again.");
+        } finally {
+            setAuthFormLoading(signupFormElement, false);
         }
     });
 }
