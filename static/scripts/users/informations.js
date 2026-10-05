@@ -23,8 +23,11 @@ async function processImageSubmission(file) {
     showSection('loading-section');
 
     try {
+        const prediction = await predictBreedInBrowser(file);
         const formData = new FormData();
         formData.append('image', file);
+        formData.append('breed', prediction.breed);
+        formData.append('confidence', String(prediction.confidence));
         const response = await fetch('/api/identify', {
             method: 'POST',
             body: formData,

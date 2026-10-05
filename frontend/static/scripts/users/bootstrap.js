@@ -47,6 +47,10 @@ async function initializeDashboard() {
         dashboard.inert = profile.requires_name;
         dashboard.style.visibility = 'visible';
     }
+    await loadClassicScript('/static/vendor/onnxruntime-web/ort.wasm.min.js');
+    window.ort.env.wasm.numThreads = 1;
+    window.ort.env.wasm.wasmPaths = '/static/vendor/onnxruntime-web/';
+    await loadClassicScript('/static/scripts/users/breed-inference.js');
     await loadClassicScript('/static/scripts/users/dashboard.js');
     await loadClassicScript('/static/scripts/users/informations.js');
 }

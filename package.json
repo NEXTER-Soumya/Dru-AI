@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "scripts": {
+    "build:frontend": "node build-frontend.mjs"
+  },
+  "devDependencies": {
+    "onnxruntime-web": "1.30.0"
+  }
+}

@@ -166,7 +166,7 @@
                   <ion-icon name="cloud-upload-outline"></ion-icon>
                 </div>
                 <h3>Drag and drop an image here<br />or click to upload</h3>
-                <p>JPEG, PNG, WebP up to 10 MB</p>
+                <p>JPEG, PNG, WebP up to 10 MB and 20 megapixels</p>
 
                 <div class="upload-actions">
                   <button class="btn-primary" id="uploadBtn">
@@ -965,7 +965,10 @@
       </div>
     </div>
 
-    <!-- Pointing to scripts/users/ subfolder -->
+    <!-- Load local WASM inference before dashboard upload handlers. -->
+    <script src="{{ url_for('static', filename='vendor/onnxruntime-web/ort.wasm.min.js') }}"></script>
+    <script>ort.env.wasm.numThreads = 1; ort.env.wasm.wasmPaths = '/static/vendor/onnxruntime-web/';</script>
+    <script src="{{ url_for('static', filename='scripts/users/breed-inference.js') }}"></script>
     <script src="{{ url_for('static', filename='scripts/users/dashboard.js') }}"></script>
     <script src="{{ url_for('static', filename='scripts/users/informations.js') }}"></script>
     <script

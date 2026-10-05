@@ -4,6 +4,29 @@ import { fileURLToPath } from "node:url";
 
 const root = path.dirname(fileURLToPath(import.meta.url));
 const output = path.join(root, "frontend");
+const runtimeSource = path.join(
+  root,
+  "node_modules",
+  "onnxruntime-web",
+  "dist",
+);
+const runtimeDestination = path.join(
+  root,
+  "static",
+  "vendor",
+  "onnxruntime-web",
+);
+
+await rm(runtimeDestination, { recursive: true, force: true });
+await mkdir(path.dirname(runtimeDestination), { recursive: true });
+await mkdir(runtimeDestination, { recursive: true });
+for (const asset of [
+  "ort.wasm.min.js",
+  "ort-wasm-simd-threaded.mjs",
+  "ort-wasm-simd-threaded.wasm",
+]) {
+  await cp(path.join(runtimeSource, asset), path.join(runtimeDestination, asset));
+}
 
 function makeStatic(html) {
   return html
@@ -24,7 +47,7 @@ function makeStatic(html) {
       "hidden",
     )
     .replace(
-      /<script src="\/static\/scripts\/users\/dashboard\.js"><\/script>\s*<script src="\/static\/scripts\/users\/informations\.js"><\/script>/,
+      /<script src="\/static\/vendor\/onnxruntime-web\/ort\.wasm\.min\.js"><\/script>\s*<script>ort\.env\.wasm\.numThreads = 1; ort\.env\.wasm\.wasmPaths = '\/static\/vendor\/onnxruntime-web\/';<\/script>\s*<script src="\/static\/scripts\/users\/breed-inference\.js"><\/script>\s*<script src="\/static\/scripts\/users\/dashboard\.js"><\/script>\s*<script src="\/static\/scripts\/users\/informations\.js"><\/script>/,
       '<script type="module" src="/static/scripts/users/bootstrap.js"></script>',
     );
 }

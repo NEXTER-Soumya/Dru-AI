@@ -6,3 +6,5 @@ __pycache__/
 instance/
 models/cattle.ipynb
 frontend-dist/
+static/vendor/onnxruntime-web/
+node_modules/

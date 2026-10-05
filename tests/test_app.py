@@ -113,11 +113,6 @@ class FlaskApplicationTests(unittest.TestCase):
             patch.object(app_module, "users_collection", self.users),
             patch.object(app_module, "scans_collection", self.scans),
             patch.object(app_module, "image_bucket", self.images),
-            patch.object(
-                app_module,
-                "predict_breed",
-                return_value={"breed": "Amritmahal", "confidence": 93.25},
-            ),
         )
         for active_patch in self.patches:
             active_patch.start()
@@ -438,13 +433,17 @@ class FlaskApplicationTests(unittest.TestCase):
         self.assertEqual(signup_response.status_code, 200)
         self.assertEqual(signup_response.json["redirect"], "/dashboard")
 
-    def test_identification_persists_prediction_and_image(self):
+    def test_identification_persists_browser_prediction_and_image(self):
         user_id = ObjectId()
         self.sign_in(user_id)
 
         response = self.client.post(
             "/api/identify",
-            data={"image": (io.BytesIO(self.png_bytes()), "cow.png")},
+            data={
+                "image": (io.BytesIO(self.png_bytes()), "cow.png"),
+                "breed": "Amritmahal",
+                "confidence": "93.25",
+            },
             content_type="multipart/form-data",
         )
 
@@ -569,15 +568,17 @@ class FlaskApplicationTests(unittest.TestCase):
 
     def test_invalid_image_is_rejected_before_inference(self):
         self.sign_in()
-        with patch.object(app_module, "predict_breed") as predict:
-            response = self.client.post(
-                "/api/identify",
-                data={"image": (io.BytesIO(b"not an image"), "cow.png")},
-                content_type="multipart/form-data",
-            )
+        response = self.client.post(
+            "/api/identify",
+            data={
+                "image": (io.BytesIO(b"not an image"), "cow.png"),
+                "breed": "Amritmahal",
+                "confidence": "93.25",
+            },
+            content_type="multipart/form-data",
+        )
 
         self.assertEqual(response.status_code, 400)
-        predict.assert_not_called()
 
     def test_oversized_image_resolution_is_rejected_before_inference(self):
         self.sign_in()
@@ -587,20 +588,43 @@ class FlaskApplicationTests(unittest.TestCase):
         image.height = 5000
         image.__enter__.return_value = image
 
-        with (
-            patch.object(app_module.Image, "open", return_value=image),
-            patch.object(app_module, "predict_breed") as predict,
-        ):
+        with patch.object(app_module.Image, "open", return_value=image):
             response = self.client.post(
                 "/api/identify",
-                data={"image": (io.BytesIO(b"image data"), "large.png")},
+                data={
+                    "image": (io.BytesIO(b"image data"), "large.png"),
+                    "breed": "Amritmahal",
+                    "confidence": "93.25",
+                },
                 content_type="multipart/form-data",
             )
 
         self.assertEqual(response.status_code, 413)
         self.assertIn("20 megapixels or less", response.json["error"])
         image.verify.assert_not_called()
-        predict.assert_not_called()
+
+    def test_identification_rejects_invalid_client_prediction(self):
+        self.sign_in()
+
+        for breed, confidence in (
+            ("Not a cattle breed", "93.25"),
+            ("Amritmahal", "NaN"),
+            ("Amritmahal", "101"),
+        ):
+            with self.subTest(breed=breed, confidence=confidence):
+                response = self.client.post(
+                    "/api/identify",
+                    data={
+                        "image": (io.BytesIO(self.png_bytes()), "cow.png"),
+                        "breed": breed,
+                        "confidence": confidence,
+                    },
+                    content_type="multipart/form-data",
+                )
+                self.assertEqual(response.status_code, 400)
+
+        self.assertEqual(self.scans.documents, [])
+        self.assertEqual(self.images.images, {})
 
 
 def tearDownModule():

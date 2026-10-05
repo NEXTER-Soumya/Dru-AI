@@ -1,3 +1,5 @@
+import json
+import math
 import os
 import secrets
 import warnings
@@ -28,7 +30,6 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from werkzeug.utils import secure_filename
 from dotenv import load_dotenv
 
-from breed_model import MAX_IMAGE_PIXELS, ModelError, predict_breed
 from breed_info import BreedDatasetError, get_breed_info
 
 # Load environment variables from .env file
@@ -72,7 +73,16 @@ users_collection = db["users"]       # Collection name
 scans_collection = db["scans"]
 image_bucket = GridFSBucket(db, bucket_name="scan_images")
 MAX_IMAGE_BYTES = 10 * 1024 * 1024
+MAX_IMAGE_PIXELS = 20_000_000
 ALLOWED_IMAGE_FORMATS = {"JPEG", "PNG", "WEBP"}
+MODEL_CLASSES_PATH = Path(app.static_folder) / "models" / "cattle_breed_classes.json"
+with MODEL_CLASSES_PATH.open(encoding="utf-8") as classes_file:
+    MODEL_CLASSES = json.load(classes_file)
+if not isinstance(MODEL_CLASSES, list) or len(MODEL_CLASSES) != 50 or not all(
+    isinstance(label, str) and label for label in MODEL_CLASSES
+):
+    raise ValueError("The browser model must provide exactly 50 non-empty class labels.")
+MODEL_CLASS_SET = frozenset(MODEL_CLASSES)
 PROFILE_AVATARS = {
     "initial": None,
     "person": "person",
@@ -419,6 +429,16 @@ def identify():
     if upload is None or not upload.filename:
         return jsonify({"error": "Choose an image to identify."}), 400
 
+    breed = request.form.get("breed", "").strip()
+    if breed not in MODEL_CLASS_SET:
+        return jsonify({"error": "The browser returned an unknown breed label."}), 400
+    try:
+        confidence = float(request.form.get("confidence", ""))
+    except ValueError:
+        return jsonify({"error": "The browser returned an invalid confidence."}), 400
+    if not math.isfinite(confidence) or not 0 <= confidence <= 100:
+        return jsonify({"error": "The browser returned an invalid confidence."}), 400
+
     image_bytes = upload.read(MAX_IMAGE_BYTES + 1)
     if len(image_bytes) > MAX_IMAGE_BYTES:
         return jsonify({"error": "Image size must be 10 MB or less."}), 413
@@ -445,23 +465,6 @@ def identify():
     ):
         return jsonify({"error": "The selected file is not a valid supported image."}), 400
 
-    try:
-        prediction = predict_breed(image_bytes)
-    except ModelError:
-        app.logger.exception("Cattle breed model inference failed")
-        return jsonify({"error": "The breed recognition model is unavailable."}), 503
-    except Exception:
-        app.logger.exception("Unexpected image inference error")
-        return jsonify({"error": "The image could not be processed."}), 500
-    if not isinstance(prediction.get("breed"), str) or not isinstance(
-        prediction.get("confidence"), (int, float)
-    ):
-        app.logger.error("Breed model returned an invalid prediction.")
-        return jsonify({"error": "The breed recognition model returned an invalid result."}), 503
-    if not 0 <= prediction["confidence"] <= 100:
-        app.logger.error("Breed model returned an out-of-range confidence.")
-        return jsonify({"error": "The breed recognition model returned an invalid result."}), 503
-
     image_id = None
     try:
         scans_collection.create_index([("user_id", 1), ("created_at", -1)])
@@ -475,15 +478,15 @@ def identify():
                 "user_id": current_user_id(),
                 "image_id": image_id,
                 "image_content_type": Image.MIME[image_format],
-                "breed": prediction["breed"],
-                "confidence": prediction["confidence"],
+                "breed": breed,
+                "confidence": confidence,
                 "created_at": datetime.now(timezone.utc),
             }
         ).inserted_id
         scan = {
             "_id": scan_id,
-            "breed": prediction["breed"],
-            "confidence": prediction["confidence"],
+            "breed": breed,
+            "confidence": confidence,
             "created_at": datetime.now(timezone.utc),
         }
         return jsonify(serialize_scan(scan)), 201
