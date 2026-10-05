@@ -9,6 +9,7 @@ from typing import Any
 from PIL import Image, ImageOps, UnidentifiedImageError
 
 MODEL_PATH = Path(__file__).resolve().parent / "models" / "cattle_breed_model.pth"
+MAX_IMAGE_PIXELS = 20_000_000
 
 
 class ModelError(RuntimeError):
@@ -45,7 +46,7 @@ def _load_model() -> None:
 
         model = models.resnet18(weights=None)
         model.fc = nn.Linear(model.fc.in_features, len(classes))
-        model.load_state_dict(state_dict)
+        model.load_state_dict(state_dict, assign=True)
         model.eval()
 
         _model = model
@@ -69,6 +70,8 @@ def predict_breed(image_bytes: bytes) -> dict[str, float | str]:
     _load_model()
     try:
         with Image.open(BytesIO(image_bytes)) as source:
+            if source.width * source.height > MAX_IMAGE_PIXELS:
+                raise ValueError("Image resolution exceeds the supported limit.")
             image = ImageOps.exif_transpose(source).convert("RGB")
         tensor = _transforms(image).unsqueeze(0)
         with _torch.inference_mode():

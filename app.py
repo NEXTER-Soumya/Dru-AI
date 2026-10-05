@@ -28,7 +28,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from werkzeug.utils import secure_filename
 from dotenv import load_dotenv
 
-from breed_model import ModelError, predict_breed
+from breed_model import MAX_IMAGE_PIXELS, ModelError, predict_breed
 from breed_info import BreedDatasetError, get_breed_info
 
 # Load environment variables from .env file
@@ -430,6 +430,10 @@ def identify():
             warnings.simplefilter("error", Image.DecompressionBombWarning)
             with Image.open(BytesIO(image_bytes)) as image:
                 image_format = image.format
+                if image.width * image.height > MAX_IMAGE_PIXELS:
+                    return jsonify(
+                        {"error": "Image resolution must be 20 megapixels or less."}
+                    ), 413
                 image.verify()
         if image_format not in ALLOWED_IMAGE_FORMATS:
             return jsonify({"error": "Use a JPEG, PNG, or WebP image."}), 400

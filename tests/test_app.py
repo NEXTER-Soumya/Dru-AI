@@ -1,7 +1,7 @@
 import io
 import unittest
 from datetime import datetime, timezone
-from unittest.mock import patch
+from unittest.mock import MagicMock, patch
 
 from bson import ObjectId
 from PIL import Image
@@ -577,6 +577,29 @@ class FlaskApplicationTests(unittest.TestCase):
             )
 
         self.assertEqual(response.status_code, 400)
+        predict.assert_not_called()
+
+    def test_oversized_image_resolution_is_rejected_before_inference(self):
+        self.sign_in()
+        image = MagicMock()
+        image.format = "PNG"
+        image.width = 5000
+        image.height = 5000
+        image.__enter__.return_value = image
+
+        with (
+            patch.object(app_module.Image, "open", return_value=image),
+            patch.object(app_module, "predict_breed") as predict,
+        ):
+            response = self.client.post(
+                "/api/identify",
+                data={"image": (io.BytesIO(b"image data"), "large.png")},
+                content_type="multipart/form-data",
+            )
+
+        self.assertEqual(response.status_code, 413)
+        self.assertIn("20 megapixels or less", response.json["error"])
+        image.verify.assert_not_called()
         predict.assert_not_called()
 
 

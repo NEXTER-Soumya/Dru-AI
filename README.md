@@ -27,7 +27,7 @@ development, the app creates a private fallback key under the ignored
 ```
 
 Open `http://127.0.0.1:5000`. Sign up or sign in, then use **Identify** to
-upload a JPEG, PNG, or WebP image up to 10 MB.
+upload a JPEG, PNG, or WebP image up to 10 MB and 20 megapixels.
 
 ## Model and saved data
 
@@ -35,6 +35,9 @@ The inference adapter uses the training notebook's ResNet-18 architecture,
 224 × 224 RGB resize, and ImageNet normalization. The checkpoint must contain
 `model_state` and the 50-element `classes` list saved by the notebook. The
 class list is used to map the highest-probability output back to its breed.
+Inference initializes the architecture without downloading ImageNet weights
+and loads the trained checkpoint directly into its parameters to avoid
+temporarily retaining a second copy of the model weights.
 
 Identification records are stored in the `scans` collection and uploaded image
 bytes in the `scan_images` GridFS bucket in the `dru_ai_database` database.
