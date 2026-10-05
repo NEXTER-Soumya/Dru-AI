@@ -62,7 +62,9 @@ and session cookies remain same-origin; no CORS setup is needed.
 1. Create a **Web Service** from this GitHub repository. Use the repository
    root as the service's root directory and select Python.
 2. Set the build command to `pip install -r requirements.txt` and the start
-   command to `gunicorn app:app`.
+   command to `gunicorn --timeout 180 app:app`. The first identification
+   request imports PyTorch and loads the model, which can exceed Gunicorn's
+   default worker timeout on a small instance.
 3. Add these environment variables in Render:
    - `MONGO_URI`: the MongoDB Atlas connection URI.
    - `FLASK_SECRET_KEY`: a long, random, private secret that remains stable
